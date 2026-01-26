@@ -23,7 +23,7 @@
     
     
       
-        <title>Project 2.11.1: TRAFFIC LIGHT with STEMAIDE - STEMAIDE Docs</title>
+        <title>Project 2.11.1: Automatic Street Light (LDR + RGB) - STEMAIDE Docs</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-2111-traffic-light-with-stemaide" class="md-skip">
+        <a href="#project-2111-automatic-street-light-ldr-rgb" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Project 2.11.1: TRAFFIC LIGHT with STEMAIDE
+              Project 2.11.1: Automatic Street Light (LDR + RGB)
             
           </span>
         </div>
@@ -758,141 +758,122 @@
 
 
 
-<h1 id="project-2111-traffic-light-with-stemaide">Project 2.11.1: TRAFFIC LIGHT with STEMAIDE<a class="headerlink" href="#project-2111-traffic-light-with-stemaide" title="Permanent link">&para;</a></h1>
+<h1 id="project-2111-automatic-street-light-ldr-rgb">Project 2.11.1: Automatic Street Light (LDR + RGB)<a class="headerlink" href="#project-2111-automatic-street-light-ldr-rgb" title="Permanent link">&para;</a></h1>
+<h2 id="1-the-concept">1. The Concept<a class="headerlink" href="#1-the-concept" title="Permanent link">&para;</a></h2>
+<p>We will create an <strong>Automatic Street Light</strong> that turns on when it gets dark.</p>
+<ul>
+<li><strong>Bright Light</strong>: LED is <strong>OFF</strong>.</li>
+<li><strong>Darkness</strong>: LED turns <strong>ON</strong> (White/Yellow).</li>
+</ul>
+<p>We use a <strong>Photoresistor (LDR)</strong> to measure light intensity.</p>
+<h2 id="2-components-needed">2. Components Needed<a class="headerlink" href="#2-components-needed" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Arduino Uno</li>
+<li>LDR Sensor Module</li>
+<li>RGB LED Module</li>
+<li>Jumper Wires</li>
+</ul>
+<h2 id="3-wiring-the-circuit">3. Wiring the Circuit<a class="headerlink" href="#3-wiring-the-circuit" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Standard Wiring</strong>: RGB uses Pins 3, 5, 6 for color mixing.</p>
+</blockquote>
 <table>
 <thead>
 <tr>
-<th><strong>Description</strong></th>
-<th>You will learn how to detect the presence or absence of light.</th>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Pin Label</th>
+<th style="text-align: left;">Arduino Pin</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Use case</strong></td>
-<td>Controlling visibility of light in streetlights at different times of the day.</td>
+<td style="text-align: left;"><strong>RGB LED</strong></td>
+<td style="text-align: left;"><strong>R</strong> (Red)</td>
+<td style="text-align: left;"><strong>Pin 3</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>G</strong> (Green)</td>
+<td style="text-align: left;"><strong>Pin 5</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>B</strong> (Blue)</td>
+<td style="text-align: left;"><strong>Pin 6</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>-</strong> (GND)</td>
+<td style="text-align: left;"><strong>GND</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>LDR Sensor</strong></td>
+<td style="text-align: left;"><strong>VCC</strong></td>
+<td style="text-align: left;"><strong>5V</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>GND</strong></td>
+<td style="text-align: left;"><strong>GND</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>AO</strong> (Analog)</td>
+<td style="text-align: left;"><strong>A0</strong></td>
 </tr>
 </tbody>
 </table>
-<h2 id="components-things-you-will-need">Components (Things You will need)<a class="headerlink" href="#components-things-you-will-need" title="Permanent link">&para;</a></h2>
-<p>| <img alt="Arduino Uno" src="../../../assets/components/arduino.webp" /> | <img alt="Arduino USB Cable" src="../../../assets/components/usbcable.webp" /> | <img alt="Breadboard" src="../../../assets/components/breadboard.webp" /> | <img alt="Jump wire" src="../../../assets/components/jumperwires.webp" /> | <img alt="RGB Module" src="../../../assets/2.0/3.4.LDR_RGB/RGB_Module.webp" /> 
-| <img alt="Light Dependable Resistor" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Light_Dependable_Resistor.webp" />|
-|-------------------------|-------------------------|-------------------------|-------------------------|
-|-------------------------|-------------------------|</p>
-<h2 id="building-the-circuit">Building the circuit<a class="headerlink" href="#building-the-circuit" title="Permanent link">&para;</a></h2>
-<p>Things Needed:</p>
-<ul>
-<li>Arduino Uno = 1  </li>
-<li>Arduino USB cable = 1</li>
-<li>Light dependent resistor   = 1</li>
-<li>Traffic module= 1</li>
-<li>Red jumper wire = 1</li>
-<li>Black jumper wire = 1</li>
-<li>Green jumper wire = 1</li>
-<li>Brown jumper wire = 1</li>
-<li>Purple jumper wire = 1</li>
-<li>Yellow jumper wire = 1</li>
-<li>Orange jumper wire = 1</li>
-<li>Blue jumper wire = 1</li>
-</ul>
-<h2 id="mounting-the-component-on-the-breadboard">Mounting the component on the breadboard<a class="headerlink" href="#mounting-the-component-on-the-breadboard" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Take the light-dependent resistor and the breadboard and insert the light-dependent resistor into the horizontal connectors on the breadboard.</p>
-<p><img alt="Step1" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step1.webp" /></p>
-<p><strong>Step 2:</strong> Take the RGB module and insert it into the horizontal connectors on the breadboard.</p>
-<p><img alt="Picture2" src="../../../assets/2.0/3.4.LDR_RGB/Picture2.webp" /></p>
-<h2 id="wiring-the-components">WIRING THE COMPONENTS<a class="headerlink" href="#wiring-the-components" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Take the orange jumper wire. Connect one end of the wire to the “VCC” port on the resistor and the other end to the “5V” port on the Arduino UNO.</p>
-<p><img alt="Picture3" src="../../../assets/2.0/3.4.LDR_RGB/Picture3.webp" /></p>
-<p><strong>Step 2:</strong> Take the brown jumper wire. Connect one end of the wire to the “GND” hole on the Arduino UNO and the other end to the “GND” port on the resistor.</p>
-<p><img alt="Picture4" src="../../../assets/2.0/3.4.LDR_RGB/Picture4.webp" /></p>
-<p><strong>Step 3:</strong> Take the yellow jumper wire. Connect one end of the wire to the “DO” hole on the resistor and the other end to hole number 8 on the Arduino UNO.</p>
-<p><img alt="Picture5" src="../../../assets/2.0/3.4.LDR_RGB/Picture5.webp" /></p>
-<p><strong>Step 4:</strong> Take the purple jumper wire. Connect one end of the wire to the “AO” port on the Arduino UNO to the “AO” port on the resistor</p>
-<p><img alt="Picture6" src="../../../assets/2.0/3.4.LDR_RGB/Picture6.webp" /></p>
-<p><strong>Step 5:</strong>Take the red jumper wire.  Connect one end of the wire to the port labelled “R” on the RGB connect the other end to digital pin 5 on the Arduino UNO.</p>
-<p><img alt="Picture7" src="../../../assets/2.0/3.4.LDR_RGB/Picture7.webp" /></p>
-<p><strong>Step 6:</strong> Take the green jumper wire. Connect one end of the wire to the port labelled “G” on the RGB and connect the other end to digital pin 6 on the Arduino UNO.</p>
-<p><img alt="Picture8" src="../../../assets/2.0/3.4.LDR_RGB/Picture8.webp" /></p>
-<p><strong>Step 7:</strong> Take the blue jumper wire. Connect one end of the wire to the port labelled “B” on the RGB and connect the other end to digital pin 7 on the Arduino UNO.</p>
-<p><img alt="Picture9" src="../../../assets/2.0/3.4.LDR_RGB/Picture9.webp" /></p>
-<p><strong>Step 8:</strong> Take the black jumper wire. Connect one end of the wire to the port labelled “-” on the RGB and connect the other end to the “GND” on the Arduino UNO.</p>
-<p><img alt="Picture10" src="../../../assets/2.0/3.4.LDR_RGB/Picture10.webp" /></p>
-<h2 id="programming">PROGRAMMING<a class="headerlink" href="#programming" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Open your Arduino IDE. See how to set up here: <a href="../../../getting-started/overview/">Getting Started</a>.</p>
-<p><strong>Step 2:</strong> Type <code>const int LDR_PIN = A0;</code> as shown below in the image</p>
-<p><em><strong>NB:</strong> Make sure you avoid errors when typing. Do not omit any character or symbol especially the bracket { }  and semicolons ;  and place them as you see in the image . The code that comes after the two ash backslashes “//” are called comments. They are not part of the code that will be run, they only explain the lines of code. You can avoid typing them.</em></p>
-<p><img alt="Step2" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step11.webp" /></p>
-<p><strong>Step 3:</strong> Type <code>const int DO_PIN = 8;</code> as shown below in the image.</p>
-<p><img alt="Step3" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step12.webp" /></p>
-<p><strong>Step 4:</strong> Type <code>const int RED_PIN = 5;</code> as shown below in the image.</p>
-<p><img alt="Step4" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step13.webp" /></p>
-<p><strong>Step 5:</strong> Type <code>const int GREEN_PIN = 6;</code> as shown below in the image.</p>
-<p><img alt="Step5" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step14.webp" /></p>
-<p><strong>Step 6:</strong> Type <code>const int BLUE_PIN = 6;</code> as shown below in the image.</p>
-<p><img alt="Step6" src="../../../assets/2.0/3.4.LDR_RGB/BluePin2.webp" /></p>
-<p><strong>Step 7:</strong> Type <code>int 1drValue;</code> as shown below in the image.</p>
-<p><img alt="Step7" src="../../../assets/2.0/3.4.LDR_RGB/BluePin3.webp" /></p>
-<p><strong>Step 8:</strong> Type <code>int redValue, greenValue, blueValue;</code> as shown below in the image.</p>
-<p><img alt="Step8" src="../../../assets/2.0/3.4.LDR_RGB/BluePin1.webp" /></p>
-<p><strong>Step 9:</strong> Type <code>pinMode (DO_PIN, INPUT);</code> as shown below in the image.</p>
-<p><img alt="Step9" src="../../../assets/2.0/3.4.LDR_RGB/BluePin4.webp" /></p>
-<p><strong>Step 10:</strong> Type <code>Serial.begin(9600);</code> as shown below in the image.</p>
-<p><img alt="Step10" src="../../../assets/2.0/3.4.LDR_RGB/BluePin5.webp" /></p>
-<p><strong>Step 11:</strong> Type <code>pinMode (RED_PIN, OUTPUT);</code> as shown below in the image.</p>
-<p><img alt="Step11" src="../../../assets/2.0/3.4.LDR_RGB/BluePin6.webp" /></p>
-<p><strong>Step 12:</strong> Type <code>pinMode (GREEN_PIN, OUTPUT);</code> as shown below in the image.</p>
-<p><img alt="Step12" src="../../../assets/2.0/3.4.LDR_RGB/BluePin7.webp" /></p>
-<p><strong>Step 13:</strong> Type <code>pinMode (BlUE_PIN, OUTPUT);</code> as shown below in the image.</p>
-<p><img alt="Step13" src="../../../assets/2.0/3.4.LDR_RGB/Bluepin.webp" /></p>
-<p><strong>Step 14:</strong> Type <code>ldrValue = analogRead (LDR_PIN) ;</code> as shown below in the image.</p>
-<p><img alt="Step14" src="../../../assets/2.0/3.4.LDR_RGB/BluePin9.webp" /></p>
-<p><strong>Step 15:</strong> Type <code>int digitalValue = digitalRead (DO_PIN)</code> as shown below in the image.</p>
-<p><img alt="Step15" src="../../../assets/2.0/3.4.LDR_RGB/BluePin10.webp" /></p>
-<p><strong>Step 16:</strong> Type <code>Serial.print (“Analog Value:”);</code> as shown below in the image.</p>
-<p><img alt="Step16" src="../../../assets/2.0/3.4.LDR_RGB/BluePin11.webp" /></p>
-<p><strong>Step 17:</strong> Type <code>Serial.printIn (ldrValue);</code> as shown below in the image.</p>
-<p><img alt="Step17" src="../../../assets/2.0/3.4.LDR_RGB/BluePin12.webp" />.</p>
-<p><strong>Step 18:</strong> Type <code>Serial.printIn (“Digital Value:”);</code> as shown below in the image.</p>
-<p><img alt="Step18" src="../../../assets/2.0/3.4.LDR_RGB/BluePin13.webp" />.</p>
-<p><strong>Step 19:</strong> Type <code>if (ldrValue &lt; 100) {;</code> as shown below in the image.</p>
-<p><img alt="Step19" src="../../../assets/2.0/3.4.LDR_RGB/BluePin14.webp" />.</p>
-<p><strong>Step 20:</strong> Type 
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">RED_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">RED_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">200</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w"> </span><span class="err">```</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">shown</span><span class="w"> </span><span class="n">below</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">image</span><span class="p">.</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="o">!</span><span class="p">[</span><span class="n">Step20</span><span class="p">](..</span><span class="o">/</span><span class="p">..</span><span class="o">/</span><span class="n">assets</span><span class="o">/</span><span class="mf">2.0</span><span class="o">/</span><span class="mf">3.4</span><span class="p">.</span><span class="n">LDR_RGB</span><span class="o">/</span><span class="n">BluePin15</span><span class="p">.</span><span class="n">webp</span><span class="p">)</span>
+<p><img alt="LDR RGB Wiring" src="../../../assets/2.0/3.4.LDR_RGB/Picture2.webp" /></p>
+<h2 id="4-the-code">4. The Code<a class="headerlink" href="#4-the-code" title="Permanent link">&para;</a></h2>
+<p>Copy this code into your Arduino IDE.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// 1. Define Pins</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">redPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">greenPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">bluePin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ldrPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A0</span><span class="p">;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="o">**</span><span class="n">Step</span><span class="w"> </span><span class="mi">21</span><span class="o">:**</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="err">```</span><span class="w"> </span><span class="n">cpp</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">BLUE_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">BLUE_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">200</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="c1">// 2. Configure Output Pins</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">redPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">greenPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">bluePin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">}</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="c1">// 3. Read Light Level (0 to 1023)</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">lightLevel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">ldrPin</span><span class="p">);</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Light Level: &quot;</span><span class="p">);</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">lightLevel</span><span class="p">);</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span><span class="c1">// 4. Logic: Dark vs Bright</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">  </span><span class="c1">// (Adjust &#39;500&#39; based on your room&#39;s light)</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">lightLevel</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">500</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">    </span><span class="c1">// DARK: Turn ON (White Light)</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">    </span><span class="n">setColor</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">);</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">    </span><span class="c1">// BRIGHT: Turn OFF</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">    </span><span class="n">setColor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="p">}</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="c1">// Helper Function</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setColor</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">blue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">  </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">redPin</span><span class="p">,</span><span class="w"> </span><span class="n">red</span><span class="p">);</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">  </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">greenPin</span><span class="p">,</span><span class="w"> </span><span class="n">green</span><span class="p">);</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">  </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">bluePin</span><span class="p">,</span><span class="w"> </span><span class="n">blue</span><span class="p">);</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="p">}</span>
 </span></code></pre></div>
- as shown below in the image.</p>
-<p><img alt="Step21" src="../../../assets/2.0/3.4.LDR_RGB/BluePin16.webp" />.</p>
-<p><strong>Step 22:</strong> Type
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">GREEN_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">GREEN_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">200</span><span class="p">);</span><span class="w"> </span>
-</span></code></pre></div>
-as shown below in the image.</p>
-<p><img alt="Step22" src="../../../assets/2.0/3.4.LDR_RGB/BluePin17.webp" />.</p>
-<p><strong>Step 23:</strong> Type
- <code>cpp
-digitalWrite (BLUE_PIN, HIGH);
-digitalWrite (RED_PIN, LOW);
-digitalWrite (GREEN_PIN, LOW);</code><br />
-as shown below in the image.</p>
-<p><img alt="Step23" src="../../../assets/2.0/3.4.LDR_RGB/BluePin18.webp" /></p>
-<p><img alt="Step24" src="../../../assets/2.0/3.4.LDR_RGB/BluePin19.webp" /></p>
-<p><img alt="Step25" src="../../../assets/2.0/3.4.LDR_RGB/BluePin20.webp" /></p>
-<h2 id="conclusion">CONCLUSION<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
-<p>If you encounter any problems when trying to upload your code to the board, run through your code again to check for any errors or missing lines of code. If you did not encounter any problems and the program ran as expected, Congratulations on a job well done. You have now learnt how to code the RGB module to change colors in the presence of light. Practice, as they say makes perfect. Continue to work hard and in time you’ll master it.</p>
+<h2 id="5-troubleshooting">5. Troubleshooting<a class="headerlink" href="#5-troubleshooting" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Light turns on when it's bright?</strong> Your LDR might be wired inversely or you need to flip logic <code>&lt;</code> to <code>&gt;</code>.</li>
+<li><strong>Is it too sensitive?</strong> Change the number <code>500</code>. Higher number = turns on sooner (in brighter light). Lower number = needs to be darker.</li>
+<li><strong>Colors are wrong?</strong> Check RGB wiring (3, 5, 6).</li>
+</ul>
 
 
 
