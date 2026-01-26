@@ -23,7 +23,7 @@
     
     
       
-        <title>Project 1.5.7: RAINBOW COLOURS - STEMAIDE Docs</title>
+        <title>Mission 1.31: The Technicolor Dream - STEMAIDE Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-157-rainbow-colours" class="md-skip">
+        <a href="#mission-131-the-technicolor-dream" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Project 1.5.7: RAINBOW COLOURS
+              Mission 1.31: The Technicolor Dream
             
           </span>
         </div>
@@ -826,156 +826,81 @@
 
 
 
-<h1 id="project-157-rainbow-colours">Project 1.5.7: RAINBOW COLOURS<a class="headerlink" href="#project-157-rainbow-colours" title="Permanent link">&para;</a></h1>
-<table>
-<thead>
-<tr>
-<th><strong>Description</strong></th>
-<th>You will learn how to create a simple circuit and program three (3) LEDs to form a very decorative and multicolored system.</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Use case</strong></td>
-<td>Having a nice house party at your house, you might not want to buy light decorations from outside. Out of this you can still use this approach to make the place much nicer.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="components-things-you-will-need">Components (Things You will need)<a class="headerlink" href="#components-things-you-will-need" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th><img alt="LED" src="../../../assets/components/leds.webp" /></th>
-<th><img alt="Arduino Uno" src="../../../assets/components/arduino.webp" /></th>
-<th><img alt="Arduino USB Cable" src="../../../assets/components/usbcable.webp" /></th>
-<th><img alt="Breadboard" src="../../../assets/components/breadboard.webp" /></th>
-<th><img alt="Jumper Wires" src="../../../assets/components/jumperwires.webp" /></th>
-<th><img alt="Breadboard" src="../../../assets/components/RGB.webp" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="building-the-circuit">Building the circuit<a class="headerlink" href="#building-the-circuit" title="Permanent link">&para;</a></h2>
-<p>Things Needed:</p>
+<h1 id="mission-131-the-technicolor-dream">Mission 1.31: The Technicolor Dream<a class="headerlink" href="#mission-131-the-technicolor-dream" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Role</strong>: Master Artist<br />
+<strong>Objective</strong>: Create a seamless rainbow transition.</p>
+</blockquote>
+<h2 id="result-preview">Result Preview<a class="headerlink" href="#result-preview" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><img alt="Result GIF" src="Placeholder_for_Rainbow.gif" /><br />
+<em>The LED flows through every color of the rainbow.</em></p>
+</blockquote>
+<hr />
+<h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
+<p>You’ve mastered Red, Green, and Blue individually. Now, it’s time to mix them.
+Your mission is to use a special function to cycle through every shade, from the warm Orange of a sunset to the deep Violet of the night sky.</p>
+<h2 id="2-the-toolkit">2. The Toolkit<a class="headerlink" href="#2-the-toolkit" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Arduino Uno Board = 1</li>
-<li>Arduino USB cable = 1</li>
-<li>RGB= 1</li>
-<li>Red jumper wires = 1</li>
-<li>Green jumper wires = 1</li>
-<li>Brown jumper wires = 1</li>
-<li>Blue jumper wires = 1</li>
+<li><strong>1x RGB LED Module</strong></li>
+<li><strong>4x Jumper Wires</strong> (R, G, B, GND)</li>
+<li><strong>1x Arduino Uno</strong></li>
 </ul>
-<h2 id="mounting-the-component-on-the-breadboard">Mounting the component on the breadboard<a class="headerlink" href="#mounting-the-component-on-the-breadboard" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> The RGB module has four pins, R pin(red), G pin(green), B pin(blue) and – pin (GND). On the middle section of the breadboard, locate each horizontal section lettered A to J. Take the RGB module and insert it into any of the lettered section (Say A) horizontally. 
-<em><strong>NB:</strong> Take note of where each of the pins of the RGB are placed on the bread board.</em></p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RGB_Intro/mount_RGB.webp" />.</p>
-<h2 id="wiring-the-circuit">WIRING THE CIRCUIT<a class="headerlink" href="#wiring-the-circuit" title="Permanent link">&para;</a></h2>
-<p>Things Needed:</p>
+<h2 id="3-the-blueprint">3. The Blueprint<a class="headerlink" href="#3-the-blueprint" title="Permanent link">&para;</a></h2>
+<p><strong>Important:</strong> Connect to <strong>PWM Pins (8, 9, 10)</strong> or (3, 5, 6) depending on your board's mark.</p>
 <ul>
-<li>Red jumper wires = 1</li>
-<li>Green jumper wires = 1</li>
-<li>Brown jumper wires = 1</li>
-<li>Blue jumper wires = 1</li>
+<li><strong>R</strong> -&gt; <strong>Pin 8</strong></li>
+<li><strong>G</strong> -&gt; <strong>Pin 9</strong></li>
+<li><strong>B</strong> -&gt; <strong>Pin 10</strong></li>
+<li><strong>-</strong> -&gt; <strong>GND</strong></li>
 </ul>
-<p><strong>Step 2:</strong> Take the Red male-to-male jumper wire and connect one end to the R pin of the RGB module and the other end to digital pin number 8 on the Arduino uno board.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RGB_Intro/red_wire_connect.webp" />.</p>
-<p><strong>Step 3:</strong> Take the Green male-to-male jumper wire and connect one end to the G pin of the RGB module and the other end to digital pin number 9 on the Arduino uno board.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RGB_Intro/green_wire_connect.webp" />.</p>
-<p><strong>Step 4:</strong> Take the Blue male-to-male jumper wire and connect one end to the B pin of the RGB module and the other end to digital pin number 10 on the Arduino uno board.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RGB_Intro/blue_wire_connect.webp" />.</p>
-<p><strong>Step 5:</strong> Take the Brown male-to-male jumper wire and connect one end to the - pin of the RGB module and the other end to GND on the Arduino uno board.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RGB_Intro/gnd_wire_connect.webp" />.</p>
-<p><em><strong>NB:</strong> Connect the USB port of the Arduino cable to the USB port of your laptop and the other side of the Arduino cable to the Arduino Uno Board.</em></p>
-<h2 id="programming">PROGRAMMING<a class="headerlink" href="#programming" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Open your Arduino IDE. See how to set up here: <a href="../../../getting-started/overview/">Getting Started</a>.</p>
-<p><strong>Step 2:</strong> Type <code>const int Red = 8;</code> as shown in the picture below. Replace “8” with the digital pin you allocated to the red pin of the RGB.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RGB_Rainbow_Colors/code_1.webp" />.</p>
-<p><strong>Step 3:</strong> Type <code>const int Green = 9;</code> as shown in the picture below. Replace “9” with the digital pin you allocated to the green pin of the RGB.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RGB_Rainbow_Colors/code_2.webp" />.</p>
-<p><strong>Step 4:</strong> Type <code>const int Blue = 10;</code> as shown in the picture below. Replace “10” with the digital pin you allocated to the blue pin of the RGB.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RGB_Rainbow_Colors/code_3.webp" />.</p>
-<p><strong>Step 5:</strong> Inside the (void setup ()) type <code>pinMode (red, OUTPUT);</code> as shown in the picture below.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RGB_Rainbow_Colors/code_4.webp" />.</p>
-<p><em><strong>NB:</strong> pinMode will help the Arduino board to decide which port should be activated and OUTPUT because the RGB is an output device.</em></p>
-<p><strong>Step 6:</strong> type <code>pinMode (green, OUTPUT);</code> as shown in the picture below.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RGB_Rainbow_Colors/code_5.webp" />.</p>
-<p><strong>Step 7:</strong> type <code>pinMode (blue, OUTPUT);</code> as shown in the picture below.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RGB_Rainbow_Colors/code_6.webp" />.</p>
-<p><strong>Step 8:</strong> Go to the next line after the closing bracket for the area where you put your main code. Here a function will be declared so that the RGB can combine an amount of the three (3) colors to give out a unique color. </p>
-<p><strong>Step 9:</strong> Type 
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>void Setcolor (int Red, int Green, int Blue) {
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    analogWrite (red, Red);
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    analogWrite (green, Green);
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    analogWrite (blue, Blue);
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>}
-</span></code></pre></div></p>
-<p>as shown in the picture below.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RGB_Rainbow_Colors/code_7.webp" />.</p>
-<p><em><strong>NB:</strong> The highest amount of each primary color of the RGB has a value of 255, we call the function Setcolor and apportion an amount of each of the primary colors to get a different color as demonstrated in the subsequent steps.</em></p>
-<p><strong>Step 10 :</strong> </p>
+<p><img alt="Rainbow Wiring" src="../../../assets/1.0/RGB/RGB_Intro/gnd_wire_connect.webp" /></p>
+<h2 id="4-the-logic">4. The Logic<a class="headerlink" href="#4-the-logic" title="Permanent link">&para;</a></h2>
+<p><strong>Algorithm:</strong></p>
+<ol>
+<li>Create a "mixing function" called <code>setColor</code>.</li>
+<li>Call this function with different "Recipes" (Red, Green, Blue values).</li>
+</ol>
+<h3 id="the-code">The Code<a class="headerlink" href="#the-code" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 1.31: The Technicolor Dream</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">red</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">green</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">blue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">blue</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="c1">// Rainbow Recipes</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="n">setColor</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w">   </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span><span class="w"> </span><span class="c1">// Red</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="n">setColor</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">127</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span><span class="w"> </span><span class="c1">// Orange</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="n">setColor</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span><span class="w"> </span><span class="c1">// Yellow</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="n">setColor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w">   </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span><span class="w"> </span><span class="c1">// Green</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="n">setColor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">);</span><span class="w">   </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span><span class="w"> </span><span class="c1">// Blue</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="n">setColor</span><span class="p">(</span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">130</span><span class="p">);</span><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span><span class="w"> </span><span class="c1">// Indigo</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">  </span><span class="n">setColor</span><span class="p">(</span><span class="mi">148</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">211</span><span class="p">);</span><span class="w"> </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span><span class="w"> </span><span class="c1">// Violet</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="p">}</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setColor</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">g</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">  </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">);</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">  </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">);</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">  </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">blue</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="5-upload-test">5. Upload &amp; Test<a class="headerlink" href="#5-upload-test" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Upload the code.</li>
+<li>Wait for the cycle. Do you see all 7 colors?</li>
+<li><strong>Upgrade</strong>: Can you create your own "Hidden Color" recipe? (Example: 255, 20, 147 for Deep Pink).</li>
+</ol>
+<h2 id="6-troubleshooting">6. Troubleshooting<a class="headerlink" href="#6-troubleshooting" title="Permanent link">&para;</a></h2>
 <ul>
-<li>(Red): Type <code>Setcolor (255, 0, 0);</code> in the area for your main code as shown in the picture below.</li>
+<li><strong>Colors skipping?</strong> Check your <code>delay()</code>. If it’s too small, the colors will blur together.</li>
+<li><strong>Only Red/Green works?</strong> Check the Blue wire on Pin 10. Digital pins 8, 9, 10 are all PWM on some boards, but on others ONLY 9 and 10 are. Check for the <code>~</code> symbol!</li>
 </ul>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RGB_Rainbow_Colors/code_8.webp" />.</p>
-<ul>
-<li>(Orange): Type Setcolor (255, 127, 0); in the area for your main code as shown in the picture below.</li>
-</ul>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RGB_Rainbow_Colors/code_9.webp" />.</p>
-<ul>
-<li>(Yellow): Type Setcolor (255, 255, 0); in the area for your main code as shown in the picture below.</li>
-</ul>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RGB_Rainbow_Colors/code_10.webp" />.</p>
-<ul>
-<li>(Green): Type Setcolor (0, 255, 0); in the area for your main code as shown in the picture below.</li>
-</ul>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RGB_Rainbow_Colors/code_11.webp" />.</p>
-<ul>
-<li>(Blue): Type Setcolor (0, 0, 255); in the area for your main code as shown in the picture below.</li>
-</ul>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RGB_Rainbow_Colors/code_12.webp" />.</p>
-<ul>
-<li>(Indigo): Type Setcolor (75, 0, 130); in the area for your main code as shown in the picture below.</li>
-</ul>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RGB_Rainbow_Colors/code_13.webp" />.</p>
-<ul>
-<li>(Violet): Type Setcolor (148, 0, 211); in the area for your main code as shown in the picture below.</li>
-</ul>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RGB_Rainbow_Colors/code_14.webp" />.</p>
-<p><strong>Step 11:</strong> We can introduce a delay after the code for each color, so the colors come right after each other.</p>
-<ul>
-<li>This is to keep the light on for a while (1000miliseconds = 1second), before the next color comes on.</li>
-</ul>
-<p>Type:
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Setcolor (255, 0, 0);
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>delay (100);
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Setcolor (255, 127, 0);
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>delay (100);
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Setcolor (255, 255, 0);
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>delay (100);
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Setcolor (0, 255, 0);
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>delay (100);
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>Setcolor (0, 0, 255);
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>delay (100);
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>Setcolor (75, 0, 130);
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>delay (100);
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>Setcolor (148, 0, 211);
-</span></code></pre></div></p>
-<p>as shown in the picture below.</p>
-<p><strong>Step 12:</strong> Save your code. <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section</em></p>
-<p><strong>Step 13:</strong> Select the arduino board and port <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section:Selecting Arduino Board Type and Uploading your code</em>.</p>
-<p><strong>Step 14:</strong> Upload your code. <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section:Selecting Arduino Board Type and Uploading your code</em></p>
-<h2 id="conclusion">CONCLUSION<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
-<p>To conclude, the RGB rainbow colors project offers an immersive exploration of color mixing and dynamic lighting effects. By manipulating the red, green, and blue components, participants gain insights into color theory, electronic control, and the art of visual representation. This endeavor serves as a creative foundation in electronics, illustrating the power of color variation and inspiring curiosity in practical applications, from decorative lighting to digital art installations.</p>
 
 
 

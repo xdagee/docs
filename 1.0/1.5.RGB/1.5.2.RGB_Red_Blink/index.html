@@ -23,7 +23,7 @@
     
     
       
-        <title>Project 1.5.2: Red Blink - STEMAIDE Docs</title>
+        <title>Mission 1.26: The Crimson Pulse - STEMAIDE Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-152-red-blink" class="md-skip">
+        <a href="#mission-126-the-crimson-pulse" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Project 1.5.2: Red Blink
+              Mission 1.26: The Crimson Pulse
             
           </span>
         </div>
@@ -826,100 +826,64 @@
 
 
 
-<h1 id="project-152-red-blink">Project 1.5.2: Red Blink<a class="headerlink" href="#project-152-red-blink" title="Permanent link">&para;</a></h1>
-<table>
-<thead>
-<tr>
-<th><strong>Description</strong></th>
-<th>This project is one that makes emphasis on how to create a simple circuit and to control the red light on the RGB to blink beautifully.</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Use case</strong></td>
-<td>Wanting to create an interactive lighting system for your school using as a security and safety alert light, you can program the Red LED in the RGB alone to blink indicating danger whenever there’s an intruder.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="components-things-you-will-need">Components (Things You will need)<a class="headerlink" href="#components-things-you-will-need" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th><img alt="LED" src="../../../assets/components/leds.webp" /></th>
-<th><img alt="Arduino Uno" src="../../../assets/components/arduino.webp" /></th>
-<th><img alt="Arduino USB Cable" src="../../../assets/components/usbcable.webp" /></th>
-<th><img alt="Breadboard" src="../../../assets/components/breadboard.webp" /></th>
-<th><img alt="Jumper Wires" src="../../../assets/components/jumperwires.webp" /></th>
-<th><img alt="Breadboard" src="../../../assets/components/RGB.webp" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="building-the-circuit">Building the circuit<a class="headerlink" href="#building-the-circuit" title="Permanent link">&para;</a></h2>
-<p>Things Needed:</p>
+<h1 id="mission-126-the-crimson-pulse">Mission 1.26: The Crimson Pulse<a class="headerlink" href="#mission-126-the-crimson-pulse" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Role</strong>: Emergency Coordinator<br />
+<strong>Objective</strong>: Program a rhythmic Red beacon.</p>
+</blockquote>
+<h2 id="result-preview">Result Preview<a class="headerlink" href="#result-preview" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><img alt="Result GIF" src="Placeholder_for_RGB_Red_Blink.gif" /><br />
+<em>The Red channel pulses ON and OFF.</em></p>
+</blockquote>
+<hr />
+<h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
+<p>A steady light may be ignored, but a pulsing light demands attention.
+Your mission is to program the Red channel of your RGB module to blink, creating a signal for nearby responders.</p>
+<h2 id="2-the-toolkit">2. The Toolkit<a class="headerlink" href="#2-the-toolkit" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Arduino Uno Board = 1</li>
-<li>Arduino USB cable = 1</li>
-<li>RGB= 1</li>
-<li>Red jumper wires = 1</li>
-<li>White jumper wires = 1</li>
+<li><strong>1x RGB LED Module</strong></li>
+<li><strong>1x Arduino Uno</strong></li>
+<li><strong>2x Jumper Wires</strong></li>
 </ul>
-<h2 id="mounting-the-component-on-the-breadboard">Mounting the component on the breadboard<a class="headerlink" href="#mounting-the-component-on-the-breadboard" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> The RGB module has four pins, R pin(red), G pin(green), B pin(blue) and – pin (GND). On the middle section of the breadboard, locate each horizontal section lettered A to J. Take the RGB module and insert it into any of the lettered section (Say A) horizontally. </p>
-<p><em><strong>NB:</strong> Take note of where each of the pins of the RGB are placed on the bread board.</em></p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RED_G_B/circuit_1.webp" />.</p>
-<h2 id="wiring-the-circuit">WIRING THE CIRCUIT<a class="headerlink" href="#wiring-the-circuit" title="Permanent link">&para;</a></h2>
-<p>Things Needed:</p>
+<h2 id="3-the-blueprint">3. The Blueprint<a class="headerlink" href="#3-the-blueprint" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Red jumper wire = 1</li>
-<li>white jumper wire = 1</li>
+<li><strong>R (Red)</strong> -&gt; <strong>Pin 5</strong></li>
+<li><strong>- (Common)</strong> -&gt; <strong>GND</strong></li>
 </ul>
-<p><strong>Step 2:</strong> Take the red jumper wire. This wire will connect the Arduino UNO and the R pin of the RGB module. </p>
+<p><img alt="Wiring Diagram" src="../../../assets/1.0/RGB/RED_G_B/circuit_3.webp" /></p>
+<h2 id="4-the-logic">4. The Logic<a class="headerlink" href="#4-the-logic" title="Permanent link">&para;</a></h2>
+<p><strong>Algorithm:</strong></p>
+<ol>
+<li>Turn Red ON.</li>
+<li>Wait 1 second.</li>
+<li>Turn Red OFF.</li>
+<li>Wait 1 second.</li>
+</ol>
+<h3 id="the-code">The Code<a class="headerlink" href="#the-code" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 1.26: The Crimson Pulse</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">red</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="5-upload-test">5. Upload &amp; Test<a class="headerlink" href="#5-upload-test" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Upload the code.</li>
+<li>Does the signal feel like an alarm?</li>
+<li><strong>Upgrade</strong>: Can you make it blink 5 times faster? (Hint: Change the delay to <code>200</code>).</li>
+</ol>
+<h2 id="6-troubleshooting">6. Troubleshooting<a class="headerlink" href="#6-troubleshooting" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p>Connect one end of the red jumper wire to R pin of RGB module on the breadboard. Ensure you put the pin in the right hole.</p>
-</li>
-<li>
-<p>Connect the other end of the red jumper wire to pin number 5 on the Arduino UNO.</p>
-</li>
+<li><strong>Flashes once then stops?</strong> Check your loop curly brackets <code>{}</code>.</li>
+<li><strong>Other colors flashing?</strong> Disconnect any stray wires on Pins 6 or 7.</li>
 </ul>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RED_G_B/circuit_2.webp" />.</p>
-<p><strong>Step 3:</strong> Take the white jumper wire and connect one end to the GND or the - pin of the RGB module.</p>
-<ul>
-<li>Connect the other end of the white jumper wire to GND on the Arduino UNO.</li>
-</ul>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RED_G_B/circuit_3.webp" />.</p>
-<h2 id="programming">PROGRAMMING<a class="headerlink" href="#programming" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Open your Arduino IDE. See how to set up here: <a href="../../../getting-started/overview/">Getting Started</a>.</p>
-<p><strong>Step 2:</strong> Type <code>const int red = 5;</code> as shown below in the image.</p>
-<p><em><strong>NB:</strong> Make sure you avoid errors when typing. Do not omit any character or symbol especially the bracket { }  and semicolons ;  and put them as you see in the image. The code that comes after the two ash backslashes “//” are called comments. They are not part of the code that will be run, they only explain the lines of code. You can avoid typing them.</em></p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RED_G_B/code_1.webp" />.</p>
-<p><strong>Step 3:</strong> Type <code>pinMode (red, OUTPUT);</code> as shown below in the image.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RED_G_B/code_2.webp" />.</p>
-<p><em><strong>NB:</strong> The code below sets the pin names “red” as an output pin. An output pin helps send signals from the microcontroller to other components in the circuit. The pinMode () function, helps determine and control the behavior of a specific pin on the board</em></p>
-<p><strong>Step 4:</strong> Type <code>digitalWrite (red, HIGH);</code> as shown below in the image.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RED_G_B/code_3.webp" />.</p>
-<p>The digitalWrite () function controls the state of the pin. The pin can either be HIGH or LOW. The HIGH state turns on the LED. As a result, the code below turns on the LED.</p>
-<p><strong>Step 5:</strong> Type  <code>delay (400);</code> as shown below </p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RED_G_B_Blink/code_1.webp" />.</p>
-<p><strong>Step 6:</strong> Type <code>digitalWrite (red, LOW);</code> as seen below:</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RED_G_B_Blink/code_2.webp" />.</p>
-<p><strong>Step 7:</strong> Type <code>delay (400);</code> as shown below.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/RGB/RED_G_B_Blink/code_3.webp" />.</p>
-<p><strong>Step 8:</strong> Save your code. <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section</em></p>
-<p><strong>Step 9:</strong> Select the arduino board and port <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section:Selecting Arduino Board Type and Uploading your code</em>.</p>
-<p><strong>Step 10:</strong> Upload your code. <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section:Selecting Arduino Board Type and Uploading your code</em></p>
-<h2 id="conclusion">CONCLUSION<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
-<p>In summary, the project centered on creating a blinking red light within an RGB configuration provides an illuminating introduction to color manipulation and electronic control. By programming the red LED component to blink, participants acquire insights into timing control, code logic, and the dynamic visual effects of a single color. This endeavor serves as a pivotal step in exploring RGB color variation, showcasing the rhythmic potential of individual color components, and sparking interest in practical applications such as decorative lighting and visual aesthetics.</p>
 
 
 

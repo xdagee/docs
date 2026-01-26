@@ -23,7 +23,7 @@
     
     
       
-        <title>Project 2.7.1:Push Button with Traffic Light Module - STEMAIDE Docs</title>
+        <title>Mission 2.7: The Crosswalk - STEMAIDE Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-271push-button-with-traffic-light-module" class="md-skip">
+        <a href="#mission-27-the-crosswalk" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Project 2.7.1:Push Button with Traffic Light Module
+              Mission 2.7: The Crosswalk
             
           </span>
         </div>
@@ -826,151 +826,158 @@
 
 
 
-<h1 id="project-271push-button-with-traffic-light-module">Project 2.7.1:Push Button with Traffic Light Module<a class="headerlink" href="#project-271push-button-with-traffic-light-module" title="Permanent link">&para;</a></h1>
-<table>
-<thead>
-<tr>
-<th><strong>Description</strong></th>
-<th>You will learn how to create a simple circuit using an Ultrasonic distance sensor and the buzzer.</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Use case</strong></td>
-<td>Imagine you want to program a pedestrian traffic light to allow pedestrians to cross the street at the push of a button.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="components-things-you-will-need">Components (Things You will need)<a class="headerlink" href="#components-things-you-will-need" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th><img alt="traffic Light Module" src="../../../assets/components/trafficmodule.webp" /></th>
-<th><img alt="Arduino Uno" src="../../../assets/components/arduino.webp" /></th>
-<th><img alt="Arduino USB Cable" src="../../../assets/components/usbcable.webp" /></th>
-<th><img alt="Breadboard" src="../../../assets/components/breadboard.webp" /></th>
-<th><img alt="Jumper wire" src="../../../assets/components/jumperwires.webp" /></th>
-<th><img alt=" Push Button" src="../../../assets/components/pushbutton.webp" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="building-the-circuit">Building the circuit<a class="headerlink" href="#building-the-circuit" title="Permanent link">&para;</a></h2>
-<p>Things Needed:</p>
+<h1 id="mission-27-the-crosswalk">Mission 2.7: The Crosswalk<a class="headerlink" href="#mission-27-the-crosswalk" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Role</strong>: Urban Planner<br />
+<strong>Objective</strong>: Keep pedestrians safe. Stop cars when someone wants to cross.</p>
+</blockquote>
+<h2 id="result-preview">Result Preview<a class="headerlink" href="#result-preview" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><img alt="Result GIF" src="Placeholder_for_Crosswalk.gif" /><br />
+<em>Green Light (Cars Go). Press Button -&gt; Yellow -&gt; Red (Cars Stop).</em></p>
+</blockquote>
+<hr />
+<h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
+<p>Drivers don't always stop for people. We need a signal.
+Your mission is to build a "Demand-Actuated Signal"—a fancy word for a crosswalk button.</p>
+<h2 id="2-the-toolkit">2. The Toolkit<a class="headerlink" href="#2-the-toolkit" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Arduino Uno = 1</li>
-<li>Arduino USB cable = 1</li>
-<li>Traffic Light= 1</li>
-<li>Breadboard = 1</li>
-<li>Pushbutton = 1</li>
+<li><strong>1x Push Button</strong></li>
+<li><strong>1x Traffic Light Module</strong></li>
+<li><strong>1x Arduino Uno</strong></li>
 </ul>
-<h2 id="mounting-the-component-on-the-breadboard">Mounting the component on the breadboard<a class="headerlink" href="#mounting-the-component-on-the-breadboard" title="Permanent link">&para;</a></h2>
-<p>Things Needed:</p>
+<h2 id="3-the-blueprint">3. The Blueprint<a class="headerlink" href="#3-the-blueprint" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Traffic Light Module = 1</li>
-<li>Push Button = 1</li>
-<li>Breadboard = 1</li>
+<li><strong>Traffic Light</strong>: 5, 6, 7 (R, Y, G)</li>
+<li><strong>Button</strong>: Pin 2 (GND Leg)</li>
 </ul>
-<p><strong>Step 1:</strong> 
--   The push button has four unassigned pins.
--   On the middle section of the breadboard, locate each horizontal section lettered A to J.
--   Take the push button and insert two pins into the lettered section ‘g’ horizontally.
--   Insert the other two pins into the lettered section ‘d’ horizontally.</p>
-<p><img alt="PushButton fixed on breadboard" src="../../../assets/2.0/2.3.%20PushButton%20%2B%20TrafficLightModule/Picture1.webp" />.</p>
-<p><strong>Step 2:</strong> 
--   The Traffic light module has four pins (Red(R), Yellow(Y)), Green(G) and GND.
--   On the middle section of the breadboard, locate each horizontal section lettered A to J.
--   Take the RGB module and insert it into any of the lettered section (Say A) horizontally. </p>
-<p><img alt="TrafficLightModule fixed on breadboard" src="../../../assets/2.0/2.3.%20PushButton%20%2B%20TrafficLightModule/Picture2.webp" />.</p>
-<h2 id="wiring-the-circuit">WIRING THE CIRCUIT<a class="headerlink" href="#wiring-the-circuit" title="Permanent link">&para;</a></h2>
-<h3 id="things-needed">Things Needed:<a class="headerlink" href="#things-needed" title="Permanent link">&para;</a></h3>
+<p><img alt="Wiring Diagram" src="../../../assets/2.0/2.3.%20PushButton%20%2B%20TrafficLightModule/Picture5.webp" /></p>
+<h2 id="4-the-logic">4. The Logic<a class="headerlink" href="#4-the-logic" title="Permanent link">&para;</a></h2>
+<p><strong>State Machine:</strong></p>
+<ol>
+<li><strong>Default</strong>: Green Light ON (Cars moving).</li>
+<li><strong>Trigger</strong>: Button Pressed?</li>
+<li><strong>Action</strong>:<ul>
+<li>Green OFF.</li>
+<li>Yellow ON (2 sec).</li>
+<li>Red ON (5 sec) -&gt; <strong>Pedestrians Cross</strong>.</li>
+<li>Red OFF, Green ON.</li>
+</ul>
+</li>
+</ol>
+<h3 id="the-code">The Code<a class="headerlink" href="#the-code" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 2.7: Crosswalk</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">buttonPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">red</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">yellow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">green</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">buttonPin</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">yellow</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="c1">// Start with Green</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">}</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="p">(</span><span class="n">buttonPin</span><span class="p">);</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">request</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="c1">// Pedestrian wants to cross!</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="n">changeLights</span><span class="p">();</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="p">}</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="kt">void</span><span class="w"> </span><span class="nf">changeLights</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">  </span><span class="c1">// 1. Slow down cars</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">yellow</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">  </span><span class="c1">// 2. Stop cars</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">yellow</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">  </span><span class="c1">// 3. Walk Time</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">  </span><span class="c1">// 4. Return to normal</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="5-upload-test">5. Upload &amp; Test<a class="headerlink" href="#5-upload-test" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Upload code.</li>
+<li>Wait. The Green light should be on.</li>
+<li>Press the button. Does it cycle through Yellow to Red?</li>
+</ol>
+<h2 id="6-troubleshooting">6. Troubleshooting<a class="headerlink" href="#6-troubleshooting" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Red male-male-to-male jumper wires = 2</li>
-<li>White male-to-male jumper wires = 2</li>
-<li>Green male-to-male jumper wires = 2</li>
-<li>Yellow male-to-male jumper wires = 2</li>
-<li>Arduino Uno Board </li>
+<li><strong>Button resets Arduino?</strong></li>
+<li>Short circuit! Check if you connected the button directly between 5V and GND. It should be Pin 2 and GND.</li>
 </ul>
-<p><strong>Step 3:</strong>  Take the Red male-male-to-male jumper wire and place one side of the wire pin under the push button pin located on the lettered section ‘d’ and the other side of the wire pin to the digital pin 2 on the Arduino uno board.
-.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/2.0/2.3.%20PushButton%20%2B%20TrafficLightModule/Picture3.webp" /></p>
-<p><strong>Step 4:</strong>  Take the White male-male-to-male jumper wire and place one side of the wire pin under the other pin located on the lettered section ‘d’ and the other side of the wire pin to GND on the Arduino uno board. </p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/2.0/2.3.%20PushButton%20%2B%20TrafficLightModule/Picture4.webp" />.</p>
-<p><strong>Step 5:</strong>  Take the Red male-to-male jumper wire and place one side of the wire pin under the Red pin of the traffic light module and the other side of the wire pin to the digital pin 3 on the Arduino uno board.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/2.0/2.3.%20PushButton%20%2B%20TrafficLightModule/Picture5.webp" />.</p>
-<p><strong>Step 6:</strong>  Take the Yellow male-to-male jumper wire and place one side of the wire pin under the yellow pin of the traffic light module and the other side of the wire pin to the digital pin 5 on the Arduino uno board.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/2.0/2.3.%20PushButton%20%2B%20TrafficLightModule/Picture6.webp" />.</p>
-<p><strong>Step 7:</strong>  Take the Green male-to-male jumper wire and place one side of the wire pin under the Green pin of the traffic light module and the other side of the wire pin to the digital pin 4 on the Arduino uno board. </p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/2.0/2.3.%20PushButton%20%2B%20TrafficLightModule/Picture7.webp" />.</p>
-<p><strong>Step 8:</strong>  Finally, Take the White male-male-to-male jumper wire and place one side of the wire pin under the GND pin of the module and the other side of the wire pin to the GND port on the Arduino Uno Board.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/2.0/2.3.%20PushButton%20%2B%20TrafficLightModule/code8.webp" />.</p>
-<h2 id="connecting-the-arduino-uno-board-to-your-laptop">Connecting The Arduino Uno Board To Your Laptop.<a class="headerlink" href="#connecting-the-arduino-uno-board-to-your-laptop" title="Permanent link">&para;</a></h2>
-<p>Arduino Uno Board
-Arduino cable</p>
-<p><strong>Step 7:</strong>  Connect the USB port of the Arduino cable to the USB port of your laptop and the other side to the Arduino Uno Board.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/2.0/2.3.%20PushButton%20%2B%20TrafficLightModule/Picture9.webp" />.</p>
+<h2 id="7-extensions-upgrades">7. Extensions &amp; Upgrades<a class="headerlink" href="#7-extensions-upgrades" title="Permanent link">&para;</a></h2>
+<p><strong>Challenge</strong>: The Buzzer</p>
+<ul>
+<li><strong>Upgrade</strong>: Add a "Beep... Beep..." sound when the Red light is on so blind people know it's safe to walk.</li>
+</ul>
 <h2 id="programming">PROGRAMMING<a class="headerlink" href="#programming" title="Permanent link">&para;</a></h2>
 <p><strong>Step 1:</strong> Open your Arduino IDE. See how to set up here: <a href="../../../getting-started/overview/">Getting Started</a>.</p>
 <p><strong>Step 2:</strong> Type <code>const int Button = 2;</code> as shown in the picture below.</p>
 <p><img alt="Pinmode decalration" src="../../../assets/2.0/2.3.%20PushButton%20%2B%20TrafficLightModule/code1.webp" />.</p>
-<p><strong>Step 3:</strong> Type <code>int RED = 3;</code> as shown in the picture below. </p>
+<p><strong>Step 3:</strong> Type <code>int RED = 3;</code> as shown in the picture below.</p>
 <p><img alt="Pinmode decalration" src="../../../assets/2.0/2.3.%20PushButton%20%2B%20TrafficLightModule/code2.webp" />.</p>
-<p><strong>Step 4:</strong> Type <code>int YELLOW = 3;</code> as shown in the picture below. </p>
+<p><strong>Step 4:</strong> Type <code>int YELLOW = 3;</code> as shown in the picture below.</p>
 <p><img alt="Pinmode decalration" src="../../../assets/2.0/2.3.%20PushButton%20%2B%20TrafficLightModule/code3.webp" />.</p>
-<p><strong>Step 5:</strong> Type <code>int GREEN = 3;</code> as shown in the picture below. </p>
+<p><strong>Step 5:</strong> Type <code>int GREEN = 3;</code> as shown in the picture below.</p>
 <p><img alt="Pinmode decalration" src="../../../assets/2.0/2.3.%20PushButton%20%2B%20TrafficLightModule/code4.webp" />.</p>
-<p><strong>Step 6:</strong> Type <code>int buttonState= 0;</code> as shown in the picture below. </p>
+<p><strong>Step 6:</strong> Type <code>int buttonState= 0;</code> as shown in the picture below.</p>
 <p><img alt="Pinmode decalration" src="../../../assets/2.0/2.3.%20PushButton%20%2B%20TrafficLightModule/code5.webp" />.</p>
-<p><strong>Step 7:</strong> After the (void setup ()) within the curly brackets type
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">pinMode</span><span class="w"> </span><span class="p">(</span><span class="n">ButtonPin</span><span class="p">,</span><span class="w"> </span><span class="n">INTPUT_PULLUP</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">pinMode</span><span class="w"> </span><span class="p">(</span><span class="n">RED</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">pinMode</span><span class="w"> </span><span class="p">(</span><span class="n">YELLOW</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">pinMode</span><span class="w"> </span><span class="p">(</span><span class="n">GREEN</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-</span></code></pre></div></p>
+<p><strong>Step 7:</strong> After the (void setup ()) within the curly brackets type</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">pinMode</span><span class="w"> </span><span class="p">(</span><span class="n">ButtonPin</span><span class="p">,</span><span class="w"> </span><span class="n">INTPUT_PULLUP</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">pinMode</span><span class="w"> </span><span class="p">(</span><span class="n">RED</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">pinMode</span><span class="w"> </span><span class="p">(</span><span class="n">YELLOW</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">pinMode</span><span class="w"> </span><span class="p">(</span><span class="n">GREEN</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span></code></pre></div>
 <p><img alt="Pinmode decalration" src="../../../assets/2.0/2.3.%20PushButton%20%2B%20TrafficLightModule/code6.webp" />.</p>
-<p><strong>Step 8:</strong> After the (void loop ()) within the curly brackets type as shown below 
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">buttonState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="w"> </span><span class="p">(</span><span class="n">ButtonPin</span><span class="p">);</span><span class="w"> </span>
-</span></code></pre></div></p>
+<p><strong>Step 8:</strong> After the (void loop ()) within the curly brackets type as shown below</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">buttonState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="w"> </span><span class="p">(</span><span class="n">ButtonPin</span><span class="p">);</span><span class="w"> </span>
+</span></code></pre></div>
 <p><img alt="Pinmode decalration" src="../../../assets/2.0/2.3.%20PushButton%20%2B%20TrafficLightModule/code7.webp" />.</p>
-<p><strong>Step 9:</strong>  Type Function
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">buttonState</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">HIGH</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">GREEN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span>
-</span></code></pre></div></p>
-<p><img alt="Pinmode decalration" src="../../../assets/2.0/2.3.%20PushButton%20%2B%20TrafficLightModule/code8.webp" />.</p>
-<p><strong>Step 10:</strong> Type Function
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">buttonState</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<p><strong>Step 9:</strong>  Type Function</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">buttonState</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">HIGH</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">GREEN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">GREEN</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">YELLOW</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">YELLOW</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">RED</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">RED</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">GREEN</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="p">}</span><span class="w"> </span>
-</span></code></pre></div></p>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span>
+</span></code></pre></div>
+<p><img alt="Pinmode decalration" src="../../../assets/2.0/2.3.%20PushButton%20%2B%20TrafficLightModule/code8.webp" />.</p>
+<p><strong>Step 10:</strong> Type Function</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">buttonState</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">GREEN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">GREEN</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">YELLOW</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">YELLOW</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">RED</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">RED</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">GREEN</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="p">}</span><span class="w"> </span>
+</span></code></pre></div>
 <p><img alt="Pinmode decalration" src="../../../assets/2.0/2.3.%20PushButton%20%2B%20TrafficLightModule/code9.webp" />.</p>
 <p><img alt="LED fixed on breadboard" src="../../../assets/2.0/2.3.%20PushButton%20%2B%20TrafficLightModule/code10.webp" />.</p>
 <p><strong>Step 11:</strong> Save your code. <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section</em></p>
 <p><strong>Step 12:</strong> Select the arduino board and port <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section:Selecting Arduino Board Type and Uploading your code</em>.</p>
 <p><strong>Step 13:</strong> Upload your code. <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section:Selecting Arduino Board Type and Uploading your code</em></p>
 <h2 id="conclusion">CONCLUSION<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
-<p>If you encounter any problems when trying to upload your code to the board, run through your code again to check for any errors or missing lines of code. If you did not encounter any problems and the program ran as expected, Congratulations on a job well done. </p>
+<p>If you encounter any problems when trying to upload your code to the board, run through your code again to check for any errors or missing lines of code. If you did not encounter any problems and the program ran as expected, Congratulations on a job well done.</p>
 
 
 

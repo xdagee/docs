@@ -23,7 +23,7 @@
     
     
       
-        <title>Project 2.5.1:LED Control with Arduino and Push Button - STEMAIDE Docs</title>
+        <title>Mission 2.5: The Controller - STEMAIDE Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-251led-control-with-arduino-and-push-button" class="md-skip">
+        <a href="#mission-25-the-controller" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Project 2.5.1:LED Control with Arduino and Push Button
+              Mission 2.5: The Controller
             
           </span>
         </div>
@@ -826,124 +826,83 @@
 
 
 
-<h1 id="project-251led-control-with-arduino-and-push-button">Project 2.5.1:LED Control with Arduino and Push Button<a class="headerlink" href="#project-251led-control-with-arduino-and-push-button" title="Permanent link">&para;</a></h1>
-<table>
-<thead>
-<tr>
-<th><strong>Description</strong></th>
-<th>You will learn how to create a simple circuit using an Arduino micro-controller and a push button to turn on and Off</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Use case</strong></td>
-<td>Imagine you want to create an interactive lighting system for your living room using Arduino and push buttons. You want to control the ambiance by turning on specific lights with a simple press of a button.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="components-things-you-will-need">Components (Things You will need)<a class="headerlink" href="#components-things-you-will-need" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th><img alt="LED " src="../../../assets/components/leds.webp" /></th>
-<th><img alt="Arduino Uno" src="../../../assets/components/arduino.webp" /></th>
-<th><img alt="Arduino USB Cable" src="../../../assets/components/usbcable.webp" /></th>
-<th><img alt="Breadboard" src="../../../assets/components/breadboard.webp" /></th>
-<th><img alt="Jumper Wires" src="../../../assets/components/jumperwires.webp" /></th>
-<th><img alt="Push Button" src="../../../assets/components/pushbutton.webp" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="building-the-circuit">Building the circuit<a class="headerlink" href="#building-the-circuit" title="Permanent link">&para;</a></h2>
-<p>Things Needed:</p>
+<h1 id="mission-25-the-controller">Mission 2.5: The Controller<a class="headerlink" href="#mission-25-the-controller" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Role</strong>: Interface Designer<br />
+<strong>Objective</strong>: Create a master switch to control the city lights.</p>
+</blockquote>
+<h2 id="result-preview">Result Preview<a class="headerlink" href="#result-preview" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><img alt="Result GIF" src="Placeholder_for_Button_LED.gif" /><br />
+<em>Press Button -&gt; Light ON. Release -&gt; Light OFF.</em></p>
+</blockquote>
+<hr />
+<h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
+<p>Every machine needs a switch. From nuclear power plants to your toaster, the <strong>Push Button</strong> is the king of control.
+Your mission is to wire a button that gives you total control over the light.</p>
+<h2 id="2-the-toolkit">2. The Toolkit<a class="headerlink" href="#2-the-toolkit" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Arduino Uno = 1</li>
-<li>Arduino USB cable = 1</li>
-<li>Resistor = 1</li>
-<li>Push button = 1</li>
-<li>Red LED = 1</li>
-<li>Blue jumper wire= 1</li>
-<li>Yellow jumper wire= 1</li>
-<li>Black jumper wire= 1</li>
-<li>Red jumper wire= 1</li>
+<li><strong>1x Push Button</strong> (Input)</li>
+<li><strong>1x LED</strong> (Output)</li>
+<li><strong>1x Arduino Uno</strong></li>
 </ul>
-<h2 id="mounting-the-component-on-the-breadboard">Mounting the component on the breadboard<a class="headerlink" href="#mounting-the-component-on-the-breadboard" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Take the breadboard and the red LED and insert the red LED into the vertical connectors on the breadboard.
-<img alt="inseting push button" src="../../../assets/2.0/2.1.Push%20Button%20%2B%20LED/img_1.webp" />.</p>
-<p><strong>step 2:</strong> Connect the pushbutton on the breadboard but make sure the two pair of the pins are connected on each side of the bridge.
-<img alt="inseting the buzzer" src="../../../assets/2.0/2.1.Push%20Button%20%2B%20LED/img_2.webp" />.</p>
-<p><strong>step 3:</strong> Take one resistor and connect one terminal of the resistor to the longer pin of the LED positive terminal (+) on the breadboard and the other pin of the resistor into the vertical connected wholes on the breadboard.
-<img alt="inseting the buzzer" src="../../../assets/2.0/2.1.Push%20Button%20%2B%20LED/img_3.webp" />.</p>
-<p><strong>Note:</strong> NB: This completes the circuit for the LED, allowing current to flow from the digital pin, through the LED and back to ground.</p>
-<h2 id="wiring-the-circuit">WIRING THE CIRCUIT<a class="headerlink" href="#wiring-the-circuit" title="Permanent link">&para;</a></h2>
-<h3 id="things-needed">Things Needed:<a class="headerlink" href="#things-needed" title="Permanent link">&para;</a></h3>
+<h2 id="3-the-blueprint">3. The Blueprint<a class="headerlink" href="#3-the-blueprint" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Blue jumper wire= 1</li>
-<li>Yellow jumper wire= 1</li>
-<li>Black jumper wire= 1</li>
-<li>Red jumper wire= 1</li>
+<li><strong>LED Long Leg (+)</strong> -&gt; <strong>Pin 13</strong></li>
+<li><strong>LED Short Leg (-)</strong> -&gt; <strong>GND</strong></li>
+<li><strong>Button Leg A</strong> -&gt; <strong>Pin 2</strong></li>
+<li><strong>Button Leg B</strong> -&gt; <strong>GND</strong></li>
 </ul>
-<p><strong>step 1:</strong> Connect red male-to-male jumper wire from the free end of the resistor to digital pin (13) on the Arduino UNO.
-<img alt="inseting the buzzer" src="../../../assets/2.0/2.1.Push%20Button%20%2B%20LED/wire_1.webp" />.</p>
-<p><strong>step 2:</strong> Connect Black male-to-male jumper wire from the free end of the LED negative pin power GND (Ground) on the Arduino UNO.
-<img alt="inseting the buzzer" src="../../../assets/2.0/2.1.Push%20Button%20%2B%20LED/wire_2.webp" />.</p>
-<p><strong>step 3:</strong> Connect Yellow male-to-male jumper wire from one Pin of the Push Button as a negative to power GND (Ground) on the Arduino UNO.
-<img alt="inseting the buzzer" src="../../../assets/2.0/2.1.Push%20Button%20%2B%20LED/wire_3.webp" />.</p>
-<p><strong>step 4:</strong> Finally, connect blue male-to-male jumper wire from the other Pin of the push button (not connected to GND) to any digital pin on the Arduino UNO. Let's use digital pin 2 in this tutorial.
-<img alt="inseting the buzzer" src="../../../assets/2.0/2.1.Push%20Button%20%2B%20LED/wire_4.webp" />.</p>
-<h2 id="programming">PROGRAMMING<a class="headerlink" href="#programming" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Open your Arduino IDE. See how to set up here: <a href="../../../getting-started/overview/">Getting Started</a>.</p>
-<p><strong>Step 2:</strong> Type the following codes before the void setup function.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">PushButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">LedPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">buttonState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<blockquote>
+<p><strong>Pro Tip</strong>: Pin 13 has a built-in resistor, so for this specific pin, you <em>can</em> skip the external resistor if you are quick. But adding one is always safer!</p>
+</blockquote>
+<p><img alt="Wiring Diagram" src="../../../assets/2.0/2.1.Push%20Button%20%2B%20LED/wire_4.webp" /></p>
+<h2 id="4-the-logic">4. The Logic<a class="headerlink" href="#4-the-logic" title="Permanent link">&para;</a></h2>
+<p>We use <strong>INPUT_PULLUP</strong>.</p>
+<ul>
+<li><strong>Pressed</strong> = LOW (0V).</li>
+<li><strong>Released</strong> = HIGH (5V).</li>
+</ul>
+<h3 id="the-code">The Code<a class="headerlink" href="#the-code" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 2.5: The Controller</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">buttonPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ledPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">buttonPin</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w"> </span><span class="c1">// Activates internal resistor</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="p">(</span><span class="n">buttonPin</span><span class="p">);</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">state</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="c1">// Button Pressed</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="c1">// Button Released</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="p">}</span>
 </span></code></pre></div>
-<p><img alt="code 1" src="../../../assets/2.0/2.1.Push%20Button%20%2B%20LED/code_1.webp" />.</p>
-<p><strong>Step 3:</strong> After the void setup ()within the curly brackets type the following codes.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w"> </span><span class="n">pinMode</span><span class="w"> </span><span class="p">(</span><span class="n">LedPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w"> </span><span class="n">pinMode</span><span class="w"> </span><span class="p">(</span><span class="n">PushButton</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span>
-</span></code></pre></div>
-<p><img alt="code 3" src="../../../assets/2.0/2.1.Push%20Button%20%2B%20LED/code_2.webp" />.</p>
-<p><strong>Step 4:</strong> : After the (void loop ()) within the curly brackets type</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">buttonState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="w"> </span><span class="p">(</span><span class="n">PushButton</span><span class="p">);</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">buttonState</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">LedPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">LED_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="p">}</span>
-</span></code></pre></div>
-<p><img alt="inseting the buzzer" src="../../../assets/2.0/2.1.Push%20Button%20%2B%20LED/code_3.webp" />.</p>
-<h2 id="uploading-the-code">Uploading the code<a class="headerlink" href="#uploading-the-code" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Save your code. <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section</em></p>
-<p><strong>Step 2:</strong> Select the arduino board and port <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section:Selecting Arduino Board Type and Uploading your code</em>.</p>
-<p><strong>Step 3:</strong> Upload your code. <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section:Selecting Arduino Board Type and Uploading your code</em></p>
-<h2 id="observation">OBSERVATION<a class="headerlink" href="#observation" title="Permanent link">&para;</a></h2>
-<p><img alt="inseting the buzzer" src="../../../assets/2.0/2.1.Push%20Button%20%2B%20LED/obsev_1.webp" />.
-<img alt="inseting the buzzer" src="../../../assets/2.0/2.1.Push%20Button%20%2B%20LED/obsev_2.webp" />.</p>
-<h2 id="push-button-to-turn-off-led">Push Button to turn off LED.<a class="headerlink" href="#push-button-to-turn-off-led" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Clear the previous code under void loop and type</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">If</span><span class="w"> </span><span class="p">(</span><span class="n">buttonState</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">LedPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">   </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">LedPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">   </span><span class="p">}</span>
-</span></code></pre></div>
-<h2 id="conclusion">CONCLUSION<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
-<p>The conclusion This Project is that, by connecting a push button and an LED to an Arduino board, you can create a circuit that allows you to turn on the LED when the push button is pressed. The circuit uses the digital input and output capabilities of the Arduino to detect the state of the push button and control the LED accordingly.
-By writing a simple Arduino code, the program continuously checks the state of the push button. When the button is pressed (reads LOW), the LED is toggled on or off by changing the state of the output pin connected to the LED. This allows the LED to turn on when the push button is pressed and turn off when it is released.
-This example serves as a basic introduction to using input and output devices with an Arduino board. It demonstrates the concept of digital input from the push button and digital output to control the LED. With this foundation, you can further explore and expand your knowledge in electronics and programming by incorporating additional sensors, actuators, or complex logic into your Arduino projects.</p>
+<h2 id="5-upload-test">5. Upload &amp; Test<a class="headerlink" href="#5-upload-test" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Upload the code.</li>
+<li>Press the button.</li>
+<li>Feel the power.</li>
+</ol>
+<h2 id="6-troubleshooting">6. Troubleshooting<a class="headerlink" href="#6-troubleshooting" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Light works backwards?</strong> (OFF when pressed?)</li>
+<li>Change <code>if (state == LOW)</code> to <code>if (state == HIGH)</code>. But remember, <code>LOW</code> is technically "Pressed" in this wiring.</li>
+<li><strong>Nothing happens?</strong></li>
+<li>Ensure the Button is connected to <strong>GND</strong>, not 5V.</li>
+</ul>
+<h2 id="7-extensions-upgrades">7. Extensions &amp; Upgrades<a class="headerlink" href="#7-extensions-upgrades" title="Permanent link">&para;</a></h2>
+<p><strong>Challenge</strong>: The Toggle</p>
+<ul>
+<li><strong>Upgrade</strong>: Can you make it so one press turns it ON and it <em>stays</em> ON until you press it again?</li>
+</ul>
 
 
 

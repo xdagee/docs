@@ -23,7 +23,7 @@
     
     
       
-        <title>Project 2.14.1: OPERATING A SOUND SENSOR AND LED WITH STEMAIDE - STEMAIDE Docs</title>
+        <title>Mission 2.14: The Voice Commander - STEMAIDE Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-2141-operating-a-sound-sensor-and-led-with-stemaide" class="md-skip">
+        <a href="#mission-214-the-voice-commander" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Project 2.14.1: OPERATING A SOUND SENSOR AND LED WITH STEMAIDE
+              Mission 2.14: The Voice Commander
             
           </span>
         </div>
@@ -826,153 +826,100 @@
 
 
 
-<h1 id="project-2141-operating-a-sound-sensor-and-led-with-stemaide">Project 2.14.1: OPERATING A SOUND SENSOR AND LED WITH STEMAIDE<a class="headerlink" href="#project-2141-operating-a-sound-sensor-and-led-with-stemaide" title="Permanent link">&para;</a></h1>
-<table>
-<thead>
-<tr>
-<th><strong>Description</strong></th>
-<th>You will learn how to turn ON three LED's with response to sound.</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Use case</strong></td>
-<td>Flickering lights in response to sound beats from a speaker.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="components-things-you-will-need">Components (Things You will need)<a class="headerlink" href="#components-things-you-will-need" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th><img alt="Arduino Uno" src="../../../assets/components/arduino.webp" /></th>
-<th><img alt="Arduino USB Cable" src="../../../assets/components/usbcable.webp" /></th>
-<th><img alt="Breadboard" src="../../../assets/components/breadboard.webp" /></th>
-<th><img alt="Jump wire" src="../../../assets/components/jumperwires.webp" /></th>
-<th><img alt="Traffic Light Module" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Traffic_Light_Module.webp" /></th>
-<th><img alt="Sound Sensor" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/SoundSensor.webp" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="building-the-circuit">Building the circuit<a class="headerlink" href="#building-the-circuit" title="Permanent link">&para;</a></h2>
-<p>Things Needed:</p>
+<h1 id="mission-214-the-voice-commander">Mission 2.14: The Voice Commander<a class="headerlink" href="#mission-214-the-voice-commander" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Role</strong>: Interface Specialist<br />
+<strong>Objective</strong>: Control traffic lights with your voice.</p>
+</blockquote>
+<h2 id="result-preview">Result Preview<a class="headerlink" href="#result-preview" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><img alt="Result GIF" src="Placeholder_for_Voice_Commander.gif" /><br />
+<em>Shout "CHANGE!" -&gt; Light cycles Green to Red.</em></p>
+</blockquote>
+<hr />
+<h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
+<p>Buttons are old school. In the future, we speak to our city.
+Your mission is to make the Traffic Light change color when it hears a loud command.</p>
+<h2 id="2-the-toolkit">2. The Toolkit<a class="headerlink" href="#2-the-toolkit" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Arduino Uno = 1  </li>
-<li>Arduino USB cable = 1</li>
-<li>Sound Sensor  = 1</li>
-<li>Traffic module= 1</li>
-<li>Red jumper wire = 1</li>
-<li>Black jumper wire = 1</li>
-<li>Green jumper wire = 1</li>
-<li>Brown jumper wire = 1</li>
-<li>Purple jumper wire = 1</li>
-<li>Yellow jumper wire = 1</li>
-<li>Orange jumper wire = 1</li>
-<li>Blue jumper wire = 1</li>
-<li>Breadboard = 1</li>
+<li><strong>1x Sound Sensor</strong> (Input)</li>
+<li><strong>1x Traffic Light Module</strong> (Output)</li>
+<li><strong>1x Arduino Uno</strong></li>
 </ul>
-<h2 id="mounting-the-component-on-the-breadboard">Mounting the component on the breadboard<a class="headerlink" href="#mounting-the-component-on-the-breadboard" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Take the Sound Sensor and the breadboard, insert the Sound Sensor into the horizontal connectors on the breadboard.</p>
-<p><img alt="Step1" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Step1pic.webp" /></p>
-<p><strong>Step 2:</strong> Take the traffic light module and insert it into the horizontal connectors on the breadboard as shown in the picture below:</p>
-<p><img alt="Picture2" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Step2pic2.webp" /></p>
-<h2 id="wiring-the-components">WIRING THE COMPONENTS<a class="headerlink" href="#wiring-the-components" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Take the blue male-to-male jumper wire, connect one end of the wire to the AO port in front of the sound sensor and the other end to the A0 port on the Arduino Uno, as shown in the picture below:</p>
-<p><img alt="Picture3" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Wiringpic1.webp" /></p>
-<p><strong>Step 2:</strong> Take the purple male-to-male jumper wire, connect one end of the wire to the “G” port in front of the sound sensor and the other end to the GND on the Arduino Uno, as shown in the picture below.</p>
-<p><img alt="Picture4" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Wiringpic2.webp" /></p>
-<p><strong>Step 3:</strong> Take the white male-to-male jumper wire. Connect one end to the “+” port in front of the sound sensor and the other end to the 5V port on the Arduino Uno, as shown in the picture below.</p>
-<p><img alt="Picture5" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Wiringpic3.webp" /></p>
-<p><strong>Step 4:</strong> Take the green male-to-male jumper wire, connect one end of the wire to the “DO” port in front of the sound sensor and the other end to digital pin 4 on the Arduino Uno, as shown in the picture below.</p>
-<p><img alt="Picture6" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Wiringpic4.webp" /></p>
-<p><strong>Step 5:</strong> Take the green male-to-male jumper wire. Connect one end to the “G” port in front of the traffic light and the other end to digital pin 7 on the Arduino Uno, as shown in the picture below.</p>
-<p><img alt="Picture7" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Wiringpic5.webp" /></p>
-<p><strong>Step 6:</strong> Take the yellow male-to-male jumper wire, connect one end of the wire to the “Y” port in front of the sound sensor and the other end to digital pin 6 on the Arduino Uno, as shown in the picture below.</p>
-<p><img alt="Picture8" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Wiringpic6.webp" /></p>
-<p><strong>Step 7:</strong> Take the orange male-to-male jumper wire. Connect one end to the “R” port in front of the traffic light and the other end to digital pin 5 on the Arduino Uno, as shown in the picture below.</p>
-<p><img alt="Picture9" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Wiringpic7.webp" /></p>
-<p><strong>Step 8:</strong> Take the blue male-to-male jumper wire, connect one end of the wire to the “GND” port in front of the traffic light and the other end to the GND port on the Arduino Uno, as shown in the picture below.</p>
-<p><img alt="Picture10" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Wiringpic8.webp" /></p>
-<h2 id="programming">PROGRAMMING<a class="headerlink" href="#programming" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Open your Arduino IDE. See how to set up here: <a href="../../../getting-started/overview/">Getting Started</a>.</p>
-<p><strong>Step 2:</strong> Type <code>const int SoundSensorAPin = A0; const int SoundSensorDOPIN = 4;</code> as shown in the picture below.</p>
-<p><img alt="Programpic1" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Programphic1.webp" /></p>
-<p><em><strong>NB:</strong> Make sure you avoid errors when typing. Do not omit any character or symbol especially the bracket {} and semicolons; and place them as you see in the image. The code that comes after the two  backslashes “//” are called comments. They are not part of the code that will be run, they only explain the lines of code. You can avoid typing them.</em></p>
-<p><strong>Step 3:</strong> Type <code>const int redPin = 7;</code> as shown below in the image.</p>
-<p><img alt="Programpic2" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Programphic2.webp" /></p>
-<p><strong>Step 4:</strong> Type <code>const int yellowPin = 6;</code> as shown below in the image.</p>
-<p><img alt="Programpic3" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Programphic3.webp" /></p>
-<p><strong>Step 5:</strong> Type <code>const int greenPin = 7;</code> as shown below in the image.</p>
-<p><img alt="Programpic4" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Programphic4.webp" /></p>
-<p><strong>Step 6:</strong> In the { } after the void setup (),
-Type
-<code>cpp
- pinMode (redPin, OUTPUT);
-pinMode (yellowPin, OUTPUT);
-pinMode (greenPin, OUTPUT);
-pinMode (soundSensorDOPin, INPUT);</code> 
-as shown below in the image.</p>
-<p><img alt="Programpic5" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Programphic5.webp" /></p>
-<p><strong>Step 7:</strong> In the { } after the void setup (), Type <code>Serial.begin(9600);</code> as shown below in the image.</p>
-<p><img alt="Programpic6" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Programphic6.webp" /></p>
-<p><strong>Step 8:</strong> In the {} after the void loop (), Type </p>
-<div class="codehilite"><pre><span></span><code>``` cpp
-    int soundValue = analogRead (SoundSensorAPin); 
-    int digitalValue= digitalRead (SoundSensorDOPin); 
-``` as shown below in the image.
-</code></pre></div>
-
-<p><img alt="Programpic7" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Programphic7.webp" /></p>
+<h2 id="3-the-blueprint">3. The Blueprint<a class="headerlink" href="#3-the-blueprint" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The above code reads data from the Soundsensor Pin.</li>
+<li><strong>Sound Analog</strong>: A0</li>
+<li><strong>Traffic Lights</strong>: 7 (R), 6 (Y), 5 (G) <em>[Note: Swapped from previous missions to match legacy wiring image if needed, but let's standardize]</em></li>
+<li>Let's stick to Standard: <strong>R=5, Y=6, G=7</strong>.</li>
 </ul>
-<p><strong>Step 9:</strong> Type 
-        <code>cpp 
-           Serial.print(“Sound Value:”);
-            Serial.printIn(soundValue);</code> as shown below in the image.</p>
-<p><img alt="Programpic8" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Programphic8.webp" /></p>
-<p><strong>Step 10:</strong> Type <code>if (soundValue &gt; 100) {  } ;</code> as shown below in the image.</p>
-<p><img alt="Programpic9" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Programphic9.webp" /></p>
-<p><strong>Step 11:</strong> Type 
-       <code>cpp
-           digitalWrite (redPin, HIGH); 
-           digitalWrite (yellowPin, LOW);
-           digitalWrite (greenPin, LOW);
-           delay (500);</code> as shown below in the image.</p>
-<p><img alt="Programpic10" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Programphic10.webp" /></p>
-<p><strong>Step 12:</strong> Type
-            <code>cpp
-            digitalWrite (redPin, LOW); 
-            digitalWrite (yellowPin, HIGH);
-            digitalWrite (greenPin, LOW);
-             delay (500);</code> as shown below in the image.</p>
-<p><img alt="Programpic11" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Programphic11.webp" /></p>
-<p><strong>Step 13:</strong> Type 
-        <code>cpp
-           digitalWrite (yellowPin, LOW); 
-           digitalWrite (greenPin, HIGH);
-           digitalWrite (redPin, LOW);
-           delay (500);</code> as shown below in the image.</p>
-<p><img alt="Programpic12" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Programphic12.webp" /></p>
-<p><strong>Step 14:</strong> Type 
-        <code>cpp
-          else {
-             digitalWrite (BLUE_PIN, HIGH);
-             digitalWrite (RED_PIN, LOW);
-             digitalWrite (GREEN_PIN, LOW);  }</code> as shown below in the image.</p>
-<p><img alt="Programpic13" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Programphic13.webp" /></p>
-<h2 id="conclusion">CONCLUSION<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
-<p>If you encounter any problem when trying to upload your code to the board, run through your code again to check for any errors or missing lines of code. If you do not encounter any problem and the program runs as expected, Congratulations on a job well done. </p>
+<p><img alt="Wiring Diagram" src="../../../assets/2.0/7.3.SoundSensor%20%2B%20Traffic/Wiringpic8.webp" /></p>
+<h2 id="4-the-logic">4. The Logic<a class="headerlink" href="#4-the-logic" title="Permanent link">&para;</a></h2>
+<p><strong>Algorithm:</strong></p>
+<ol>
+<li><strong>Wait</strong>: Light is Red by default.</li>
+<li><strong>Listen</strong>: If Sound &gt; Threshold:<ul>
+<li>Cycle Green -&gt; Yellow -&gt; Red.</li>
+<li>Wait a bit.</li>
+</ul>
+</li>
+</ol>
+<h3 id="the-code">The Code<a class="headerlink" href="#the-code" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 2.14: Voice Commander</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">soundPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A0</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">red</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">yellow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">green</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">yellow</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="c1">// Start Red</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">}</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">noise</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">soundPin</span><span class="p">);</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">noise</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">500</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="c1">// COMMAND RECEIVED!</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="n">cycleLights</span><span class="p">();</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="p">}</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="kt">void</span><span class="w"> </span><span class="nf">cycleLights</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">  </span><span class="c1">// Go Green</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">  </span><span class="c1">// Go Yellow</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">yellow</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">  </span><span class="c1">// Go Red</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">yellow</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">  </span><span class="c1">// Debounce (Don&#39;t trigger again immediately)</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="5-upload-test">5. Upload &amp; Test<a class="headerlink" href="#5-upload-test" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Upload code.</li>
+<li>Wait for Red.</li>
+<li>Shout "GO!"</li>
+<li>Watch the magic.</li>
+</ol>
+<h2 id="6-troubleshooting">6. Troubleshooting<a class="headerlink" href="#6-troubleshooting" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Too sensitive?</strong> Increase <code>500</code>.</li>
+<li><strong>Not sensitive enough?</strong> Decrease <code>500</code> or turn the potentiometer.</li>
+</ul>
 
 
 

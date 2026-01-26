@@ -23,7 +23,7 @@
     
     
       
-        <title>Project 3.4.1: SMART STREET LIGHT SYSTEM - STEMAIDE Docs</title>
+        <title>Mission 3.4: Adaptive Home Lighting - STEMAIDE Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-341-smart-street-light-system" class="md-skip">
+        <a href="#mission-34-adaptive-home-lighting" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Project 3.4.1: SMART STREET LIGHT SYSTEM
+              Mission 3.4: Adaptive Home Lighting
             
           </span>
         </div>
@@ -826,110 +826,83 @@
 
 
 
-<h1 id="project-341-smart-street-light-system">Project 3.4.1: SMART STREET LIGHT SYSTEM<a class="headerlink" href="#project-341-smart-street-light-system" title="Permanent link">&para;</a></h1>
-<table>
-<thead>
-<tr>
-<th><strong>Description</strong></th>
-<th>The Smart Street Light System is a simple project designed to automatically control lighting based on environmental conditions, such as light intensity.</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Use case</strong></td>
-<td>This project finds utility in providing basic automatic and energy-efficient lighting tailored to specific needs.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="components-things-you-will-need">Components (Things You will need)<a class="headerlink" href="#components-things-you-will-need" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th><img alt="LED" src="../../../assets/components/leds.webp" /></th>
-<th><img alt="Arduino Uno" src="../../../assets/components/arduino.webp" /></th>
-<th><img alt="Arduino USB Cable" src="../../../assets/components/usbcable.webp" /></th>
-<th><img alt="Breadboard" src="../../../assets/components/breadboard.webp" /></th>
-<th><img alt="LDR" src="../../../assets/components/ldr.webp" /></th>
-<th><img alt="Resistor" src="../../../assets/components/resistors.webp" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="building-the-circuit">Building the circuit<a class="headerlink" href="#building-the-circuit" title="Permanent link">&para;</a></h2>
-<p>Components Required:</p>
+<h1 id="mission-34-adaptive-home-lighting">Mission 3.4: Adaptive Home Lighting<a class="headerlink" href="#mission-34-adaptive-home-lighting" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Role</strong>: Smart Home Architect<br />
+<strong>Objective</strong>: Lights that gently turn ON when it gets dark.</p>
+</blockquote>
+<h2 id="result-preview">Result Preview<a class="headerlink" href="#result-preview" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><img alt="Result GIF" src="Placeholder_for_Adaptive_Light.gif" /><br />
+<em>Sun sets -&gt; Light turns ON.</em></p>
+</blockquote>
+<hr />
+<h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
+<p>Why fumble for switches in the dark? A smart home should know when you need light.
+Your mission is to use the <strong>LDR (Light Dependent Resistor)</strong> to control your room light automatically.</p>
+<h2 id="2-the-toolkit">2. The Toolkit<a class="headerlink" href="#2-the-toolkit" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Arduino Uno Board: 1</li>
-<li>Arduino USB Cable: 1</li>
-<li>Breadboard:1</li>
-<li>White LED: 1</li>
-<li>Light Dependent Resistor(LDR) : 1</li>
-<li>Resistor : 1</li>
-<li>Jumper wire (red, blue, white and black male-to-male)</li>
+<li><strong>1x LDR Sensor</strong> (Input)</li>
+<li><strong>1x LED</strong> (Output)</li>
+<li><strong>1x Resistor</strong> (10k Ohm or 220 Ohm depending on circuit)</li>
+<li><strong>1x Arduino Uno</strong></li>
 </ul>
-<h2 id="mounting-components-on-the-breadboard">MOUNTING COMPONENTS ON THE BREADBOARD<a class="headerlink" href="#mounting-components-on-the-breadboard" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Take the breadboard, and insert  the white LED into the vertical connectors of the breadboard.</p>
-<p><img alt="LDR fixed on beardboard" src="../../../assets/3.0/Smart_Street_Light_System/circuit.webp" /></p>
-<p><strong>Step 2:</strong> Insert the resistor into the vertical connectors on the breadboard. Insert one side of the resistor under the positive pin of the LED on the breadboard.</p>
-<p><img alt="LDR fixed on beardboard" src="../../../assets/3.0/Smart_Street_Light_System/circuit_2.webp" /></p>
-<p><strong>Step 3</strong> Insert the Light Dependent Resistor(LDR) into the vertical connectors of the breadboard.</p>
-<p><img alt="LDR fixed on beardboard" src="../../../assets/3.0/Smart_Street_Light_System/circuit_8.webp" /></p>
-<p><em><strong>NB</strong> Make sure you identify where the positive pin (+) and the negative pin (-) is connected to on the breadboard. The longer pin of the LED is the positive pin and the shorter one, the negative PIN</em></p>
-<h2 id="wiring-the-circuit">WIRING THE CIRCUIT<a class="headerlink" href="#wiring-the-circuit" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> : Connect one end of red male-to-male jumper wire to VCC of the LDR on the breadboard and the other end to 5V on the Arduino UNO board.</p>
-<p><img alt="LDR fixed on beardboard" src="../../../assets/3.0/Smart_Street_Light_System/circuit_3.webp" /></p>
-<p><strong>Step 2:</strong> : Connect one end of the blue male-to-male jumper to the OUTPUT of the LDR on the breadboard and the other end to A0 on the Arduino UNO board.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/3.0/Smart_Street_Light_System/circuit_4.webp" />.</p>
-<p><strong>Step 3:</strong> : Connect one end of the black male-to-male jumper to GND of the LDR on the breadboard and the other end to GND on the Arduino UNO board.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/3.0/Smart_Street_Light_System/circuit_5.webp" />.</p>
-<p><strong>Step 4:</strong> Connect one end of the white male-to-male jumper wire to the positive pin of LED on the bread board to digital pin number 6 on the Arduino UNO board through the resistor as shown below.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/3.0/Smart_Street_Light_System/circuit_6.webp" />.</p>
-<p><strong>Step 5:</strong> Connect one end of the white male-to-male jumper wire to the negative pin of the LED on the breadboard and the other end to GND on the Arduino UNO.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/3.0/Smart_Street_Light_System/circuit_7.webp" />.</p>
-<p><em>Make sure to connect the Arduino Board to the Laptop USB port using the USB cable in the Kit</em></p>
-<h2 id="programming">PROGRAMMING<a class="headerlink" href="#programming" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Open your Arduino IDE. See how to set up here: <a href="../../../getting-started/overview/">Getting Started</a>.</p>
-<p><strong>Step 2:</strong> Type the code into the Arduino IDE workspace</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ledPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="c1">// put your setup code here, to run once:</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w"> </span><span class="n">pinMode</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w"> </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">ldrPin</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT</span><span class="p">);</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">}</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="c1">// put your main code here, to run repeatedly:</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">lightLevel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">ldrPin</span><span class="p">);</span>
+<h2 id="3-the-blueprint">3. The Blueprint<a class="headerlink" href="#3-the-blueprint" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>LDR Analog</strong>: Pin A0</li>
+<li><strong>LED Positive</strong>: Pin 6</li>
+<li><strong>LED Negative</strong>: GND</li>
+<li><strong>VCC/GND</strong>: 5V/GND</li>
+</ul>
+<p><img alt="LDR fixed on beardboard" src="../../../assets/3.0/Smart_Street_Light_System/circuit_7.webp" /></p>
+<h2 id="4-the-logic">4. The Logic<a class="headerlink" href="#4-the-logic" title="Permanent link">&para;</a></h2>
+<p><strong>Algorithm:</strong></p>
+<ol>
+<li><strong>Read Light Level</strong>.</li>
+<li><strong>Logic</strong>: If Darkness Detected (&lt; Threshold), Turn LED ON.<ul>
+<li><em>Note</em>: The original legacy code had this backwards (<code>&gt; 500</code>). Usually, low reading = dark.</li>
+</ul>
+</li>
+<li><strong>Bonus</strong>: Use <code>analogWrite</code> to fade it in!</li>
+</ol>
+<h3 id="the-code">The Code<a class="headerlink" href="#the-code" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 3.4: Smart Bed Light</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ldrPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A0</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ledPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">brightness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">ldrPin</span><span class="p">);</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Brightness: &quot;</span><span class="p">);</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">brightness</span><span class="p">);</span>
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Light Level: &quot;</span><span class="p">);</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">lightLevel</span><span class="p">);</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">lightLevel</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">500</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Adjust threshold based on your environment</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// Turn LED on</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">   </span><span class="c1">// Turn LED off</span>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="c1">// If it&#39;s DARK (Low number)</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">brightness</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">300</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// Turn Light ON</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">  </span><span class="c1">// Turn Light OFF</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="p">}</span>
 </span></code></pre></div>
-<h2 id="conclusion">CONCLUSION<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
-<p>In a summary, the Smart Street Light project demonstrates a simple yet effective approach to automating 
-lighting using Arduino. By utilizing an LDR to detect ambient light levels, this system can intelligently control LEDs, 
-ensuring energy efficiency and convenience. </p>
+<h2 id="5-upload-test">5. Upload &amp; Test<a class="headerlink" href="#5-upload-test" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Upload code.</li>
+<li>Cover the sensor. The light should turn ON.</li>
+<li>Uncover. The light should turn OFF.</li>
+</ol>
+<h2 id="6-troubleshooting">6. Troubleshooting<a class="headerlink" href="#6-troubleshooting" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Opposite behavior?</strong></li>
+<li>Change <code>&lt; 300</code> to <code>&gt; 300</code>. Some LDR modules are wired differently (pull-up vs pull-down).</li>
+<li><strong>Flickering?</strong></li>
+<li>Add a small "buffer" (hysteresis) or just tweak the threshold.</li>
+</ul>
 
 
 

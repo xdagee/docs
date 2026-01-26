@@ -23,7 +23,7 @@
     
     
       
-        <title>Project 1.4.6: Trafic Light Green Blink Only - STEMAIDE Docs</title>
+        <title>Mission 1.23: The Awareness Pulse - STEMAIDE Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-146-trafic-light-green-blink-only" class="md-skip">
+        <a href="#mission-123-the-awareness-pulse" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Project 1.4.6: Trafic Light Green Blink Only
+              Mission 1.23: The Awareness Pulse
             
           </span>
         </div>
@@ -826,94 +826,66 @@
 
 
 
-<h1 id="project-146-trafic-light-green-blink-only">Project 1.4.6: Trafic Light Green Blink Only<a class="headerlink" href="#project-146-trafic-light-green-blink-only" title="Permanent link">&para;</a></h1>
-<table>
-<thead>
-<tr>
-<th><strong>Description</strong></th>
-<th>This is where you will learn how to make the green LED blink.</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Use case</strong></td>
-<td>This could be a system that would make the green LED on the traffic light blink to create more awareness or signal that it’s time to move since sometimes, drivers have their attention off when in traffic.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="components-things-you-will-need">Components (Things You will need)<a class="headerlink" href="#components-things-you-will-need" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th><img alt="Traffic light module " src="../../../assets/components/trafficmodule.webp" /></th>
-<th><img alt="Arduino Uno" src="../../../assets/components/arduino.webp" /></th>
-<th><img alt="Arduino USB Cable" src="../../../assets/components/usbcable.webp" /></th>
-<th><img alt="Breadboard" src="../../../assets/components/breadboard.webp" /></th>
-<th><img alt="Jumper Wires" src="../../../assets/components/jumperwires.webp" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="building-the-circuit">Building the circuit<a class="headerlink" href="#building-the-circuit" title="Permanent link">&para;</a></h2>
-<p>Things Needed:</p>
+<h1 id="mission-123-the-awareness-pulse">Mission 1.23: The Awareness Pulse<a class="headerlink" href="#mission-123-the-awareness-pulse" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Role</strong>: Attention Specialist<br />
+<strong>Objective</strong>: Use a pulsing Green light to wake up distracted drivers.</p>
+</blockquote>
+<h2 id="result-preview">Result Preview<a class="headerlink" href="#result-preview" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><img alt="Result GIF" src="Placeholder_for_Traffic_Green_Blink.gif" /><br />
+<em>The Green light pulses to grab attention.</em></p>
+</blockquote>
+<hr />
+<h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
+<p>Sometimes drivers are distracted while waiting in traffic. A pulsing Green light can grab their attention more effectively than a steady one.
+Your mission is to program the "GO" signal to pulse, ensuring everyone notices when the road opens.</p>
+<h2 id="2-the-toolkit">2. The Toolkit<a class="headerlink" href="#2-the-toolkit" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Arduino Uno = 1</li>
-<li>Arduino USB cable = 1</li>
-<li>Traffic light module = 1</li>
-<li>green jumper wires = 1</li>
-<li>White jumper wire= 1</li>
+<li><strong>1x Traffic Light Module</strong></li>
+<li><strong>1x Arduino Uno</strong></li>
+<li><strong>4x Jumper Wires</strong></li>
 </ul>
-<h2 id="mounting-the-component-on-the-breadboard">Mounting the component on the breadboard<a class="headerlink" href="#mounting-the-component-on-the-breadboard" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Take the Traffic light and the breadboard, insert the Traffic light into the horizontal connectors on the breadboard.</p>
-<p><img alt="Trafic Light fixed on breadboard" src="../../../assets/1.0/Traffic_Light_Module/Traffic_Light_Red_On/Trafic_Light_image_1.webp" />.</p>
-<h2 id="wiring-the-circuit">WIRING THE CIRCUIT<a class="headerlink" href="#wiring-the-circuit" title="Permanent link">&para;</a></h2>
-<h3 id="things-needed">Things Needed:<a class="headerlink" href="#things-needed" title="Permanent link">&para;</a></h3>
+<h2 id="3-the-blueprint">3. The Blueprint<a class="headerlink" href="#3-the-blueprint" title="Permanent link">&para;</a></h2>
 <ul>
-<li>green male-male-to-male jumper wires = 1</li>
-<li>White jumper wire = 1</li>
+<li><strong>G (Green)</strong> -&gt; <strong>Pin 7</strong></li>
+<li><strong>GND</strong> -&gt; <strong>GND</strong></li>
 </ul>
-<p><strong>step 1:</strong> Take the green jumper wire. This wire will connect the Arduino UNO the green light (green pin) of the traffic light. This pin is labeled “G” on the traffic light.</p>
-<p><strong>step 2:</strong> Connect one end of the green jumper wire to R pin of traffic light on the breadboard. Ensure you put the pin in the right hole.</p>
-<p><strong>step 3:</strong> Connect the other end of the green jumper wire to pin number 5 on the Arduino UNO.</p>
-<p><img alt="Trafic Light fixed on breadboard" src="../../../assets/1.0/Traffic_Light_Module/Traffic_Light_Red_On/green1.webp" />.</p>
-<p><strong>step 4:</strong> Take the white jumper wire and connect one end to the GND pin of the traffic light.</p>
-<p><strong>step 5:</strong> Connect the other end of the white jumper wire to GND on the Arduino UNO.</p>
-<p><img alt="Trafic Light fixed on breadboard" src="../../../assets/1.0/Traffic_Light_Module/Traffic_Light_Red_On/green2.webp" />.</p>
-<h2 id="programming">PROGRAMMING<a class="headerlink" href="#programming" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Open your Arduino IDE. See how to set up here: <a href="../../../getting-started/overview/">Getting Started</a>.</p>
-<p><strong>Step 2:</strong> Type <code>const int green = 7;</code> before the void setup function.</p>
-<p><img alt="Pinmode decalration" src="../../../assets/1.0/Traffic_Light_Module/Traffic_Light_Red_On/green_code_1.webp" />.</p>
-<p><strong>Step 3:</strong> Type the following codes in the void setup function as shown below;</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">pinMode</span><span class="w"> </span><span class="p">(</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<p><img alt="Wiring Diagram" src="../../../assets/1.0/Traffic_Light_Module/Traffic_Light_Red_On/green2.webp" /></p>
+<h2 id="4-the-logic">4. The Logic<a class="headerlink" href="#4-the-logic" title="Permanent link">&para;</a></h2>
+<p><strong>Algorithm:</strong></p>
+<ol>
+<li>Turn Pin 7 ON.</li>
+<li>Wait 400ms.</li>
+<li>Turn Pin 7 OFF.</li>
+<li>Wait 400ms.</li>
+</ol>
+<h3 id="the-code">The Code<a class="headerlink" href="#the-code" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 1.23: The Awareness Pulse</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">green</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">400</span><span class="p">);</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">400</span><span class="p">);</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">}</span>
 </span></code></pre></div>
-<p><img alt="Trafic pinMode" src="../../../assets/1.0/Traffic_Light_Module/Traffic_Light_Red_On/green_code_2.webp" />.</p>
-<p><strong>Step 4:</strong> Type the following codes in the void loop function as shown below;</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
-</span></code></pre></div>
-<p><img alt="Truning On the Trafic ligth " src="../../../assets/1.0/Traffic_Light_Module/Traffic_Light_Red_On/green_code_3.webp" />.</p>
-<p>The digitalWrite () function controls the state of the pin. The pin can either be HIGH or LOW. The HIGH state turns on the LED. As a result, the code below turns on the LED.</p>
-<p><strong>Step 5:</strong> Now, let's introduce a delay by typing <code>delay(400);</code> exactly as shown in the image below.
-<img alt="Truning OFF the Trafic ligth " src="../../../assets/1.0/Traffic_Light_Module/Traffic_Light_Red_On/green_code_5.webp" />.</p>
-<p><strong>Step 6:</strong> : Type <code>digitalWrite (green, LOW);</code> exactly as shown in the image below.
-<img alt="Truning OFF the Trafic ligth " src="../../../assets/1.0/Traffic_Light_Module/Traffic_Light_Red_On/green_code_6.webp" />.</p>
-<p><strong>Step 7:</strong> Now, let's finish up with a delay by typing <code>delay(400);</code> exactly as shown in the image below.
-<img alt="Truning OFF the Trafic ligth " src="../../../assets/1.0/Traffic_Light_Module/Traffic_Light_Red_On/green_code_7.webp" />.</p>
-<h2 id="uploading-the-code">Uploading the code<a class="headerlink" href="#uploading-the-code" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Save your code. <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section</em></p>
-<p><strong>Step 2:</strong> Select the arduino board and port <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section:Selecting Arduino Board Type and Uploading your code</em>.</p>
-<p><strong>Step 3:</strong> Upload your code. <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section:Selecting Arduino Board Type and Uploading your code</em></p>
-<h2 id="observation">OBSERVATION<a class="headerlink" href="#observation" title="Permanent link">&para;</a></h2>
-<p>When the circuit is functioning, observe the green LED of the tgrafic ligth blinking as expected. This indicates that the LED is receiving the signal correctly from the Arduino and is operating as intended.</p>
-<h2 id="conclusion">CONCLUSION<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
-<p>In brief, the project centered on creating a blinking green light within a simulated traffic light system provides an instructive introduction to controlled visual signaling. By programming the green LED to blink, participants gain insights into timing control, code logic, and the role of dynamic visual cues. This endeavor serves as a cornerstone in electronics exploration, showcasing the concept of rhythmic signaling and fostering curiosity about practical applications, such as traffic flow management and automation.</p>
+<h2 id="5-upload-test">5. Upload &amp; Test<a class="headerlink" href="#5-upload-test" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Upload the code.</li>
+<li>Watch the signal. Does it feel like an invitation to move?</li>
+<li><strong>Master Challenge</strong>: Can you combine everything? Red ON (2s) -&gt; Yellow ON (1s) -&gt; Green ON (2s) -&gt; Loop.</li>
+</ol>
+<h2 id="6-troubleshooting">6. Troubleshooting<a class="headerlink" href="#6-troubleshooting" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>No blinking?</strong> Check the spelling of <code>digitalWrite</code> and <code>delay</code>. Code is case-sensitive!</li>
+<li><strong>Green light not working?</strong> Ensure your wire labeled 'G' on the module is connected to <strong>Pin 7</strong> on the Arduino.</li>
+</ul>
 
 
 
