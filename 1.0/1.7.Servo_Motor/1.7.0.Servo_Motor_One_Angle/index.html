@@ -23,7 +23,7 @@
     
     
       
-        <title>Project 1.7: The Robot Arm (Servo Motor) - STEMAIDE Docs</title>
+        <title>Mission 1.7: The Robot Arm (Servo) - STEMAIDE Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-17-the-robot-arm-servo-motor" class="md-skip">
+        <a href="#mission-17-the-robot-arm-servo" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Project 1.7: The Robot Arm (Servo Motor)
+              Mission 1.7: The Robot Arm (Servo)
             
           </span>
         </div>
@@ -826,112 +826,89 @@
 
 
 
-<h1 id="project-17-the-robot-arm-servo-motor">Project 1.7: The Robot Arm (Servo Motor)<a class="headerlink" href="#project-17-the-robot-arm-servo-motor" title="Permanent link">&para;</a></h1>
-<h2 id="1-the-concept-precision-movement">1. The Concept: Precision Movement<a class="headerlink" href="#1-the-concept-precision-movement" title="Permanent link">&para;</a></h2>
-<p><strong>What are we learning?</strong>
-Normal motors spin around and around (like a fan).
-<strong>Servo Motors</strong> are different. They go to a specific <strong>angle</strong> (like 90°) and STOP.
-They are used in robot arms, car wipers, and airplane rudders.</p>
-<p>To control them, we need a special "Toolbox" of code called a <strong>Library</strong>.
-<code>#include &lt;Servo.h&gt;</code></p>
-<h2 id="2-components-needed">2. Components Needed<a class="headerlink" href="#2-components-needed" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="Servo Motor" src="../../../assets/components/servomotor.webp" /></th>
-<th style="text-align: center;"><img alt="Arduino Uno" src="../../../assets/components/arduino.webp" /></th>
-<th style="text-align: center;"><img alt="Jumper Wires" src="../../../assets/components/jumperwires.webp" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><strong>Servo Motor</strong></td>
-<td style="text-align: center;"><strong>Arduino Uno</strong></td>
-<td style="text-align: center;"><strong>Male-to-Male Wires</strong></td>
-</tr>
-</tbody>
-</table>
-<h2 id="3-wiring-the-circuit">3. Wiring the Circuit<a class="headerlink" href="#3-wiring-the-circuit" title="Permanent link">&para;</a></h2>
-<p>The Servo has 3 wires attached to it. They are color-coded:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Wire Color</th>
-<th style="text-align: center;">Connection</th>
-<th style="text-align: center;">Arduino Pin</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><strong>Brown</strong> (or Black)</td>
-<td style="text-align: center;">Ground</td>
-<td style="text-align: center;"><strong>GND</strong></td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Red</strong></td>
-<td style="text-align: center;">Power</td>
-<td style="text-align: center;"><strong>5V</strong></td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Orange</strong> (or Yellow)</td>
-<td style="text-align: center;">Signal</td>
-<td style="text-align: center;"><strong>Pin 10</strong></td>
-</tr>
-</tbody>
-</table>
+<h1 id="mission-17-the-robot-arm-servo">Mission 1.7: The Robot Arm (Servo)<a class="headerlink" href="#mission-17-the-robot-arm-servo" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Role</strong>: Robotics Engineer<br />
+<strong>Objective</strong>: Control a motor that acts like a human joint—moving to precise angles.</p>
+</blockquote>
+<h2 id="result-preview">Result Preview<a class="headerlink" href="#result-preview" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><img alt="Result GIF" src="Placeholder_for_Servo_Wave.gif" /><br />
+<em>The Servo Arm moves: 0° -&gt; 90° -&gt; 180°.</em></p>
+</blockquote>
+<hr />
+<h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
+<p>Normal motors just spin round and round (like a fan). But robots need precision. They need to wave, grab, and walk.
+For this, we use the <strong>Servo Motor</strong>. It doesn't spin; it <strong>points</strong>.</p>
+<h2 id="2-the-toolkit">2. The Toolkit<a class="headerlink" href="#2-the-toolkit" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>1x Micro Servo</strong> (The Muscle)</li>
+<li><strong>3x Jumper Wires</strong> (Male-to-Male)</li>
+<li><strong>1x Arduino Uno</strong></li>
+</ul>
+<h2 id="3-the-blueprint">3. The Blueprint<a class="headerlink" href="#3-the-blueprint" title="Permanent link">&para;</a></h2>
+<p>The Servo has 3 wires. Watch the colors carefully!</p>
+<ul>
+<li><strong>Brown/Black</strong> -&gt; <strong>GND</strong> (Ground)</li>
+<li><strong>Red</strong> -&gt; <strong>5V</strong> (Power)</li>
+<li><strong>Orange/Yellow</strong> -&gt; <strong>Pin 10</strong> (Signal)</li>
+</ul>
 <p><img alt="Servo Wiring" src="../../../assets/1.0/Servo_Motor/One_Angle/orange_10.webp" /></p>
 <blockquote>
-<p><strong>Caution:</strong> Do not force the servo arm with your hands. You might break the gears!</p>
+<p>[!WARNING]
+<strong>Don't force the arm!</strong> turning the servo gears by hand can strip them. Let the code do the moving.</p>
 </blockquote>
-<h2 id="4-the-code">4. The Code<a class="headerlink" href="#4-the-code" title="Permanent link">&para;</a></h2>
-<p>Copy this code into your Arduino IDE.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// 1. Grab the &quot;Toolbox&quot; for servos</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Servo.h&gt;</span><span class="c1"> </span>
+<h2 id="4-the-logic">4. The Logic<a class="headerlink" href="#4-the-logic" title="Permanent link">&para;</a></h2>
+<p>To control a servo, we need a "Translator" (a Library) called <code>&lt;Servo.h&gt;</code>.</p>
+<p><strong>Step-by-Step:</strong></p>
+<ol>
+<li><strong>Include</strong>: Load the library.</li>
+<li><strong>Attach</strong>: Tell the Arduino the Servo is slightly different from an LED. It's on Pin 10.</li>
+<li><strong>Write</strong>: Send an angle (0 to 180).</li>
+</ol>
+<h3 id="the-code">The Code<a class="headerlink" href="#the-code" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 1.7: Robot Arm</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Servo.h&gt;</span><span class="c1">  // Load the Toolbox</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// 2. Give our servo a name</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">Servo</span><span class="w"> </span><span class="n">myArm</span><span class="p">;</span><span class="w"> </span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="c1">// 3. Tell Arduino where the servo is connected (Pin 10)</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="n">myArm</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="c1">// 4. Move to 0 degrees</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="n">myArm</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"> </span><span class="c1">// Wait 1 second</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="c1">// 5. Move to 90 degrees</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="n">myArm</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">90</span><span class="p">);</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">  </span><span class="c1">// 6. Move to 180 degrees (Max)</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="n">myArm</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">180</span><span class="p">);</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="p">}</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">Servo</span><span class="w"> </span><span class="n">myRobotArm</span><span class="p">;</span><span class="w">   </span><span class="c1">// Create a servo object</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="n">myRobotArm</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// Connect to Pin 10</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="c1">// Move to 0 degrees (Left)</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="n">myRobotArm</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="c1">// Move to 90 degrees (Middle)</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="n">myRobotArm</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">90</span><span class="p">);</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="c1">// Move to 180 degrees (Right)</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">  </span><span class="n">myRobotArm</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">180</span><span class="p">);</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="p">}</span>
 </span></code></pre></div>
-<h3 id="explaining-the-library">Explaining the Library<a class="headerlink" href="#explaining-the-library" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>#include &lt;Servo.h&gt;</code>: This tells the computer "I am using a Servo, please load the special commands".</li>
-<li><code>myArm.attach(10)</code>: This connects the software "myArm" to the hardware "Pin 10".</li>
-<li><code>myArm.write(90)</code>: This acts like the steering wheel. It tells the servo exactly where to point.</li>
-</ul>
 <h2 id="5-upload-test">5. Upload &amp; Test<a class="headerlink" href="#5-upload-test" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Verify</strong> and <strong>Upload</strong>.</li>
-<li>Watch the arm. It should move Left -&gt; Middle -&gt; Right -&gt; Repeat.</li>
+<li>Upload the code.</li>
+<li>Watch the arm. It should sweep Left, Middle, Right.</li>
 </ol>
 <h2 id="6-troubleshooting">6. Troubleshooting<a class="headerlink" href="#6-troubleshooting" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Arm just vibrates?</strong> You might have low power. Try using a different USB port.</li>
-<li><strong>Nothing happens?</strong> Check the <strong>Red</strong> and <strong>Brown</strong> wires. They are often mixed up.</li>
-<li>Red -&gt; 5V</li>
-<li>Brown -&gt; GND</li>
-<li><strong>Moves nicely but stops working?</strong> Ensure wires are tight. Servos vibrate a lot and can shake wires loose!</li>
+<li><strong>Arm just vibrates/hums?</strong></li>
+<li>Power issue. Try a different USB port or ensure batteries are fresh. Servos are power hungry.</li>
+<li><strong>Not moving?</strong></li>
+<li>Check the Brown wire. Is it in GND?</li>
+<li>Check the code: Did you <code>#include &lt;Servo.h&gt;</code>?</li>
 </ul>
-<h2 id="challenge">Challenge<a class="headerlink" href="#challenge" title="Permanent link">&para;</a></h2>
-<p>Can you make the arm wave "Goodbye"?
-<em>Hint: Change the angles to 45 and 135 and make the delay shorter!</em></p>
+<h2 id="7-extensions-upgrades">7. Extensions &amp; Upgrades<a class="headerlink" href="#7-extensions-upgrades" title="Permanent link">&para;</a></h2>
+<p><strong>Challenge</strong>: The Waving Hand</p>
+<ul>
+<li><strong>Upgrade</strong>: Tape a cardboard hand to the servo arm.</li>
+<li><strong>Code</strong>: Make it wave fast! (Change delay to <code>200</code> and angles to <code>45</code> and <code>135</code>).</li>
+</ul>
 
 
 

@@ -23,7 +23,7 @@
     
     
       
-        <title>Project 1.9.0: Noise Checker – Sound Sensor Threshold Detection - STEMAIDE Docs</title>
+        <title>Mission 1.9: The Clap Sensor - STEMAIDE Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-190-noise-checker-sound-sensor-threshold-detection" class="md-skip">
+        <a href="#mission-19-the-clap-sensor" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Project 1.9.0: Noise Checker – Sound Sensor Threshold Detection
+              Mission 1.9: The Clap Sensor
             
           </span>
         </div>
@@ -826,99 +826,81 @@
 
 
 
-<h1 id="project-190-noise-checker-sound-sensor-threshold-detection">Project 1.9.0: Noise Checker – Sound Sensor Threshold Detection<a class="headerlink" href="#project-190-noise-checker-sound-sensor-threshold-detection" title="Permanent link">&para;</a></h1>
-<table>
-<thead>
-<tr>
-<th><strong>Description</strong></th>
-<th>This project demonstrates how to use a sound sensor to monitor ambient noise levels in an environment. The system detects and quantifies sound levels, providing a foundation for applications like noise pollution monitoring or smart systems with sound-based triggers.</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Use case</strong></td>
-<td>Wanting to create a project that will detect or check a certain level of noise in an environment, use can use the approach from this book.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="components-things-you-will-need">Components (Things You will need)<a class="headerlink" href="#components-things-you-will-need" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th><img alt="Arduino Uno" src="../../../assets/components/arduino.webp" /></th>
-<th><img alt="Bread Board" src="../../../assets/components/breadboard.webp" /></th>
-<th><img alt="Arduino USB Cable" src="../../../assets/components/usbcable.webp" /></th>
-<th><img alt="Sound Sensor" src="../../../assets/components/soundsensor.webp" /></th>
-<th><img alt="Jumper wires" src="../../../assets/components/jumperwires.webp" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="building-the-circuit">Building the circuit<a class="headerlink" href="#building-the-circuit" title="Permanent link">&para;</a></h2>
-<p>Things Needed:</p>
+<h1 id="mission-19-the-clap-sensor">Mission 1.9: The Clap Sensor<a class="headerlink" href="#mission-19-the-clap-sensor" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Role</strong>: Home Automation Engineer<br />
+<strong>Objective</strong>: Detect noise (like a clap) to trigger actions.</p>
+</blockquote>
+<h2 id="result-preview">Result Preview<a class="headerlink" href="#result-preview" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><img alt="Result GIF" src="Placeholder_for_Clap_Sensor.gif" /><br />
+<em>Clap your hands -&gt; The value spikes in the Serial Monitor.</em></p>
+</blockquote>
+<hr />
+<h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
+<p>Imagine walking into a room and turning on the lights just by clapping. That's not magic; it's engineering.
+Your mission is to calibrate a sensor to detect the specific sound pattern of a "Clap".</p>
+<h2 id="2-the-toolkit">2. The Toolkit<a class="headerlink" href="#2-the-toolkit" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Arduino Uno = 1</li>
-<li>Arduino USB cable = 1</li>
-<li>Sound sensor = 1</li>
-<li>Red jumper wire = 1</li>
-<li>Black jumper wire = 1</li>
-<li>Green jumper wire = 1</li>
-<li>Breadboard = 1</li>
+<li><strong>1x Sound Sensor</strong> (The Ear)</li>
+<li><strong>3x Jumper Wires</strong></li>
+<li><strong>1x Arduino Uno</strong></li>
 </ul>
-<h2 id="mounting-the-component-on-the-breadboard">Mounting the component on the breadboard<a class="headerlink" href="#mounting-the-component-on-the-breadboard" title="Permanent link">&para;</a></h2>
+<h2 id="3-the-blueprint">3. The Blueprint<a class="headerlink" href="#3-the-blueprint" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Breadboard = 1</li>
-<li>Sound sensor = 1</li>
+<li><strong>VCC</strong> -&gt; <strong>5V</strong></li>
+<li><strong>GND</strong> -&gt; <strong>GND</strong></li>
+<li><strong>OUT (Signal)</strong> -&gt; <strong>Pin A0</strong> (Analog)</li>
 </ul>
-<p><strong>Step 1:</strong> • Insert the sound sensor into the horizontal connectors on the breadboard, ensuring the pins face outward.</p>
-<p><img alt="Mount the Sound Sensor on the Breadboard" src="../../../assets/1.0/Sound_Sensor/mount.webp" />.</p>
-<p><em><strong>NB:</strong> Make sure you identify where the positive pin (+) and the negative pin (-) is connected to on the breadboard. The longer pin of the LED is the positive pin and the shorter one, the negative PIN</em>.</p>
-<h2 id="wiring-the-circuit">WIRING THE CIRCUIT<a class="headerlink" href="#wiring-the-circuit" title="Permanent link">&para;</a></h2>
-<h3 id="things-needed">Things Needed:<a class="headerlink" href="#things-needed" title="Permanent link">&para;</a></h3>
+<p><img alt="Sound Sensor Wiring" src="../../../assets/1.0/Sound_Sensor/green.webp" /></p>
+<h2 id="4-the-logic">4. The Logic<a class="headerlink" href="#4-the-logic" title="Permanent link">&para;</a></h2>
+<p>The sensor converts sound waves into electricity.</p>
 <ul>
-<li>Arduino Uno = 1</li>
-<li>Red jumper wire = 1</li>
-<li>Black jumper wire = 1</li>
-<li>Green jumper wire = 1</li>
+<li><strong>Quiet</strong> = Low Number.</li>
+<li><strong>Loud</strong> = High Number.</li>
 </ul>
-<p><strong>Step 1:</strong> Red Wire (VCC): Connect one end of the red jumper wire to the VCC pin on the sound sensor and the other end to the 5V pin on the Arduino Uno.</p>
-<p><img alt="connect red jumper wire" src="../../../assets/1.0/Sound_Sensor/red.webp" />.</p>
-<p><strong>Step 2:</strong> Black Wire (GND): Connect one end of the black jumper wire to the GND pin on the sound sensor and the other end to the GND pin on the Arduino Uno.</p>
-<p><img alt="connect red jumper wire" src="../../../assets/1.0/Sound_Sensor/black.webp" />.</p>
-<p><strong>Step 3:</strong> Green Wire (Signal): Connect one end of the green jumper wire to the OUT pin on the sound sensor and the other end to the A0 pin on the Arduino Uno.</p>
-<p><img alt="connect red jumper wire" src="../../../assets/1.0/Sound_Sensor/green.webp" />.</p>
-<p><em>just as shown above, connect your USB cable to the Arduino board and to your laptop.</em></p>
-<h2 id="programming">PROGRAMMING<a class="headerlink" href="#programming" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Open your Arduino IDE. See how to set up here: <a href="../../../getting-started/overview/">Getting Started</a>.</p>
-<p><strong>Step 2:</strong> Type <code>const int soundSensorPin = A0;</code>
-as shown below in the picture below: on line one before void Setup() function.</p>
-<p><img alt="creating the varaible for sound sensor" src="../../../assets/1.0/Sound_Sensor/sound.webp" />.</p>
-<p><strong>NB:</strong> Make sure you avoid errors when typing. Do not omit any character or symbol especially the bracket {} and semicolons; and place them as you see in the image. The code that comes after the two ash backslashes “//” are called comments. They are not part of the code that will be run, they only explain the lines of code. You can avoid typing them.</p>
-<p><strong>Step 3:</strong> In the {} after the <code>void setup (), type Serial.begin (9600);</code> as shown below in the picture below:</p>
-<p><img alt="starting the serial monitor" src="../../../assets/1.0/Sound_Sensor/serial.webp" />.</p>
-<p><strong>Step 4:</strong> In the {} after the <code>void loop (), type int soundValue = analogueRead (soundSensorPin);</code> as shown below in the picture below:</p>
-<p><img alt="reads data from the soundSensorPin" src="../../../assets/1.0/Sound_Sensor/analogread.webp" />.</p>
-<p><strong>Step 5:</strong> Type <code>Serial.printLn (soundValue) ;</code> as shown below in the picture below:</p>
-<p><img alt="print's sound values in the serial monitor" src="../../../assets/1.0/Sound_Sensor/soundvalue.webp" />.</p>
-<p><strong>Step 6:</strong> Type <code>delay (50) ;</code> as shown below in the picture below:</p>
-<p><img alt="delays before reading and printing the next sound value" src="../../../assets/1.0/Sound_Sensor/delay.webp" />.</p>
-<p><strong>Step 7:</strong> Save your code. <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section</em></p>
-<p><strong>Step 8:</strong> Select the arduino board and port <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section:Selecting Arduino Board Type and Uploading your code</em>.</p>
-<p><strong>Step 9:</strong> Upload your code. <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section:Selecting Arduino Board Type and Uploading your code</em></p>
-<p><strong>Step 10:</strong> Click on the serial monitor icon to view the amount of sound being recorded as shown in the picture below:</p>
-<p><img alt="open the Serial Monitor" src="../../../assets/1.0/Sound_Sensor/serial_monitor.webp" />.</p>
-<h2 id="observation">OBSERVATION<a class="headerlink" href="#observation" title="Permanent link">&para;</a></h2>
-<p><img alt="Serial monitor starts displaying sound values" src="../../../assets/1.0/Sound_Sensor/observation.webp" />.</p>
-<h2 id="conclusion">CONCLUSION<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
-<p>In conclusion, the sound sensor project aimed at measuring ambient noise levels presents a practical exploration of audio sensing and data acquisition. By utilizing the sound sensor to detect and quantify noise, participants acquire insights into analog signal processing, threshold detection, and environmental monitoring. This endeavor marks a significant milestone in electronics exploration, underscoring the importance of sensory technology in assessing noise pollution and inspiring interest in applications such as smart cities, noise control systems, and data-driven urban planning.</p>
+<p><strong>Step-by-Step:</strong></p>
+<ol>
+<li><strong>Define</strong>: Pin A0.</li>
+<li><strong>Read</strong>: <code>analogRead(A0)</code>.</li>
+<li><strong>Inspect</strong>: Watch the Serial Plotter to see the sound waves.</li>
+</ol>
+<h3 id="the-code">The Code<a class="headerlink" href="#the-code" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 1.9: Clap Sensor</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">soundPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A0</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">noiseLevel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">soundPin</span><span class="p">);</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="c1">// Print to Serial Plotter (Tools &gt; Serial Plotter)</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">noiseLevel</span><span class="p">);</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// Very fast updates to catch the clap</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="5-upload-test">5. Upload &amp; Test<a class="headerlink" href="#5-upload-test" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Upload code.</li>
+<li><strong>Open Serial Plotter</strong> (CTRL+SHIFT+L) or Tools &gt; Serial Plotter.</li>
+<li>Clap your hands! Do you see a spike in the blue line?</li>
+</ol>
+<h2 id="6-troubleshooting">6. Troubleshooting<a class="headerlink" href="#6-troubleshooting" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Flat line? (Not reacting)</strong></li>
+<li><strong>Sensitivity</strong>: Locate the blue box on the sensor. Use a small screwdriver to turn the screw on top until the red LED on the module <em>just</em> turns off (or flickers).</li>
+<li><strong>Always Max Value?</strong></li>
+<li>Check GND and VCC connections.</li>
+</ul>
+<h2 id="7-extensions-upgrades">7. Extensions &amp; Upgrades<a class="headerlink" href="#7-extensions-upgrades" title="Permanent link">&para;</a></h2>
+<p><strong>Challenge</strong>: The Clap Switch</p>
+<ul>
+<li><strong>Upgrade</strong>: Turn on an LED when the sound is loud.</li>
+<li><strong>Code</strong>: <code>if (noiseLevel &gt; 500) { digitalWrite(13, HIGH); delay(1000); }</code></li>
+</ul>
 
 
 
