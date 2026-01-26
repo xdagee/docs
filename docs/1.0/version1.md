@@ -3,7 +3,7 @@
 
 ### 1.1 LED
 
-- [Turn on one LED](1.1.LED/1.1.1.LED_ON.md)
+- [Mission 1.1: First Light](1.1.LED/1.1.1.Mission_First_Light.md)
 - [Blink one LED](1.1.LED/1.1.2.One_LED_Blink.md)
 - [Turn on two LEDs](1.1.LED/1.1.3.LEDS_ON.md)
 - [Blink two LEDs](1.1.LED/1.1.4.Two_LED_Blink.md)
@@ -61,5 +61,4 @@
 
 ### 1.9 Sound Sensor
 
- - [Sound Sensor](1.9.Sound_Sensor/1.9.0.Sound_Sensor.md)
-
+- [Sound Sensor](1.9.Sound_Sensor/1.9.0.Sound_Sensor.md)

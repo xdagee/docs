@@ -3,7 +3,7 @@
 
 ### 2.1 Ultrasonic Sensor With LED
 
-- [Ultrasonic Sensor With One LED](2.1.Ultrasonic+LED/2.1.1.Ultrasonic_and_1_LED.md)
+- [Mission 2.1: The Bat's Warning](2.1.Ultrasonic+LED/2.1.1.Mission_Bats_Warning.md)
 - [Ultrasonic Sensor With Two LEDs](2.1.Ultrasonic+LED/2.1.2.Ultrasonic_and_2_LED.md)
 - [Ultrasonic Sensor With Three LED](2.1.Ultrasonic+LED/2.1.3.Ultrasonic_and_3_LED.md)
 - [Ultrasonic Sensor With Four LED](2.1.Ultrasonic+LED/2.1.4.Ultrasonic_and_4_LED.md)

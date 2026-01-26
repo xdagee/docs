@@ -2,7 +2,7 @@
 
 ### 3.1 Smart Gauge
 
-- [Smart Gauge](3.1.Smart_Guage/3.1.1.Smart%20Guage.md)
+- [Mission 3.1: The City Dashboard](3.1.Smart_Gauge/3.1.1.Mission_City_Dashboard.md)
 
 ### 3.2 Smart Security System
 
