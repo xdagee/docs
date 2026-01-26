@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#contributing-to-our-documentation-project" class="md-skip">
+        <a href="#contributing-to-stemaide" class="md-skip">
           Skip to content
         </a>
       
@@ -877,10 +877,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#table-of-contents" class="md-nav__link">
+  <a href="#ways-to-contribute" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Table of Contents
+        Ways to Contribute
       
     </span>
   </a>
@@ -888,10 +888,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-fork-the-repository" class="md-nav__link">
+  <a href="#getting-started" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Fork the Repository
+        Getting Started
       
     </span>
   </a>
@@ -899,43 +899,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-clone-the-repository" class="md-nav__link">
+  <a href="#community-code-of-conduct" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Clone the Repository
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-create-a-new-branch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Create a New Branch
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-make-your-changes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Make Your Changes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-update-the-changelog" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Update the Changelog
+        Community Code of Conduct
       
     </span>
   </a>
@@ -1065,89 +1032,42 @@
 
 
 
-<h1 id="contributing-to-our-documentation-project">Contributing to Our Documentation Project<a class="headerlink" href="#contributing-to-our-documentation-project" title="Permanent link">&para;</a></h1>
-<p>Thank you for your interest in contributing to the STEMAIDE Manuals documentation project! Your contributions play a vital role in helping us maintain accurate, high-quality, and user-friendly resources that empower learners and educators alike. Whether you're fixing a typo, enhancing existing content, or adding new sections, your efforts are deeply valued and contribute to the growth of our community.</p>
-<p>This guide provides a step-by-step walkthrough for contributing to the project. If this is your first time contributing to a GitHub project, no worries—we’ve got you covered with simple and beginner-friendly instructions!</p>
-<hr />
-<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
+<h1 id="contributing-to-stemaide">Contributing to STEMAIDE<a class="headerlink" href="#contributing-to-stemaide" title="Permanent link">&para;</a></h1>
+<p>We love contributions! Whether you are an educator, student, or engineer, you can help us build the best open-source STEM curriculum in Africa.</p>
+<h2 id="ways-to-contribute">Ways to Contribute<a class="headerlink" href="#ways-to-contribute" title="Permanent link">&para;</a></h2>
 <ol>
-<li><a href="#1-fork-the-repository">Fork the Repository</a></li>
-<li><a href="#2-clone-the-repository">Clone the Repository</a></li>
-<li><a href="#3-create-a-new-branch">Create a New Branch</a></li>
-<li><a href="#4-make-your-changes">Make Your Changes</a></li>
-<li><a href="#5-update-the-changelog">Update the Changelog</a></li>
-<li><a href="#6-push-your-changes">Push Your Changes</a></li>
-<li><a href="#7-create-a-pull-request">Create a Pull Request</a></li>
-<li><a href="#8-wait-for-review">Wait for Review</a></li>
+<li><strong>Report Bugs</strong>: Found a typo or a broken circuit diagram? Open an issue on GitHub.</li>
+<li><strong>Add Translations</strong>: Help us translate these guides into local languages (Twi, Ga, Ewe, Swahili, etc.).</li>
+<li><strong>Create Missions</strong>: Design a new project and add it to the curriculum (See the <a href="../guides/developer-guide/">Contributing to the Curriculum</a> guide).</li>
 </ol>
-<hr />
-<h2 id="1-fork-the-repository">1. Fork the Repository<a class="headerlink" href="#1-fork-the-repository" title="Permanent link">&para;</a></h2>
-<p>Forking creates your own copy of the project that you can work on.</p>
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Go to the main repository page.</li>
-<li>Click on the <strong>Fork</strong> button (located at the top-right corner of the page).</li>
+<li>Fork this repository.</li>
+<li>Clone your fork.</li>
+<li>Create a branch: <code>git checkout -b my-new-mission</code>.</li>
+<li>Commit your changes.</li>
+<li>Push to the branch.</li>
+<li>Submit a Pull Request.</li>
 </ol>
-<hr />
-<h2 id="2-clone-the-repository">2. Clone the Repository<a class="headerlink" href="#2-clone-the-repository" title="Permanent link">&para;</a></h2>
-<p>Once you’ve forked the repository, you’ll need to clone it to your local machine.</p>
-<ol>
-<li>Open your terminal (or Git Bash).</li>
-<li>Run the following command (replace <code>your-username</code> with your GitHub username):
-   <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/your-username/docs.stemaide.com.git
-</span></code></pre></div></li>
-<li>Navigate to the directory you just cloned:
-   cd docs.stemaide.com</li>
-</ol>
-<h2 id="3-create-a-new-branch">3. Create a New Branch<a class="headerlink" href="#3-create-a-new-branch" title="Permanent link">&para;</a></h2>
-<p>Creating a new branch helps keep your changes organized and separate from the main project.</p>
-<ol>
-<li>Create a new branch with a descriptive name
-   <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>update-readme
-</span></code></pre></div>
-   Replace 'update-readme' with a name that describes your changes (e.g., fix-typo, add-section)</li>
-</ol>
-<h2 id="4-make-your-changes">4. Make Your Changes<a class="headerlink" href="#4-make-your-changes" title="Permanent link">&para;</a></h2>
-<p>Now it’s time to edit the documentation files! We use Markdown for all documentation files.</p>
-<ol>
-<li>Open the project in your text editor (e.g., VSCode, Sublime Text).</li>
-<li>Locate the file you want to edit (e.g., README.md or a file in the docs/ folder).</li>
-<li>Make your changes or add new content in Markdown.</li>
-</ol>
-<p>Markdown Example
-   Here’s a quick Markdown example to help you:</p>
-<p># Heading 1
-   Use a single hash(#) symbol for this effect.
-   ## Heading 2
-   Use a double hash(##) for th1is effect.
-   ### Heading 3
-   Use a triple hash(###) for this effect.</p>
-<ul>
-<li>Bullet point: Use hyphen(-) symbol.</li>
-</ul>
-<p><strong>Bold Text</strong>: Wrap your text between two asteriks(**).</p>
-<p><a href="../assets/markdown_cheat_sheet_opensource.com_.pdf">Find the markdown cheatsheet here</a>.</p>
-<ol>
-<li>Save your changes when you are done.</li>
-</ol>
-<h2 id="5-update-the-changelog">5. Update the Changelog<a class="headerlink" href="#5-update-the-changelog" title="Permanent link">&para;</a></h2>
-<p>Every change you make should be recorded in the CHANGELOG.md file.</p>
-<ol>
-<li>Open the CHANGELOG.md file.</li>
-<li>Add an entry under the appropriate version heading. If no version heading exists, create one:</li>
-</ol>
+<h2 id="community-code-of-conduct">Community Code of Conduct<a class="headerlink" href="#community-code-of-conduct" title="Permanent link">&para;</a></h2>
+<p>Be respectful, inclusive, and helpful. We are here to learn together.</p>
 <h2 id="6-push-your-changes">6. Push Your Changes<a class="headerlink" href="#6-push-your-changes" title="Permanent link">&para;</a></h2>
 <p>Now that you’ve made and saved your changes, you’ll need to push them to your forked repository.</p>
 <ol>
-<li>Stage your changes:
-   <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
-</span></code></pre></div></li>
-<li>Commit your changes with a meaningful message:
-   <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Added contribution guide and updated changelog&quot;</span>
-</span></code></pre></div></li>
-<li>Push your changes to your fork:
-   <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>update-readme
-</span></code></pre></div></li>
+<li>Stage your changes:</li>
 </ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</span></code></pre></div>
+<ol>
+<li>Commit your changes with a meaningful message:</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Added contribution guide and updated changelog&quot;</span>
+</span></code></pre></div>
+<ol>
+<li>Push your changes to your fork:</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>update-readme
+</span></code></pre></div>
 <h2 id="7-create-a-pull-request">7. Create a Pull Request<a class="headerlink" href="#7-create-a-pull-request" title="Permanent link">&para;</a></h2>
 <p>A pull request (PR) is how you ask to merge your changes into the main repository.</p>
 <ol>
@@ -1173,12 +1093,12 @@
 <p>To update your PR after feedback:</p>
 <ul>
 <li>Make the required changes in your local branch.</li>
-<li>Commit and push the changes:
-  <div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Fixed feedback issues&quot;</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>update-readme
-</span></code></pre></div></li>
+<li>Commit and push the changes:</li>
 </ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Fixed feedback issues&quot;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>update-readme
+</span></code></pre></div>
 </li>
 </ol>
 <h2 id="additional-tips">Additional Tips<a class="headerlink" href="#additional-tips" title="Permanent link">&para;</a></h2>

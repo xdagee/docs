@@ -55,10 +55,8 @@ nav:
       - Appentice's Handbook: guides/user-guide.md
       - The Lab (Level 1): 1.0/version1.md
       - The Neighborhood (Level 2): 2.0/version2.md
-      - The Smart City (Level 3): 3.0/version3.md
-      - Developer Guide: guides/developer-guide.md 
+      - Developer Guide: guides/developer-guide.md
 
-  - Changelog: CHANGELOG.md
   - Contributing: CONTRIBUTING.md
   - About: about.md
   - Code of Conduct: code-of-conduct.md
