@@ -103,4 +103,4 @@ When you see "Done uploading" at the bottom, your code is running on the board!
 ### Ready?
 
 Let's build your first project!
-👉 **[Start Mission 1.1: First Light**](../1.0/1.1.LED/1.1.1.Mission_First_Light.md)
+👉 **[Start Mission 1.1: First Light](../1.0/1.1.LED/1.1.1.Mission_First_Light.md)**
