@@ -20,33 +20,33 @@ hide:
 <div class="card-grid">
 
   <a href="getting-started/overview/" class="card">
-    <h3>🚀 Getting Started</h3>
-    <p>Install the Arduino IDE, set up your board, and run your first "Hello World" code.</p>
+    <h3>🚀 The Toolbox</h3>
+    <p>Every innovator needs their tools. Install the software and prepare your workspace.</p>
   </a>
 
   <a href="1.0/version1/" class="card">
-    <h3>🔰 Level 1.0: Foundations</h3>
-    <p>Master the basics: LEDs, Buzzers, Push Buttons, and RGB Lights. The building blocks of electronics.</p>
+    <h3>🧪 The Lab (Level 1)</h3>
+    <p><strong>Master the Elements.</strong> Learn to control Light, Sound, and Motion. These are your building blocks.</p>
   </a>
 
   <a href="2.0/version2/" class="card">
-    <h3>🧩 Level 2.0: Combinations</h3>
-    <p>Combine sensors and outputs. Build "Smart Light Systems" and "Traffic Controls" using logic.</p>
+    <h3>asd The Neighborhood (Level 2)</h3>
+    <p><strong>Solve Problems.</strong> Use your skills to build street lights, alarms, and smart gates for your community.</p>
   </a>
 
   <a href="3.0/version3/" class="card">
-    <h3>🤖 Level 3.0: Smart Systems</h3>
-    <p>Advanced automation. Build Smart Homes, Security Systems, and Autonomous Robots.</p>
+    <h3>🏙️ The Smart City (Level 3)</h3>
+    <p><strong>Build the Future.</strong> Engineer complex, automated systems to create a sustainable smart city.</p>
   </a>
 
   <a href="guides/user-guide/" class="card">
-    <h3>📚 User Guide</h3>
-    <p>Detailed references, pinouts, and troubleshooting tips for the entire STEMAIDE kit.</p>
+    <h3>📘 Apprentice's Handbook</h3>
+    <p>Your field guide. Pinouts, cheat sheets, and technical references.</p>
   </a>
 
   <a href="CONTRIBUTING/" class="card">
-    <h3>🤝 Contributing</h3>
-    <p>Join the community. Help us improve the documentation and create new projects.</p>
+    <h3>🤝 Join the Guild</h3>
+    <p>Contribute to the STEMAIDE community. Share your inventions and help others learn.</p>
   </a>
 
 </div>
