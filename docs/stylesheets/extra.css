@@ -1,0 +1,73 @@
+/* OpenVINO / Intel Design Theme */
+:root {
+  /* Intel Blue */
+  --md-primary-fg-color:        #0068B5;
+  --md-primary-fg-color--light: #00C7FD;
+  --md-primary-fg-color--dark:  #004A86;
+  --md-accent-fg-color:         #0068B5;
+  
+  /* Typography */
+  --md-text-font: "Inter", "Roboto", sans-serif;
+  --md-code-font: "JetBrains Mono", "Roboto Mono", monospace;
+}
+
+/* Header Styling */
+.md-header {
+  background-color: #0068B5 !important;
+}
+
+.md-tabs {
+  background-color: #F5F5F5 !important;
+  color: #333 !important;
+}
+
+.md-tabs__link {
+    color: #555 !important;
+}
+
+.md-tabs__link--active {
+    color: #0068B5 !important;
+    font-weight: bold;
+}
+
+/* Card Styling mimicking OpenVINO homepage */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 2em;
+}
+
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: white;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-color: #0068B5;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #0068B5;
+}
+
+.card p {
+  color: #555;
+  flex-grow: 1;
+}
+
+/* Admonition Styling */
+.md-typeset .admonition, 
+.md-typeset details {
+  border-color: #0068B5;
+}

@@ -1,79 +1,61 @@
-## Introducing the STEMAIDE kit
-The STEMAIDE Kit is a comprehensive plug-and-play educational toolkit designed  to  inspire  and  empower young  learners  in  Africa.  It  is  specifically  curated  to  promote  STEM  (Science,  Technology, Engineering,  and  Mathematics)  education  and  foster  the  development  of  critical  skills,  creativity, problem-solving abilities, and an entrepreneurial mindset.
+---
+hide:
+  - navigation
+  - toc
+---
 
-The  STEMAIDE  kit  includes  a  range  of  components  and  materials  that  allow  you  to  engage  in  first-hand learning experiences and build over two hundred projects to explore various STEM concepts.
+# STEMAIDE Documentation
 
-This guide helps you discover all the amazing things the STEMAIDE kit can do.
+<div style="text-align: center; max-width: 800px; margin: 0 auto; padding-bottom: 2em;">
+  <p style="font-size: 1.2rem; color: #555;">
+    The comprehensive toolkit to inspire young African learners in STEM.
+    Build over 200 projects, from blinking LEDs to Smart Traffic Systems.
+  </p>
+  
+  <a href="getting-started/overview/" class="md-button md-button--primary" style="background-color: #0068B5; margin-top: 1em;">
+    Get Started
+  </a>
+</div>
 
-## Getting started
-To  get  started  with  your  STEMAIDE  kit,  it  is  particularly  important  that  you  have  some  basic knowledge of ICT.
+<div class="card-grid">
 
-You will need a Laptop / PC, the Arduino IDE. Group learning is encouraged when you are using the STEMAIDE kit.
+  <a href="getting-started/overview/" class="card">
+    <h3>🚀 Getting Started</h3>
+    <p>Install the Arduino IDE, set up your board, and run your first "Hello World" code.</p>
+  </a>
 
-## The Arduino IDE and Basic Set Up
-**Step 1:** Double click on the Arduino IDE icon on your computer / laptop to open Arduino IDE.
+  <a href="1.0/version1/" class="card">
+    <h3>🔰 Level 1.0: Foundations</h3>
+    <p>Master the basics: LEDs, Buzzers, Push Buttons, and RGB Lights. The building blocks of electronics.</p>
+  </a>
 
-![Arduino IDE logo](assets/Arduino_IDE.png).
+  <a href="2.0/version2/" class="card">
+    <h3>🧩 Level 2.0: Combinations</h3>
+    <p>Combine sensors and outputs. Build "Smart Light Systems" and "Traffic Controls" using logic.</p>
+  </a>
 
-**Step 2:** Find the three buttons in the top right corner of the window.
+  <a href="3.0/version3/" class="card">
+    <h3>🤖 Level 3.0: Smart Systems</h3>
+    <p>Advanced automation. Build Smart Homes, Security Systems, and Autonomous Robots.</p>
+  </a>
 
-![First interface of IDE](assets/first_arduino_interface.png)
+  <a href="guides/user-guide/" class="card">
+    <h3>📚 User Guide</h3>
+    <p>Detailed references, pinouts, and troubleshooting tips for the entire STEMAIDE kit.</p>
+  </a>
 
-**Step 3:** Click the middle button "Maximize" in the top right corner of the window to maximize its size.
+  <a href="CONTRIBUTING/" class="card">
+    <h3>🤝 Contributing</h3>
+    <p>Join the community. Help us improve the documentation and create new projects.</p>
+  </a>
 
-![Second interface of IDE](assets/second_interface.png).
+</div>
 
-At the point you should see the code below on your computer / laptop.
+<br><br>
+<hr>
 
-![Third interface of IDE](assets/third_interface.png)
+## Popular Topics
 
-**Step 4:** Left Click before the ( void setup () ) and click on the Enter key on your keyboard to get space at the top of the void setup(). Then click above the void setup().
-
-|![Creating space for variables](assets/creating_space_1.png) | ![Creating space for variables](assets/creating_space_2.png) |
-|----------------------------------|----------------------------------|
-
-_**NB:** we will write the necessary code and comment at the space we created above the void setup ()._
-
-## Comment
-In programming, a comment is a piece of text that is added to the source code of a program to provide information or explanations. Comments are intended for human readers and are ignored by the compiler or interpreter when the program is executed.
-
-![Third interface of IDE](assets/comment.png).
-
-_**NB:** before you type a comment, type two slash (//) before you complete your sentence._
-
-<summary> Selecting Arduino Board Type and Uploading your code</summary>
-
-**Step 1:** Select the Board type. 
-Click on tools on the menu bar hover your mouse on Board, a new window will appear. Look through and click on Arduino UNO.
-
-![pinMode declaration](assets/select_board.png).
-
-**Step 2:** Select the Port.
-
-Click on tools on the menu bar and hover your mouse on Port, a new window will appear. Look through and click on COM which has Arduino Uno  attached to it.
-
-![pinMode declaration](assets/select_port.png).
-
-_**NB:** Your COM number may be different. In this example we have COM36 (Arduino Uno)_
-
-**Step 3:**  Click Control S (CTRL S) on your keyboard or click Save on the Arduino task bar.
-
-![pinMode declaration](assets/saving.png).
-
-A new window will pop up, type the project name and click save.
-
-![pinMode declaration](assets/saving_2.png).
-
-**Step 4:** Click Verify. 
-
-![pinMode declaration](assets/verify.png).
-
-**Step 5:** Click Upload. 
-
-![pinMode declaration](assets/upload.png).
-
-_**NB:** Make sure there is no error in your code and the Arduino USB cable is connected to your laptop / desktop before you click **Upload**._
-
-**WAIT** _Done uploading_
-
-![pinMode declaration](assets/done.png).
+* [**Standard Wiring Guide**](photoshoot_plan.md) - The "Gold Standard" for pin connections.
+* [**Traffic Light Module**](1.0/1.4.Traffic_Light/1.4.0.Taffic_Light_Intro.md) - Wiring and Logic.
+* [**Servo Motors**](1.0/1.7.Servo_Motor/1.7.0.Servo_Motor_One_Angle.md) - Precision Movement.

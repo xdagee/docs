@@ -5,54 +5,45 @@ site_url: https://docs.stemaide.com
 
 theme:
   name: material
+  custom_dir: overrides
   palette:
     - scheme: default
-      primary: indigo
+      primary: custom
+      accent: indigo
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - scheme: slate
-      primary: indigo
+      primary: custom
+      accent: indigo
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
-  primary: indigo
-  accent: indigo 
-  favicon: assets/favicon.ico 
-  logo: assets/stemaide-logo-white-footer.128px.webp 
+  favicon: assets/favicon.ico
+  logo: assets/stemaide-logo-white-footer.128px.webp
 
   features:
     - navigation.instant
-    - navigation.instant.progress
-    - navigation.instant.preview
     - navigation.tracking
-    #- navigation.tabs
+    - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
     - navigation.expand
-    - navigation.path
     - navigation.indexes
-    - toc.integrate 
-    - toc.follow
+    - toc.integrate
     - navigation.top
     - search.suggest
-    - search.highlight
-    - search.share  
-    - navigation.footer
+    - search.share
     - content.code.copy
-    - navigation.tabs.sticky.scroll.target: .md-header-nav
-    - Core Features: features/core-features.md
-    - Advanced Features: features/advanced-features.md
-copyright: |
-  <div style="display: flex; align-items: center; gap: 8px; font-size: 12px;">
-    <img src="assets/stemaide-logo-white-footer.128px.webp" alt="STEMAIDE Logo" height="25px" width="25px"/>
-    <span>© 2024 - 2025 STEMAIDE AFRICA</span>
-  </div>
+    - content.tooltips
 
+extra_css:
+  - stylesheets/extra.css
 
 font:
-    text: Roboto
-    code: Roboto Mono
+    text: Inter
+    code: JetBrains Mono
+
 
 plugins:
   - search
