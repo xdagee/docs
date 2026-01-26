@@ -1,39 +1,80 @@
 ---
-tags:
-  - CODING
-  - STEMAIDE
-  - STEM
+hide:
+  - navigation
+  - toc
 ---
 
+# About STEMAIDE
 
-# About Prol
+<div style="text-align: center; max-width: 800px; margin: 0 auto; padding-bottom: 2em;">
+  <p style="font-size: 1.2rem; color: #555;">
+    <strong>Reinventing the Future.</strong><br>
+    We are an EdTech startup empowering young Africans through immersive, hands-on STEM education experiences.
+  </p>
+</div>
 
-## Introduction
+## Our Mission
 
-Prol is a powerful and versatile development platform designed to streamline your workflow and enhance productivity. Our mission is to provide developers with the tools they need to build better software, faster.
+We exist to equip young Africans with the **21st-century creative mindset** and the technical skills they need to become the next generation of **Innovators** and **Entrepreneurs**.
 
-## Our Vision
+We believe in a practical, hands-on approach. We don't just teach theory; we build the future.
 
-We believe in creating tools that are:
-- Intuitive and easy to use
-- Powerful and flexible
-- Community-driven
-- Open and transparent
+---
 
-## The Team
+## What Does "STEMAIDE" Stand For?
 
-Prol is maintained by a dedicated team of developers and contributors who are passionate about creating the best possible development experience.
+It is more than just an acronym. It is our pedagogical framework:
 
-## Community
+<div class="card-grid">
 
-We welcome contributions from the community! Whether you're reporting bugs, suggesting features, or contributing code, your input helps make Prol better for everyone.
+  <div class="card">
+    <h3>🔬 STEM</h3>
+    <p><strong>Science, Technology, Engineering, Mathematics.</strong> The fundamental laws of the universe and the tools to manipulate them.</p>
+  </div>
 
-## Contact
+  <div class="card">
+    <h3>🎨 Arts</h3>
+    <p>Creativity is at the heart of engineering. We blend aesthetics with function to build beautiful solutions.</p>
+  </div>
 
-- GitHub: [github.com/prol](https://github.com/prol)
-- Email: support@prol.dev
-- Twitter: [@prol_dev](https://twitter.com/prol_dev)
+  <div class="card">
+    <h3>💡 Innovation</h3>
+    <p>We don't just repeat what exists. We invent new ways to solve old problems.</p>
+  </div>
 
-## License
+  <div class="card">
+    <h3>📐 Design</h3>
+    <p>Design Thinking is our process. Empathize, Define, Ideate, Prototype, Test.</p>
+  </div>
 
-Prol is open source software licensed under the MIT License. See our [LICENSE](LICENSE) file for details.
+  <div class="card">
+    <h3>🚀 Entrepreneurship</h3>
+    <p>We solve problems for <em>people</em>. We teach students to turn their inventions into viable solutions for their communities.</p>
+  </div>
+
+</div>
+
+<br><br>
+
+## What We Do
+
+### 1. The STEMAIDE Kit
+
+A comprehensive, plug-and-play toolkit aimed at inspiring learners. It includes over 200 projects, from simple circuits to complex automation systems. This documentation site is the companion to the Kit.
+
+### 2. STEMAIDE Training
+
+Curated education solutions for students at all levels—from the absolute beginner in "The Lab" to the expert architecting "The Smart City".
+
+### 3. Ultra-Modern Labs
+
+We build transformative STEM labs for schools, providing the environment needed to foster deep learning and experimentation.
+
+---
+
+<div style="text-align: center; margin-top: 2em;">
+  <h3>Ready to join the movement?</h3>
+  <a href="https://stemaide.com" class="md-button md-button--primary" style="background-color: #0068B5;">
+    Visit Our Main Website
+  </a>
+</div>
