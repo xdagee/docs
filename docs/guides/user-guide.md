@@ -60,22 +60,3 @@ Before you build, remember the **Innovator's Code**:
 
 * Ask a Mentor in your local STEMAIDE Lab.
 * Check the [Online Community](https://stemaide.com).
-
-## Best Practices
-
-1. **Project Organization**
-   * Document your code
-
-2. **Version Control**
-   * Commit regularly
-   * Write clear messages
-   * Use branches effectively
-
-3. **Performance**
-   * Monitor resource usage
-   * Optimize workspace
-   * Regular maintenance
-
-## Advanced Topics
-
-For more advanced topics, please refer to our [Advanced Features](../features/advanced-features.md) documentation.
