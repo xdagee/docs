@@ -831,6 +831,11 @@
 <p><strong>Role</strong>: Lab Apprentice<br />
 <strong>Objective</strong>: Take control of the system. Send your first command to the microcontroller.</p>
 </blockquote>
+<h2 id="result-preview">Result Preview<a class="headerlink" href="#result-preview" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><img alt="Result GIF" src="Placeholder_for_Blinking_LED.gif" /><br />
+<em>The LED will turn ON for 1 second, then OFF for 1 second.</em></p>
+</blockquote>
 <hr />
 <h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
 <p>Welcome to <strong>The Lab</strong>. Before you can build smart cities, you must first master the flow of electricity.</p>
@@ -855,11 +860,17 @@
 <strong>Check your Polarity!</strong> If the LED is backwards, it won't light up. The <strong>Long Leg</strong> must go to Power (Pin 6).</p>
 </blockquote>
 <h2 id="4-the-logic">4. The Logic<a class="headerlink" href="#4-the-logic" title="Permanent link">&para;</a></h2>
-<p>We communicate with the board using C++. Here is the logic:</p>
+<p>We communicate with the board using C++. Here is the step-by-step logic:</p>
 <ol>
-<li><strong>Define</strong>: Give the pin a name (<code>ledPin</code>).</li>
-<li><strong>Setup</strong>: Tell the board that this pin is for <strong>OUTPUT</strong> (sending power out).</li>
-<li><strong>Loop</strong>: Turn it <strong>HIGH</strong> (On), wait, turn it <strong>LOW</strong> (Off).</li>
+<li><strong>Define</strong>: Give Pin 6 the name <code>ledPin</code>.</li>
+<li><strong>Setup</strong>: Tell the Arduino "Pin 6 is for Talking (OUTPUT), not Listening".</li>
+<li><strong>Loop</strong>:<ul>
+<li>Turn Power <strong>ON</strong> (HIGH).</li>
+<li><strong>Wait</strong> 1 second.</li>
+<li>Turn Power <strong>OFF</strong> (LOW).</li>
+<li><strong>Wait</strong> 1 second.</li>
+</ul>
+</li>
 </ol>
 <h3 id="the-code">The Code<a class="headerlink" href="#the-code" title="Permanent link">&para;</a></h3>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 1.1: First Light</span>
@@ -878,15 +889,6 @@
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w">                </span><span class="c1">// Wait 1 second</span>
 </span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">}</span>
 </span></code></pre></div>
-<h2 id="5-the-debrief">5. The Debrief<a class="headerlink" href="#5-the-debrief" title="Permanent link">&para;</a></h2>
-<p>If your light is blinking, <strong>congratulations</strong>. You have successfully sent a command from the digital world to the physical world.</p>
-<p><strong>Challenge</strong>: Can you make it blink faster? (Hint: Change the <code>delay</code> number).
-}</p>
-<p>void loop() {
-  // 3. Turn the LED ON (HIGH voltage)
-  digitalWrite(ledPin, HIGH);
-}</p>
-<p>```</p>
 <h3 id="explaining-the-lines">Explaining the lines<a class="headerlink" href="#explaining-the-lines" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>int ledPin = 6;</code> -&gt; We create a variable named <code>ledPin</code> and set it to 6. Now, whenever we say <code>ledPin</code>, the computer knows we mean Pin 6.</li>
@@ -908,8 +910,12 @@
 <li><strong>Dim light?</strong></li>
 <li>Ensure you are using a digital pin (0-13), not an analog pin.</li>
 </ul>
-<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
-<p>Congratulations! You have just built your first electronic circuit. You learned how to complete a circuit and control it with software. Next, let's make it blink!</p>
+<h2 id="7-extensions-upgrades">7. Extensions &amp; Upgrades<a class="headerlink" href="#7-extensions-upgrades" title="Permanent link">&para;</a></h2>
+<p><strong>Challenge</strong>: Can you make it blink faster?</p>
+<ul>
+<li><strong>Hint</strong>: Change the <code>delay(1000)</code> to <code>delay(200)</code>.</li>
+<li><strong>Upgrade</strong>: Add a second LED on Pin 5 and make them blink like a Police Car (Alternating).</li>
+</ul>
 
 
 

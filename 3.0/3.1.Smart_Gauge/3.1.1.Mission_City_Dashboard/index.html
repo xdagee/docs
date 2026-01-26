@@ -831,6 +831,11 @@
 <p><strong>Role</strong>: City Planner<br />
 <strong>Objective</strong>: Build a visual status board to monitor critical infrastructure (like a Water Tower).</p>
 </blockquote>
+<h2 id="result-preview">Result Preview<a class="headerlink" href="#result-preview" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><img alt="Result GIF" src="Placeholder_for_Smart_Gauge.gif" /><br />
+<em>Green means SAFE. Red means DANGER (too close).</em></p>
+</blockquote>
 <hr />
 <h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
 <p>In the <strong>Smart City</strong>, data is useless if humans can't read it. A City Mayor doesn't want to see "Distance = 3cm". They want to see <strong>"Green = Safe"</strong> or <strong>"Red = Danger"</strong>.</p>
@@ -851,13 +856,17 @@
 </ul>
 <p><img alt="Wiring Diagram" src="../../../assets/3.0/Smart_Gauge/image_8.webp" /></p>
 <h2 id="4-the-logic">4. The Logic<a class="headerlink" href="#4-the-logic" title="Permanent link">&para;</a></h2>
-<p>We are building a <strong>State Machine</strong>.</p>
+<p>We are building a <strong>State Machine</strong>. Here is the step-by-step logic:</p>
 <ol>
-<li><strong>Measure</strong>: Get the distance.</li>
-<li><strong>Analyze</strong>: Is it safe (&gt;10cm) or dangerous (&lt;10cm)?</li>
+<li><strong>Measure</strong>: Ask the sensor for distance (in cm).</li>
+<li><strong>Analyze</strong>:<ul>
+<li><strong>IF</strong> distance &lt; 10cm: Situation is <strong>CRITICAL</strong>.</li>
+<li><strong>ELSE</strong>: Situation is <strong>NORMAL</strong>.</li>
+</ul>
+</li>
 <li><strong>Display</strong>:<ul>
-<li><strong>Safe</strong>: Green ON, Red OFF.</li>
-<li><strong>Danger</strong>: Red ON, Green OFF.</li>
+<li><strong>Critical</strong>: Turn Red LED <strong>ON</strong>, Green LED <strong>OFF</strong>.</li>
+<li><strong>Normal</strong>: Turn Green LED <strong>ON</strong>, Red LED <strong>OFF</strong>.</li>
 </ul>
 </li>
 </ol>
@@ -909,7 +918,21 @@
 </span></code></pre></div>
 <h2 id="5-the-debrief">5. The Debrief<a class="headerlink" href="#5-the-debrief" title="Permanent link">&para;</a></h2>
 <p>Watch your dashboard. As you move your hand closer, the city's status should change instantly from <strong>Green</strong> to <strong>Red</strong>.</p>
-<p><strong>Challenge</strong>: Can you add a Yellow LED for "Warning" (between 10cm and 20cm)?</p>
+<h2 id="6-troubleshooting">6. Troubleshooting<a class="headerlink" href="#6-troubleshooting" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Both LEDs off?</strong></li>
+<li>Check if you added <code>pinMode(OUTPUT)</code> for both LEDs.</li>
+<li><strong>Ultrasonic not reading?</strong></li>
+<li>Note that we changed pins for this Mission (Trig is 9, Echo is 10). Did you move the wires?</li>
+</ul>
+<h2 id="7-extensions-upgrades">7. Extensions &amp; Upgrades<a class="headerlink" href="#7-extensions-upgrades" title="Permanent link">&para;</a></h2>
+<p><strong>Challenge</strong>: Can you add a Yellow LED for "Warning"?</p>
+<ul>
+<li><strong>Logic</strong>: Add an <code>else if</code> block.</li>
+<li><code>if (distance &lt; 10)</code> -&gt; Red</li>
+<li><code>else if (distance &lt; 20)</code> -&gt; Yellow</li>
+<li><code>else</code> -&gt; Green</li>
+</ul>
 
 
 

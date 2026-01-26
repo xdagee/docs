@@ -831,6 +831,11 @@
 <p><strong>Role</strong>: Neighborhood Engineer<br />
 <strong>Objective</strong>: Build a proximity alarm that warns us when danger is too close.</p>
 </blockquote>
+<h2 id="result-preview">Result Preview<a class="headerlink" href="#result-preview" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><img alt="Result GIF" src="Placeholder_for_Ultrasonic.gif" /><br />
+<em>As your hand gets closer (&lt;20cm), the Warning LED turns ON.</em></p>
+</blockquote>
 <hr />
 <h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
 <p>In the <strong>Neighborhood</strong>, blind corners are dangerous. Cars and pedestrians crash because they can't "see" what's coming.</p>
@@ -852,12 +857,17 @@
 </ul>
 <p><img alt="Wiring Diagram" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/circuit_5.webp" /></p>
 <h2 id="4-the-logic">4. The Logic<a class="headerlink" href="#4-the-logic" title="Permanent link">&para;</a></h2>
-<p>How do we measure distance with sound?
-<code>Distance = (Time * Speed of Sound) / 2</code></p>
+<p>We communicate with the board using C++. Here is the step-by-step logic:</p>
 <ol>
-<li><strong>Trigger</strong>: Send a 10-microsecond pulse (Shout).</li>
-<li><strong>Echo</strong>: Wait for the pulse to bounce back (Listen).</li>
-<li><strong>Calculate</strong>: Use the time to find centimeters.</li>
+<li><strong>Define</strong>: Variables for <code>trigPin</code> (11), <code>echoPin</code> (12), and <code>ledPin</code> (13).</li>
+<li><strong>Speak</strong>: Send a "Shout" signal (Trig HIGH for 10 microseconds).</li>
+<li><strong>Listen</strong>: Wait for the "Echo" signal to return.</li>
+<li><strong>Math</strong>: Calculate distance: <code>Distance = (Time x Speed) / 2</code>.</li>
+<li><strong>Decision</strong>:<ul>
+<li><strong>IF</strong> Distance &lt; 20cm -&gt; Turn LED <strong>ON</strong>.</li>
+<li><strong>ELSE</strong> -&gt; Turn LED <strong>OFF</strong>.</li>
+</ul>
+</li>
 </ol>
 <h3 id="the-code">The Code<a class="headerlink" href="#the-code" title="Permanent link">&para;</a></h3>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 2.1: The Bat&#39;s Warning</span>
@@ -907,7 +917,21 @@
 <h2 id="5-the-debrief">5. The Debrief<a class="headerlink" href="#5-the-debrief" title="Permanent link">&para;</a></h2>
 <p>Open the <strong>Serial Monitor</strong> (Top Right Magnifying Glass).
 Move your hand in front of the sensor. Does the LED turn on when you get close?</p>
-<p><strong>Challenge</strong>: Can you add a Buzzer that beeps only when it is <em>extremely</em> close (5cm)?</p>
+<h2 id="6-troubleshooting">6. Troubleshooting<a class="headerlink" href="#6-troubleshooting" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Distance always 0?</strong></li>
+<li>Check your wires. Did you swap <strong>Trig</strong> and <strong>Echo</strong>?</li>
+<li>Ensure <strong>VCC</strong> is connected to 5V (not 3.3V).</li>
+<li><strong>LED not working?</strong></li>
+<li>Check if it is inserted correctly (Long leg to Pin 13).</li>
+<li>Check the serial monitor to see if the distance is actually below 20.</li>
+</ul>
+<h2 id="7-extensions-upgrades">7. Extensions &amp; Upgrades<a class="headerlink" href="#7-extensions-upgrades" title="Permanent link">&para;</a></h2>
+<p><strong>Challenge</strong>: Can you add a Buzzer?</p>
+<ul>
+<li><strong>Upgrade</strong>: Add a Buzzer to Pin 10.</li>
+<li><strong>Code</strong>: Make it beep ONLY when distance is extremely close (&lt; 5cm).</li>
+</ul>
 
 
 
