@@ -49,7 +49,7 @@
 
 - [LDR With One LED](2.9.LDR+LED/2.9.1.LDR+1_LED.md)
 - [LDR With Two LED](2.9.LDR+LED/2.9.2.LDR+2_LED.md)
-- [LDR With Three LED](2.9.LDR+LED/)
+
 - [LDR With Four LED](2.9.LDR+LED/2.9.4.LDR+4_LED.md)
 - [LDR With Five LED](2.9.LDR+LED/2.9.5.LDR+5_LED.md)
 

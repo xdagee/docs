@@ -1,70 +1,106 @@
-# Getting Started
-Here's a quick overview of what you can expect from our guides:
+# Welcome to STEMAIDE
 
-## The Arduino IDE and Basic Set Up
-**Step 1:** Double click on the Arduino IDE icon on your computer / laptop to open Arduino IDE.
+**Your journey into STEM starts here!**
 
-![Arduino IDE logo](../assets/Arduino_IDE.png).
+The **STEMAIDE Kit** is your toolkit for building the future. With over 200 possible projects, you will learn how to control lights, make sounds, sense the environment, and build smart systems.
 
-**Step 2:** Find the three buttons in the top right corner of the window.
+This guide will help you set up your computer so you can start programming your STEMAIDE board immediately.
 
-![First interface of IDE](../assets/first_arduino_interface.png)
+## What You Need
 
-**Step 3:** Click the middle button "Maximize" in the top right corner of the window to maximize its size.
+Before we begin, make sure you have:
 
-![Second interface of IDE](../assets/second_interface.png).
+1. **A Laptop or Desktop Computer** (Windows, Mac, or Linux).
+2. **The STEMAIDE Kit** (specifically the Arduino Uno board and the blue USB cable).
+3. **Curiosity!**
 
-At the point you should see the code below on your computer / laptop.
+---
 
-![Third interface of IDE](../assets/third_interface.png)
+## 1. Setting Up the Software (Arduino IDE)
 
-**Step 4:** Left Click before the ( void setup () ) and click on the Enter key on your keyboard to get space at the top of the void setup(). Then click above the void setup().
+The **Arduino IDE** (Integrated Development Environment) is the software we use to write code and send it to the board. Think of it as a text editor that talks to hardware.
 
-|![Creating space for varibales](../assets/creating_space_1.png) | ![Creating space for varibales](../assets/creating_space_2.png) |
-|----------------------------------|----------------------------------|
+**Step 1: Open the Software**
+Double-click the **Arduino IDE** icon on your computer.
 
-_**NB:** we will write the necessary code and comment at the space we created above the void setup ()._
+![Arduino IDE logo](../assets/Arduino_IDE.png)
 
-## Comment
-In programming, a comment is a piece of text that is added to the source code of a program to provide information or explanations. Comments are intended for human readers and are ignored by the compiler or interpreter when the program is executed.
+**Step 2: The Interface**
+When it opens, you will see a window like this. This is where you will write your code.
 
-![Third interface of IDE](../assets/comment.png).
+![First interface of IDE](../assets/third_interface.png)
 
-_**NB:** before you type a comment, type two slash (//) before you complete your sentence._
+### Key Areas to Know
 
-<summary> Selecting Arduino Board Type and Uploading your code</summary>
+* **void setup()**: This runs **once** when you turn on the board. We use it to tell the board what devices are connected (like "I have an LED on pin 6").
+* **void loop()**: This runs **forever** in a circle. This is where the magic happens (like "Turn LED on... wait... turn off").
 
-**Step 1:** Select the Board type. 
-Click on tools on the menu bar hover your mouse on Board, a new window will appear. Look through and click on Arduino UNO.
+---
 
-![Pinmode decalration](../assets/select_board.png).
+## 2. Preparing the Code Space
 
-**Step 2:** Select the Port.
+To make coding easier, let's make some space.
+Click before `void setup()` and press **Enter** a few times to create a blank space at the top.
 
-Click on tools on the menu bar and hover your mouse on Port, a new window will appear. Look through and click on COM which has Arduino Uno  attached to it.
+**Why?**
+We use this top space to give **names** to our pins (e.g., `int led = 6;`). It makes code easier to read!
 
-![Pinmode decalration](../assets/select_port.png).
+![Creating space for variables](../assets/creating_space_1.png)
 
-_**NB:** Your COM number may be different. In this example we have COM36 (Arduino Uno)_
+---
 
-**Step 3:**  Click Control S (CTRL S) on your keyboard or click Save on the Arduino task bar.
+## 3. Comments (Notes for Humans)
 
-![Pinmode decalration](../assets/saving.png).
+You will often see lines starting with `//`. These are **Comments**.
 
-A new window will pop up, type the project name and click save.
+* The computer ignores them.
+* They are there to help **YOU** understand what the code does.
 
-![Pinmode decalration](../assets/saving_2.png).
+```cpp
+// This is a comment. It does nothing to the board.
+pinMode(6, OUTPUT); // This sets pin 6 as an output
+```
 
-**Step 4:** Click Verify. 
+---
 
-![Pinmode decalration](../assets/verify.png).
+## 4. Connecting Your Board
 
-**Step 5:** Click Upload. 
+Now, let's connect your STEMAIDE board to the computer.
 
-![Pinmode decalration](../assets/upload.png).
+**Step 1: Plug it in**
+Connect the blue USB cable to the Arduino and your USB port.
 
-_**NB:** Make sure there is no error in your code and the Arduino USB cable is connected to your laptop / desktop before you click **Upload**._
+**Step 2: Select Board**
+Go to **Tools** > **Board** > **Arduino Uno**.
 
-**WAIT** _Done uploading_
+![Select Board](../assets/select_board.png)
 
-![Pinmode decalration](../assets/done.png).
+**Step 3: Select Port**
+Go to **Tools** > **Port** and select the one that says **Arduino Uno** (e.g., COM3, COM5, /dev/tty...).
+
+![Select Port](../assets/select_port.png)
+
+> **Note:** If you don't see "Arduino Uno" next to a port, try unplugging and replugging the cable.
+
+---
+
+## 5. Saving & Uploading
+
+Once you have written code (we'll do that in the next chapter!), you need to send it to the board.
+
+1. **Verify (Check):** Click the **Checkmark** icon. This checks for spelling mistakes in your code.
+    ![Verify](../assets/verify.png)
+2. **Upload (Send):** Click the **Arrow** icon. This sends the code to the board.
+    ![Upload](../assets/upload.png)
+
+**Success!**
+When you see "Done uploading" at the bottom, your code is running on the board!
+
+![Done](../assets/done.png)
+
+---
+
+### Ready?
+
+Let's build your first project!
+👉 **[Go to Project 1.1: Turn on an LED](../1.0/1.1.LED/1.1.1.LED_ON.md)**
