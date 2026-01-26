@@ -5,7 +5,6 @@ site_url: https://docs.stemaide.com
 
 theme:
   name: material
-  custom_dir: overrides
   palette:
     - scheme: default
       primary: custom
