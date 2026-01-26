@@ -1,135 +1,43 @@
-# Developer Guide
+# Contributing to the Curriculum
 
 ## Introduction
 
-This guide is intended for developers who want to contribute to Prol or extend its functionality through plugins and extensions.
+This guide is for **Educators, Engineers, and Advanced Students** who want to add new projects to the STEMAIDE Kit documentation. We call these "Missions".
 
-## Development Environment
+**Goal**: Transform complex electronic concepts into engaging, story-driven challenges.
 
-### Prerequisites
+---
 
-- Node.js (v16 or higher)
-- Git
-- Your preferred IDE
-- Build tools
+## 1. The Narrative Structure
 
-### Setting Up
+Every new project must follow the **Innovator's Journey** format:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/prol/prol.git
-   cd prol
-   ```
+1. **The Call to Adventure (Problem)**: What real-world problem are we solving? (e.g., Dark streets, Crashes).
+2. **The Toolkit (Components)**: What parts do we need?
+3. **The Blueprint (Wiring)**: Clear diagrams.
+4. **The Logic (Code)**: Explain the *concept*, not just the syntax.
+5. **The Debrief (Challenge)**: A follow-up task to test understanding.
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+---
 
-3. Build the project:
-   ```bash
-   npm run build
-   ```
+## 2. Style Guide
 
-## Architecture
+* **Tone**: Encouraging, Professional, African-Centric.
+* **Role**: Treat the reader as a "Lead Engineer" or "Innovator", not a student.
+* **Code**: Use clear variable names (`int redPin = 5` NOT `int r = 5`).
 
-### Core Components
+---
 
-- **Editor**: The main text editing component
-- **Extension Host**: Manages plugin execution
-- **Language Server**: Provides language-specific features
-- **UI Framework**: Handles the user interface
+## 3. How to Submit
 
-### Extension System
+1. **Fork** the repository.
+2. **Create** a new Markdown file in the appropriate Level folder (e.g., `3.0/3.7.Smart_Irrigation`).
+3. **Images**: Put diagrams in `assets/`.
+4. **Submit** a Pull Request.
 
-The extension system allows you to:
-- Add new features
-- Modify existing functionality
-- Integrate with external tools
-- Create custom commands
+---
 
-## API Reference
+## 4. Support
 
-### Extension API
-
-```typescript
-interface ExtensionAPI {
-  registerCommand(command: string, callback: Function): void;
-  registerLanguage(language: Language): void;
-  addConfiguration(config: Configuration): void;
-}
-```
-
-### Event System
-
-```typescript
-interface EventEmitter {
-  on(event: string, listener: Function): void;
-  emit(event: string, ...args: any[]): void;
-  off(event: string, listener: Function): void;
-}
-```
-
-## Best Practices
-
-### Code Style
-
-- Follow the project's style guide
-- Use TypeScript for type safety
-- Write comprehensive tests
-- Document your code
-
-### Performance
-
-- Optimize for startup time
-- Minimize memory usage
-- Use efficient algorithms
-- Profile your code
-
-### Security
-
-- Validate all inputs
-- Handle errors gracefully
-- Follow security guidelines
-- Regular security audits
-
-## Testing
-
-### Unit Tests
-
-```bash
-npm run test:unit
-```
-
-### Integration Tests
-
-```bash
-npm run test:integration
-```
-
-### End-to-End Tests
-
-```bash
-npm run test:e2e
-```
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## Release Process
-
-1. Version bump
-2. Update changelog
-3. Run tests
-4. Build release
-5. Deploy
-
-## Support
-
-- [Issue Tracker](https://github.com/prol/issues)
-- [Developer Forum](https://community.prol.dev)
-- [Documentation](https://prol.dev/docs)
+* Join the [Discord Community](https://stemaide.com).
+* Email `educators@stemaide.com`.

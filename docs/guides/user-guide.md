@@ -1,105 +1,80 @@
-# User Guide
+# The Apprentice's Handbook
 
 ## Introduction
 
-Welcome to the Prol User Guide. This comprehensive guide will help you get the most out of Prol's features and capabilities.
+This handbook is your field guide to the **STEMAIDE Kit**. While the "Missions" (Level 1, 2, 3) teach you how to build specific projects, this guide provides the technical reference data you might need along the way.
 
-## Getting Started
+---
 
-### Installation
+## 1. Safety First
 
-1. Download the latest version from our [downloads page](https://prol.dev/download)
-2. Follow the [installation guide](../getting-started/installation.md)
-3. Launch Prol and complete the initial setup
+Before you build, remember the **Innovator's Code**:
 
-### Basic Navigation
+1. **Never** connect wires while the board is plugged into the computer.
+2. **Double-check** your wiring (especially VCC and GND) before powering up.
+3. **Keep it tidy.** A messy circuit is hard to debug.
 
-- **Sidebar**: Access files, search, and extensions
-- **Editor**: Main workspace for coding
-- **Terminal**: Integrated command line interface
-- **Status Bar**: View important information and settings
+---
 
-## Core Features
+## 2. Component Cheatsheet
 
-### Code Editing
+### Digital Outputs (Actuators)
 
-- Syntax highlighting
-- Auto-completion
-- Code formatting
-- Multi-cursor editing
-- Find and replace
+* **LEDs**: Light Emitting Diodes. Beware of polarity (Long leg is +).
+* **Buzzer**: Makes sound. Active buzzers need only 5V; Passive buzzers need a signal.
+* **Traffic Light Module**: Pins are R, Y, G, GND.
 
-### Version Control
+### Analog Inputs (Sensors)
 
-- Git integration
-- Branch management
-- Commit and push
-- Pull requests
-- Merge conflicts
+* **LDR (Light Dependent Resistor)**: Resistance changes with light. Good for "Smart Street Lights".
+* **Potentiometer**: A knob that changes resistance. Good for dials and volume.
 
-### Debugging
+### Digital Inputs
 
-- Setting breakpoints
-- Variable inspection
-- Step through code
-- Watch expressions
-- Call stack
+* **Push Button**: Connects two points when pressed. Use `INPUT_PULLUP` to make wiring easier.
 
-## Configuration
+### Smart Modules
 
-### Settings
+* **Ultrasonic Sensor (HC-SR04)**: Measures distance using sound. Echolocation!
+* **Servo Motor**: Moves to a specific angle (0-180 degrees).
 
-Access settings through:
-- File > Preferences > Settings
-- Keyboard shortcut: `Ctrl+,`
+---
 
-### Key Bindings
+## 3. Common Troubleshooting
 
-Customize keyboard shortcuts:
-- File > Preferences > Keyboard Shortcuts
-- Keyboard shortcut: `Ctrl+K Ctrl+S`
+**"My Code Won't Upload!"**
 
-## Troubleshooting
+* Check the USB Cable. Is it plugged in firmly?
+* Check **Tools > Board**. Is "Arduino Uno" selected?
+* Check **Tools > Port**. Is the correct COM port selected?
 
-### Common Issues
+**"The circuit isn't working!"**
 
-1. **Performance Issues**
-   - Clear cache
-   - Disable extensions
-   - Check system resources
+* Check **GND**. Is everything connected to Ground?
+* Check **Pin Numbers**. Did you plug the LED into Pin 6 but program Pin 5?
+* Check **Polarity**. Are your LEDs plugged in backwards?
 
-2. **Extension Problems**
-   - Update extensions
-   - Check compatibility
-   - Reinstall if needed
+---
 
-3. **Git Issues**
-   - Verify Git installation
-   - Check credentials
-   - Review Git configuration
+## 4. Need Help?
 
-### Getting Help
-
-- Check the [documentation](https://prol.dev/docs)
-- Visit our [community forum](https://community.prol.dev)
-- Contact [support](mailto:support@prol.dev)
+* Ask a Mentor in your local STEMAIDE Lab.
+* Check the [Online Community](https://stemaide.com).
 
 ## Best Practices
 
 1. **Project Organization**
-   - Use consistent naming
-   - Maintain clear structure
-   - Document your code
+   * Document your code
 
 2. **Version Control**
-   - Commit regularly
-   - Write clear messages
-   - Use branches effectively
+   * Commit regularly
+   * Write clear messages
+   * Use branches effectively
 
 3. **Performance**
-   - Monitor resource usage
-   - Optimize workspace
-   - Regular maintenance
+   * Monitor resource usage
+   * Optimize workspace
+   * Regular maintenance
 
 ## Advanced Topics
 
