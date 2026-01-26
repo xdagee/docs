@@ -23,7 +23,7 @@
     
     
       
-        <title>Introduction to the Traffic Light Module - STEMAIDE Docs</title>
+        <title>Mission 1.4: The Unsafe Intersection (Traffic Light) - STEMAIDE Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction-to-the-traffic-light-module" class="md-skip">
+        <a href="#mission-14-the-unsafe-intersection-traffic-light" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction to the Traffic Light Module
+              Mission 1.4: The Unsafe Intersection (Traffic Light)
             
           </span>
         </div>
@@ -644,7 +644,7 @@
   <span class="md-ellipsis">
     
   
-    User Guide
+    Appentice's Handbook
   
 
     
@@ -672,7 +672,7 @@
   <span class="md-ellipsis">
     
   
-    Beginner's Use Case
+    The Lab (Level 1)
   
 
     
@@ -700,7 +700,7 @@
   <span class="md-ellipsis">
     
   
-    Intermediate Use Case
+    The Neighborhood (Level 2)
   
 
     
@@ -728,7 +728,7 @@
   <span class="md-ellipsis">
     
   
-    Advanced Use Case
+    The Smart City (Level 3)
   
 
     
@@ -902,22 +902,25 @@
 
 
 
-<h1 id="introduction-to-the-traffic-light-module">Introduction to the Traffic Light Module<a class="headerlink" href="#introduction-to-the-traffic-light-module" title="Permanent link">&para;</a></h1>
-<h2 id="1-what-is-it">1. What is it?<a class="headerlink" href="#1-what-is-it" title="Permanent link">&para;</a></h2>
-<p>The <strong>Traffic Light Module</strong> looks fancy, but it is actually very simple: <strong>It is just 3 LEDs (Red, Yellow, Green) stuck together.</strong></p>
-<p>Instead of using 3 separate LEDs and 3 resistors on a breadboard, this module keeps everything tidy.</p>
-<h3 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h3>
+<h1 id="mission-14-the-unsafe-intersection-traffic-light">Mission 1.4: The Unsafe Intersection (Traffic Light)<a class="headerlink" href="#mission-14-the-unsafe-intersection-traffic-light" title="Permanent link">&para;</a></h1>
+<h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
+<p><strong>Location:</strong> The busiest road in your community.
+<strong>The Problem:</strong> Cars, bicycles, and pedestrians are all trying to cross at the same time. It's dangerous! The community needs a system to tell people when to <strong>STOP</strong> and when to <strong>GO</strong>.</p>
+<p><strong>Your Objective:</strong>
+As the <strong>Lead Engineer</strong>, you must build an automated <strong>Traffic Light System</strong>.</p>
 <ul>
-<li>It has <strong>4 Pins</strong>:<ol>
-<li><strong>GND (-):</strong> The negative leg shared by all three lights.</li>
-<li><strong>R (+):</strong> Turns on the Red light.</li>
-<li><strong>Y (+):</strong> Turns on the Yellow light.</li>
-<li><strong>G (+):</strong> Turns on the Green light.</li>
-</ol>
-</li>
+<li><strong>Red Light</strong>: Stop everyone. Dangerous! (Pin 5)</li>
+<li><strong>Yellow Light</strong>: Warning. Get ready. (Pin 6)</li>
+<li><strong>Green Light</strong>: Safe to go. (Pin 7)</li>
 </ul>
-<h2 id="2-standard-wiring">2. Standard Wiring<a class="headerlink" href="#2-standard-wiring" title="Permanent link">&para;</a></h2>
-<p>For all our Traffic Light projects, we will use this standard wiring. This makes it easy to switch between projects!</p>
+<h2 id="2-the-toolkit">2. The Toolkit<a class="headerlink" href="#2-the-toolkit" title="Permanent link">&para;</a></h2>
+<p>To solve this, you will need:</p>
+<ul>
+<li><strong>Traffic Light Module</strong>: A pre-built set of 3 digital beacons.</li>
+<li><strong>Arduino Uno</strong>: The brain that controls the timing.</li>
+</ul>
+<h2 id="3-the-blueprint-wiring">3. The Blueprint (Wiring)<a class="headerlink" href="#3-the-blueprint-wiring" title="Permanent link">&para;</a></h2>
+<p>We need to connect our beacons to the brain. We use the <strong>Standard Wiring</strong>:</p>
 <table>
 <thead>
 <tr>
@@ -944,21 +947,17 @@
 </tr>
 </tbody>
 </table>
-<h2 id="3-why-use-const-int">3. Why use "const int"?<a class="headerlink" href="#3-why-use-const-int" title="Permanent link">&para;</a></h2>
-<p>In our code, we don't want to keep remembering "Pin 5 is Red". That's confusing.
-Instead, we give the pins names at the start of our code:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">red</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">yellow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">green</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+<h2 id="4-the-logic-code-strategy">4. The Logic (Code Strategy)<a class="headerlink" href="#4-the-logic-code-strategy" title="Permanent link">&para;</a></h2>
+<p>Before writing code, good engineers plan. We will use <code>const int</code> into give our pins names.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Naming our tools</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">red</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">yellow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">green</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
 </span></code></pre></div>
-<p>Now, we can just write <code>digitalWrite(red, HIGH);</code> and the computer knows we mean Pin 5!</p>
-<ul>
-<li><strong>const</strong>: Means "Constant" (This number will never change while the program runs).</li>
-<li><strong>int</strong>: Means "Integer" (A whole number).</li>
-</ul>
-<h2 id="ready">Ready?<a class="headerlink" href="#ready" title="Permanent link">&para;</a></h2>
-<p>Now that you understand the module, let's turn on the Red light!
-👉 <strong><a href="../1.4.1.Traffic_Light_Red_ON/">Go to Project 1.4.1: Red Means Stop</a></strong></p>
+<p>Now, we can just say <code>digitalWrite(red, HIGH);</code> instead of remembering numbers.</p>
+<h2 id="5-mission-start">5. Mission Start<a class="headerlink" href="#5-mission-start" title="Permanent link">&para;</a></h2>
+<p>The community is waiting. Let's build the first part of the system!</p>
+<p>👉 <strong><a href="../1.4.1.Traffic_Light_Red_ON/">Task 1: The Red Beacons (Turning on Red)</a></strong></p>
 
 
 
