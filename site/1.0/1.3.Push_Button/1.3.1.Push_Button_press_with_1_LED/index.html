@@ -23,7 +23,7 @@
     
     
       
-        <title>Project 1.3: The Light Switch (Push Button) - STEMAIDE Docs</title>
+        <title>Mission 1.3: The Light Switch (Push Button) - STEMAIDE Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-13-the-light-switch-push-button" class="md-skip">
+        <a href="#mission-13-the-light-switch-push-button" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Project 1.3: The Light Switch (Push Button)
+              Mission 1.3: The Light Switch (Push Button)
             
           </span>
         </div>
@@ -826,39 +826,27 @@
 
 
 
-<h1 id="project-13-the-light-switch-push-button">Project 1.3: The Light Switch (Push Button)<a class="headerlink" href="#project-13-the-light-switch-push-button" title="Permanent link">&para;</a></h1>
-<h2 id="1-the-concept-digital-input">1. The Concept: Digital Input<a class="headerlink" href="#1-the-concept-digital-input" title="Permanent link">&para;</a></h2>
-<p><strong>What are we learning?</strong>
-So far, we have only <em>told</em> the Arduino what to do (Output).
-Now, we will <em>listen</em> to the Arduino using a <strong>Push Button</strong> (Input).</p>
-<p>We will use a special mode called <code>INPUT_PULLUP</code>.</p>
-<ul>
-<li><strong>Button Pressed</strong> = Signal goes to <strong>LOW</strong> (0V).</li>
-<li><strong>Button Released</strong> = Signal stays <strong>HIGH</strong> (5V).</li>
-</ul>
+<h1 id="mission-13-the-light-switch-push-button">Mission 1.3: The Light Switch (Push Button)<a class="headerlink" href="#mission-13-the-light-switch-push-button" title="Permanent link">&para;</a></h1>
 <blockquote>
-<p><strong>Think of it like a doorbell.</strong> When you press it, the circuit connects to the Ground, sending a "LOW" signal that tells the Arduino "I'm pressed!"</p>
+<p><strong>Role</strong>: Interface Designer<br />
+<strong>Objective</strong>: Build a manual control switch. Press for ON, Release for OFF.</p>
 </blockquote>
-<h2 id="2-components-needed">2. Components Needed<a class="headerlink" href="#2-components-needed" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="Push Button" src="../../../assets/components/pushbutton.webp" /></th>
-<th style="text-align: center;"><img alt="LED" src="../../../assets/components/leds.webp" /></th>
-<th style="text-align: center;"><img alt="Arduino Uno" src="../../../assets/components/arduino.webp" /></th>
-<th style="text-align: center;"><img alt="Breadboard" src="../../../assets/components/breadboard.webp" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><strong>Push Button</strong></td>
-<td style="text-align: center;"><strong>LED</strong></td>
-<td style="text-align: center;"><strong>Arduino Uno</strong></td>
-<td style="text-align: center;"><strong>Breadboard</strong></td>
-</tr>
-</tbody>
-</table>
-<h2 id="3-wiring-the-circuit">3. Wiring the Circuit<a class="headerlink" href="#3-wiring-the-circuit" title="Permanent link">&para;</a></h2>
+<h2 id="result-preview">Result Preview<a class="headerlink" href="#result-preview" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><img alt="Result GIF" src="Placeholder_for_Button_Press.gif" /><br />
+<em>Press the button -&gt; LED turns ON. Release -&gt; LED turns OFF.</em></p>
+</blockquote>
+<hr />
+<h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
+<p>Computers are smart, but sometimes they need human input. The <strong>Push Button</strong> is the simplest way to talk to a machine.
+Your mission is to build a doorbell circuit: Input (Button) -&gt; Processing -&gt; Output (Light).</p>
+<h2 id="2-the-toolkit">2. The Toolkit<a class="headerlink" href="#2-the-toolkit" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>1x Push Button</strong> (The Input)</li>
+<li><strong>1x LED</strong> (The Output)</li>
+<li><strong>1x Arduino Uno</strong></li>
+</ul>
+<h2 id="3-the-blueprint">3. The Blueprint<a class="headerlink" href="#3-the-blueprint" title="Permanent link">&para;</a></h2>
 <p>We need two circuits here: one for the LED (Output) and one for the Button (Input).</p>
 <h3 id="a-the-led-output">A. The LED (Output)<a class="headerlink" href="#a-the-led-output" title="Permanent link">&para;</a></h3>
 <ol>
@@ -866,69 +854,70 @@ Now, we will <em>listen</em> to the Arduino using a <strong>Push Button</strong>
 <li><strong>Negative (Short Leg)</strong> -&gt; <strong>GND</strong></li>
 </ol>
 <h3 id="b-the-button-input">B. The Button (Input)<a class="headerlink" href="#b-the-button-input" title="Permanent link">&para;</a></h3>
-<p>Buttons have 4 legs, but we only need to use <strong>2 legs diagonally across</strong> from each other (or two on the same side if you are careful).</p>
+<p>Buttons have 4 legs. Use <strong>2 diagonal legs</strong>.</p>
 <ol>
-<li>Connect <strong>Leg A</strong> to <strong>Pin 2</strong>.</li>
-<li>Connect <strong>Leg B</strong> to <strong>GND</strong>.</li>
+<li><strong>Leg A</strong> -&gt; <strong>Pin 2</strong></li>
+<li><strong>Leg B</strong> -&gt; <strong>GND</strong></li>
 </ol>
 <blockquote>
-<p><strong>Note:</strong> We don't need a resistor for the button because we are using the Arduino's internal "Pullup" resistor!</p>
+<p><strong>Note:</strong> No resistor needed for the button! We use the internal one.</p>
 </blockquote>
-<p><img alt="Push Button Circuit" src="../../../assets/1.0/Push_Button/Push_Button_One_LED/Push_Button_Fig.7.webp" />
-<em>(Note: Your wiring might look slightly different depending on which holes you choose, but the connections to Pin 2, Pin 6, and GND must be correct!)</em></p>
-<h2 id="4-the-code">4. The Code<a class="headerlink" href="#4-the-code" title="Permanent link">&para;</a></h2>
-<p>Copy this code into your Arduino IDE.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// 1. Define our names</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">buttonPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c1">// Button is on Pin 2</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ledPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w">     </span><span class="c1">// LED is on Pin 6</span>
+<p><img alt="Push Button Circuit" src="../../../assets/1.0/Push_Button/Push_Button_One_LED/Push_Button_Fig.7.webp" /></p>
+<h2 id="4-the-logic">4. The Logic<a class="headerlink" href="#4-the-logic" title="Permanent link">&para;</a></h2>
+<p>We are using <code>INPUT_PULLUP</code> mode. This is "Inverse Logic".</p>
+<ul>
+<li><strong>Default (Not Pressed)</strong> = 5V (HIGH)</li>
+<li><strong>Pressed (Connected to GND)</strong> = 0V (LOW)</li>
+</ul>
+<p><strong>Step-by-Step:</strong></p>
+<ol>
+<li><strong>Read</strong>: Check Pin 2. Is it HIGH or LOW?</li>
+<li><strong>Decide</strong>:<ul>
+<li><strong>IF</strong> LOW (Pressed) -&gt; Turn LED <strong>ON</strong>.</li>
+<li><strong>ELSE</strong> (Not Pressed) -&gt; Turn LED <strong>OFF</strong>.</li>
+</ul>
+</li>
+</ol>
+<h3 id="the-code">The Code<a class="headerlink" href="#the-code" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 1.3: The Light Switch</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">buttonPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c1">// Input</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ledPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w">     </span><span class="c1">// Output</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="c1">// 2. Set up the LED as visual output</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="c1">// 3. Set up the Button as Input with internal Pullup resistor</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="c1">// This is IMPORTANT: It keeps the signal HIGH when not pressed.</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">buttonPin</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">}</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="c1">// 4. Read the button state</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="c1">// Remember: LOW means pressed!</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">isPressed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="p">(</span><span class="n">buttonPin</span><span class="p">);</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isPressed</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="c1">// Button is pushed! Turn ON LED.</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="c1">// Button is not pushed. Turn OFF LED.</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="p">}</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="c1">// INPUT_PULLUP enables the internal 20k resistor</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">buttonPin</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">}</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="c1">// Read the button (Remember: Low = Pressed)</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">isPressed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="p">(</span><span class="n">buttonPin</span><span class="p">);</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isPressed</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// Pressed! Light ON</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">  </span><span class="c1">// Released. Light OFF</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="p">}</span>
 </span></code></pre></div>
-<h3 id="explaining-the-logic">Explaining the Logic<a class="headerlink" href="#explaining-the-logic" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>pinMode(buttonPin, INPUT_PULLUP);</code> -&gt; This is the secret sauce. It sets the pin to be HIGH (5V) by default.</li>
-<li><code>if (isPressed == LOW)</code> -&gt; When we connect the button to GND (press it), the voltage drops to LOW. So <code>LOW</code> actually means "Action happening"!</li>
-</ul>
 <h2 id="5-upload-test">5. Upload &amp; Test<a class="headerlink" href="#5-upload-test" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Click <strong>Verify</strong>.</li>
-<li>Click <strong>Upload</strong>.</li>
+<li>Upload the code.</li>
 <li>Press the button. Does the light turn on?</li>
-<li>Release the button. Does it turn off?</li>
+<li>Release. Does it turn off?</li>
 </ol>
 <h2 id="6-troubleshooting">6. Troubleshooting<a class="headerlink" href="#6-troubleshooting" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>LED is ON when I'm NOT pressing the button?</strong></li>
-<li>You might have confused the logic. Check if you wrote <code>if (isPressed == HIGH)</code>.</li>
-<li>Or, you might be using <code>INPUT</code> instead of <code>INPUT_PULLUP</code>.</li>
-<li><strong>Nothing happens?</strong></li>
-<li>Check the LED wiring (Long leg to Pin 6).</li>
-<li>Check the Button wiring (One leg to Pin 2, other to GND).</li>
-<li>Try pressing the button firmly.</li>
+<li><strong>LED is ON when I'm NOT pressing?</strong></li>
+<li>You might have <code>if (isPressed == HIGH)</code>. Remember, <code>INPUT_PULLUP</code> means LOW is the active action!</li>
+<li><strong>Button loose?</strong></li>
+<li>Push buttons must snap firmly into the middle trench of the breadboard.</li>
 </ul>
-<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
-<p>You just built a digital switch! This is the foundation of every keyboard, game controller, and smart home button.</p>
+<h2 id="7-extensions-upgrades">7. Extensions &amp; Upgrades<a class="headerlink" href="#7-extensions-upgrades" title="Permanent link">&para;</a></h2>
+<p><strong>Challenge</strong>: Toggle Switch</p>
+<ul>
+<li><strong>Upgrade</strong>: Can you make it so one press turns it ON (and it stays ON), and the next press turns it OFF? (Hint: You need a variable to store the <code>state</code>).</li>
+</ul>
 
 
 

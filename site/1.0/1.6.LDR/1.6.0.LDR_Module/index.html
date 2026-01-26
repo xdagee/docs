@@ -23,7 +23,7 @@
     
     
       
-        <title>Project 1.6.0: LIGHT INTENSITY CHECKER - STEMAIDE Docs</title>
+        <title>Mission 1.6: The Night Watch (LDR) - STEMAIDE Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-160-light-intensity-checker" class="md-skip">
+        <a href="#mission-16-the-night-watch-ldr" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Project 1.6.0: LIGHT INTENSITY CHECKER
+              Mission 1.6: The Night Watch (LDR)
             
           </span>
         </div>
@@ -826,98 +826,92 @@
 
 
 
-<h1 id="project-160-light-intensity-checker">Project 1.6.0: LIGHT INTENSITY CHECKER<a class="headerlink" href="#project-160-light-intensity-checker" title="Permanent link">&para;</a></h1>
-<table>
-<thead>
-<tr>
-<th><strong>Description</strong></th>
-<th>This is a basic project that helps one to check the light intensity present at a particular environment.</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Use case</strong></td>
-<td>Wanting to get a device that will measure or detect the brightness of an L.E.D or anything that bright such as day light and even night, you can use this approach to do that.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="components-things-you-will-need">Components (Things You will need)<a class="headerlink" href="#components-things-you-will-need" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th><img alt="LDR Module" src="../../../assets/components/ldr.webp" /></th>
-<th><img alt="Arduino Uno" src="../../../assets/components/arduino.webp" /></th>
-<th><img alt="Arduino USB Cable" src="../../../assets/components/usbcable.webp" /></th>
-<th><img alt="Breadboard" src="../../../assets/components/breadboard.webp" /></th>
-<th><img alt="Breadboard" src="../../../assets/components/jumperwires.webp" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="building-the-circuit">Building the circuit<a class="headerlink" href="#building-the-circuit" title="Permanent link">&para;</a></h2>
-<p>Things Needed:
--   Arduino Uno = 1
--   Arduino USB cable = 1
--   Light dependent resistor   = 1
--   Red jumper wire = 1
--   Black jumper wire = 1
--   Green jumper wire = 1
--   White jumper wire = 1</p>
-<h2 id="mounting-the-component-on-the-breadboard">Mounting the component on the breadboard<a class="headerlink" href="#mounting-the-component-on-the-breadboard" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Take the light dependent resistor and the breadboard, insert the light dependent resistor into the horizontal connectors on the   breadboard</p>
-<p><img alt="LDR fixed on breadboard" src="../../../assets/1.0/LDR_Module/ldr_insertion.webp" />.</p>
-<h2 id="wiring-the-circuit">WIRING THE CIRCUIT<a class="headerlink" href="#wiring-the-circuit" title="Permanent link">&para;</a></h2>
-<h3 id="things-needed">Things Needed:<a class="headerlink" href="#things-needed" title="Permanent link">&para;</a></h3>
+<h1 id="mission-16-the-night-watch-ldr">Mission 1.6: The Night Watch (LDR)<a class="headerlink" href="#mission-16-the-night-watch-ldr" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Role</strong>: Smart City Engineer<br />
+<strong>Objective</strong>: Build a system that can detect Day vs Night.</p>
+</blockquote>
+<h2 id="result-preview">Result Preview<a class="headerlink" href="#result-preview" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><img alt="Result GIF" src="Placeholder_for_LDR_Graph.gif" /><br />
+<em>Cover the sensor -&gt; Value drops (Night). Shine light -&gt; Value rises (Day).</em></p>
+</blockquote>
+<hr />
+<h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
+<p>Streetlights shouldn't be on during the day—it wastes energy. We need a sensor that can "see" sunlight.
+Your mission is to use a <strong>Light Dependent Resistor (LDR)</strong> to measure brightness and report it to the city control center (your computer).</p>
+<h2 id="2-the-toolkit">2. The Toolkit<a class="headerlink" href="#2-the-toolkit" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Red male-male-to-male jumper wires = 1</li>
-<li>Blue male-to-male jumper wires = 1</li>
+<li><strong>1x LDR Module</strong> (The Eye)</li>
+<li><strong>3x Jumper Wires</strong></li>
+<li><strong>1x Arduino Uno</strong></li>
 </ul>
-<p><strong>Step 2:</strong> Take the red jumper wire. Connect one end of the wire to the “VCC” port on the resistor and the other end to the “5V” port on the Arduino UNO.</p>
-<p><img alt="LDR fixed on breadboard" src="../../../assets/1.0/LDR_Module/ldr_wire_1.webp" /></p>
-<p><strong>Step 3:</strong> Take the black jumper wire. Connect one end of the wire to the “GND” hole on the Arduino UNO and the other end to the “GND” port on the resistor.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/LDR_Module/ldr_wire_2.webp" />.</p>
-<p><strong>Step 4:</strong> Take the white jumper wire. Connect one end of the wire to the “DO” hole on the resistor and the other end to hole number 2 on the Arduino UNO.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/LDR_Module/ldr_wire_3.webp" />.</p>
-<p><strong>Step 5:</strong> Take the green jumper wire. Connect one end of the wire to the “AO” port  on the Arduino UNO to the “AO” port on the resistor.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/1.0/LDR_Module/ldr_wire_4.webp" />.</p>
-<p><em>make sure you connect the arduino usb use blue cable to the Arduino board</em>.</p>
-<h2 id="programming">PROGRAMMING<a class="headerlink" href="#programming" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Open your Arduino IDE. See how to set up here: <a href="../../../getting-started/overview/">Getting Started</a>.</p>
-<p><strong>Step 2:</strong> Type <code>const int LDR_PIN = A0;</code> as shown below in the image.</p>
-<p><em><strong>NB:</strong> Make sure you avoid errors when typing. Do not omit any character or symbol especially the bracket { }  and semicolons ;  and place them as you see in the image . The code that comes after the two ash backslashes “//” are called comments. They are not part of the code that will be run, they only explain the lines of code. You can avoid typing them.</em>
-<img alt="LDR_PIN decalration" src="../../../assets/1.0/LDR_Module/code_1.webp" />.</p>
-<p><strong>Step 3:</strong> Type <code>const int DO_PIN = 2;</code> as shown below in the image.</p>
-<p><img alt="DO_PIN decalration" src="../../../assets/1.0/LDR_Module/code_2.webp" />.
-<em><strong>NB:</strong> The code below sets the pin names as an output pin. An output pin helps send signals from the microcontroller to other components in the circuit. The pinMode () function, helps determine and control the behavior of a specific pin on the board.</em></p>
-<p><strong>Step 4:</strong> Type <code>pinMode (DO_PIN, INPUT);</code> as shown below in the image.</p>
-<p><img alt="PinMode decalration" src="../../../assets/1.0/LDR_Module/code_3.webp" />.</p>
-<p><strong>Step 5:</strong> Type <code>Serial.begin(9600); ;</code> as shown below in the image.</p>
-<p><img alt="Serial decalration" src="../../../assets/1.0/LDR_Module/code_4.webp" />.</p>
-<p><strong>Step 6:</strong> Type <code>int 1drValue = analogRead (LDR_PIN);</code> as shown below in the image.</p>
-<p><img alt="Analog decalration" src="../../../assets/1.0/LDR_Module/code_5.webp" />.</p>
-<p><strong>Step 7:</strong> Type <code>int digitalValue = digitalRead (DO_PIN);</code> as shown below in the image.</p>
-<p><img alt="DigitalRead decalration" src="../../../assets/1.0/LDR_Module/code_6.webp" />.</p>
-<p><strong>Step 8:</strong> Type <code>Serial.print(“Analog Value:”);</code> as shown below in the image.</p>
-<p><img alt="Serial.print decalration" src="../../../assets/1.0/LDR_Module/code_7.webp" />.</p>
-<p><strong>Step 9:</strong> Type <code>Serial.printIn(ldrValue);</code> as shown below in the image.</p>
-<p><img alt="Serial.println decalration" src="../../../assets/1.0/LDR_Module/code_8.webp" />.</p>
-<p><strong>Step 10:</strong> Type <code>Serial.print(“Digital Value:”);</code> as shown below in the image.</p>
-<p><img alt="Serial.print decalration" src="../../../assets/1.0/LDR_Module/code_9.webp" />.</p>
-<p><strong>Step 11:</strong> Type <code>Serial.printIn(digitalValue);</code> as shown below in the image.</p>
-<p><img alt="Serial.println decalration" src="../../../assets/1.0/LDR_Module/code_10.webp" />.</p>
-<p><strong>Step 12:</strong> Save your code. <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section</em></p>
-<p><strong>Step 13:</strong> Select the arduino board and port <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section:Selecting Arduino Board Type and Uploading your code</em>.</p>
-<p><strong>Step 14:</strong> Upload your code.</p>
-<h2 id="conclusion">CONCLUSION<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
-<p>In summary, this LED project presents a basic yet significant step in understanding parallel LED control. By simultaneously lighting up two LEDs, learners gain insight into simple circuit connections and programming synchronization. This project serves as a starting point for more complex configurations while highlighting the fundamental principle of coordinated electronic actions, setting the stage for broader exploration in electronics and automation.</p>
+<h2 id="3-the-blueprint">3. The Blueprint<a class="headerlink" href="#3-the-blueprint" title="Permanent link">&para;</a></h2>
+<p>The LDR module has 3 or 4 pins. We will use the <strong>Analog Output (AO)</strong> to get a precise number.</p>
+<ul>
+<li><strong>VCC</strong> -&gt; <strong>5V</strong></li>
+<li><strong>GND</strong> -&gt; <strong>GND</strong></li>
+<li><strong>AO (Analog)</strong> -&gt; <strong>Pin A0</strong></li>
+</ul>
+<p><img alt="LDR Wiring" src="../../../assets/1.0/LDR_Module/ldr_wire_4.webp" /></p>
+<h2 id="4-the-logic">4. The Logic<a class="headerlink" href="#4-the-logic" title="Permanent link">&para;</a></h2>
+<p>Digital pins are just 0 or 1. Analog pins can see <strong>1024</strong> levels of brightness!</p>
+<ul>
+<li><strong>0</strong> = Pitch Black.</li>
+<li><strong>1023</strong> = Blinding Light.</li>
+</ul>
+<p><strong>Step-by-Step:</strong></p>
+<ol>
+<li><strong>Define</strong>: LDR is on <code>A0</code>.</li>
+<li><strong>Setup</strong>: Start the Serial Monitor (Communication line).</li>
+<li><strong>Loop</strong>:<ul>
+<li><strong>Read</strong>: Get the brightness number (<code>analogRead</code>).</li>
+<li><strong>Report</strong>: Send it to the computer (<code>Serial.println</code>).</li>
+</ul>
+</li>
+</ol>
+<h3 id="the-code">The Code<a class="headerlink" href="#the-code" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 1.6: Light Intensity Checker</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ldrPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A0</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="c1">// Start communication with the computer</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="c1">// 1. Read the brightness (0-1023)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">brightness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">ldrPin</span><span class="p">);</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="c1">// 2. Report it</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Brightness Level: &quot;</span><span class="p">);</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">brightness</span><span class="p">);</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="c1">// 3. Slow down so we can read it</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="5-upload-test">5. Upload &amp; Test<a class="headerlink" href="#5-upload-test" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Upload the code.</li>
+<li><strong>Open Serial Monitor</strong> (Top Right Magnifying Glass).</li>
+<li>Cover the sensor with your hand. Does the number go down?</li>
+<li>Shine a flashlight on it. Does the number go up?</li>
+</ol>
+<h2 id="6-troubleshooting">6. Troubleshooting<a class="headerlink" href="#6-troubleshooting" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Numbers are random?</strong></li>
+<li>Check if you used <strong>AO</strong> (Analog) or <strong>DO</strong> (Digital). <code>analogRead</code> needs <code>AO</code>.</li>
+<li><strong>Value always 1023 or 0?</strong></li>
+<li>Check VCC (5V) and GND connections.</li>
+<li>Adjust the little blue screw (Potentiometer) on the module if it has one—it acts as a sensitivity tuner.</li>
+</ul>
+<h2 id="7-extensions-upgrades">7. Extensions &amp; Upgrades<a class="headerlink" href="#7-extensions-upgrades" title="Permanent link">&para;</a></h2>
+<p><strong>Challenge</strong>: Automatic Streetlight</p>
+<ul>
+<li><strong>Upgrade</strong>: Connect an LED to Pin 13.</li>
+<li><strong>Code</strong>: <code>if (brightness &lt; 300) { digitalWrite(13, HIGH); } else { digitalWrite(13, LOW); }</code></li>
+</ul>
 
 
 

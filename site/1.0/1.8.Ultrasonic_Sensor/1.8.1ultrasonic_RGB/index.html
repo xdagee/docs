@@ -23,7 +23,7 @@
     
     
       
-        <title>Project 1.8.1: Ultrasonic Sensor with RGB Module - STEMAIDE Docs</title>
+        <title>Mission 1.8: Reverse Parking System - STEMAIDE Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-181-ultrasonic-sensor-with-rgb-module" class="md-skip">
+        <a href="#mission-18-reverse-parking-system" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Project 1.8.1: Ultrasonic Sensor with RGB Module
+              Mission 1.8: Reverse Parking System
             
           </span>
         </div>
@@ -826,143 +826,132 @@
 
 
 
-<h1 id="project-181-ultrasonic-sensor-with-rgb-module">Project 1.8.1: Ultrasonic Sensor with RGB Module<a class="headerlink" href="#project-181-ultrasonic-sensor-with-rgb-module" title="Permanent link">&para;</a></h1>
-<h2 id="1-the-concept-distance-color">1. The Concept: Distance &amp; Color<a class="headerlink" href="#1-the-concept-distance-color" title="Permanent link">&para;</a></h2>
-<p><strong>What are we learning?</strong>
-In this project, we will combine an <strong>input</strong> (Ultrasonic Sensor) and an <strong>output</strong> (RGB Module). We will learn how to make decisions using <code>if/else</code> statements.</p>
-<ul>
-<li><strong>If</strong> an object is close, the light turns <strong>RED</strong> (Danger!).</li>
-<li><strong>If</strong> an object is far away, the light turns <strong>GREEN</strong> (Safe).</li>
-</ul>
-<p>This is the same logic used in car reversing sensors!</p>
-<h2 id="2-components-needed">2. Components Needed<a class="headerlink" href="#2-components-needed" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Component</th>
-<th style="text-align: center;">Quantity</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Arduino Uno</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: left;">Ultrasonic Sensor (HC-SR04)</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: left;">RGB Module</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: left;">Jumper Wires (Male-to-Female &amp; Male-to-Male)</td>
-<td style="text-align: center;">~8</td>
-</tr>
-<tr>
-<td style="text-align: left;">USB Cable</td>
-<td style="text-align: center;">1</td>
-</tr>
-</tbody>
-</table>
-<h2 id="3-wiring-the-circuit">3. Wiring the Circuit<a class="headerlink" href="#3-wiring-the-circuit" title="Permanent link">&para;</a></h2>
-<p>We need to connect two modules. Use the breadboard to make it easier.</p>
-<h3 id="ultrasonic-sensor-connections">Ultrasonic Sensor Connections<a class="headerlink" href="#ultrasonic-sensor-connections" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>VCC</strong> -&gt; Arduino <strong>5V</strong></li>
-<li><strong>GND</strong> -&gt; Arduino <strong>GND</strong></li>
-<li><strong>Trig</strong> -&gt; Arduino Pin <strong>9</strong></li>
-<li><strong>Echo</strong> -&gt; Arduino Pin <strong>10</strong></li>
-</ul>
-<h3 id="rgb-module-connections">RGB Module Connections<a class="headerlink" href="#rgb-module-connections" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>R (Red)</strong> -&gt; Arduino Pin <strong>3</strong></li>
-<li><strong>G (Green)</strong> -&gt; Arduino Pin <strong>5</strong></li>
-<li><strong>B (Blue)</strong> -&gt; Arduino Pin <strong>6</strong></li>
-<li><strong>- (GND)</strong> -&gt; Arduino <strong>GND</strong></li>
-</ul>
+<h1 id="mission-18-reverse-parking-system">Mission 1.8: Reverse Parking System<a class="headerlink" href="#mission-18-reverse-parking-system" title="Permanent link">&para;</a></h1>
 <blockquote>
-<p><strong>Checkpoint:</strong> Check your connections carefully! The Ultrasonic sensor needs 5V to work.</p>
+<p><strong>Role</strong>: Automotive Engineer<br />
+<strong>Objective</strong>: Build a car sensor that changes color as you get closer to a wall.</p>
 </blockquote>
-<h2 id="4-the-code">4. The Code<a class="headerlink" href="#4-the-code" title="Permanent link">&para;</a></h2>
-<p>Copy the code below into your Arduino IDE.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Define Pins</span>
+<h2 id="result-preview">Result Preview<a class="headerlink" href="#result-preview" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><img alt="Result GIF" src="Placeholder_for_Reverse_Sensor.gif" /><br />
+<em>Far away = Blue. Close (&lt; 10cm) = Red.</em></p>
+</blockquote>
+<hr />
+<h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
+<p>Cars use ultrasonic sensors to help drivers park safely.
+Your mission is to build this system. It must combine <strong>Input</strong> (Distance) and <strong>Output</strong> (Color) to make a smart decision.</p>
+<h2 id="2-the-toolkit">2. The Toolkit<a class="headerlink" href="#2-the-toolkit" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>1x Ultrasonic Sensor</strong> (Input)</li>
+<li><strong>1x RGB LED</strong> (Output)</li>
+<li><strong>8x Jumper Wires</strong></li>
+<li><strong>1x Arduino Uno</strong></li>
+</ul>
+<h2 id="3-the-blueprint">3. The Blueprint<a class="headerlink" href="#3-the-blueprint" title="Permanent link">&para;</a></h2>
+<p>This is a complex circuit. Focus!</p>
+<h3 id="ultrasonic">Ultrasonic<a class="headerlink" href="#ultrasonic" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>VCC</strong> -&gt; <strong>5V</strong></li>
+<li><strong>GND</strong> -&gt; <strong>GND</strong></li>
+<li><strong>Trig</strong> -&gt; <strong>Pin 9</strong></li>
+<li><strong>Echo</strong> -&gt; <strong>Pin 10</strong></li>
+</ul>
+<h3 id="rgb-led">RGB LED<a class="headerlink" href="#rgb-led" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>R (Red)</strong> -&gt; <strong>Pin 3</strong></li>
+<li><strong>G (Green)</strong> -&gt; <strong>Pin 5</strong></li>
+<li><strong>B (Blue)</strong> -&gt; <strong>Pin 6</strong></li>
+<li><strong>- (Common)</strong> -&gt; <strong>GND</strong></li>
+</ul>
+<p><img alt="Circuit Diagram" src="../../../assets/3.0/Smart_Gauge/image_8.webp" />
+<em>(Note: Diagram shows separate LEDs, but we are using the RGB Module)</em></p>
+<h2 id="4-the-logic">4. The Logic<a class="headerlink" href="#4-the-logic" title="Permanent link">&para;</a></h2>
+<p>We are combining the skills from Mission 1.5 (RGB) and Mission 2.1 (Ultrasonic).</p>
+<p><strong>Step-by-Step:</strong></p>
+<ol>
+<li><strong>Measure</strong>: Get distance in cm.</li>
+<li><strong>Decide</strong>:<ul>
+<li><strong>IF</strong> Distance &lt; 10cm -&gt; <strong>RED</strong> (Danger!).</li>
+<li><strong>ELSE</strong> -&gt; <strong>BLUE</strong> (Safe).</li>
+</ul>
+</li>
+<li><strong>Act</strong>: Send color command.</li>
+</ol>
+<h3 id="the-code">The Code<a class="headerlink" href="#the-code" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 1.8: Reverse Parking Sensor</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">trigPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">echoPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">redPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">greenPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">bluePin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1">// Variables for distance</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">redPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">greenPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">bluePin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="kt">long</span><span class="w"> </span><span class="n">duration</span><span class="p">;</span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="kt">int</span><span class="w"> </span><span class="n">distance</span><span class="p">;</span>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="c1">// Set up the Ultrasonic Sensor pins</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">trigPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"> </span><span class="c1">// Sends the sound wave</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">echoPin</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT</span><span class="p">);</span><span class="w">  </span><span class="c1">// Listens for the echo</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="c1">// Set up the RGB LED pins</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">redPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">greenPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">bluePin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="c1">// Start Serial Monitor (so we can see the distance on screen)</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="p">}</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">  </span><span class="c1">// 1. Clear the trigPin</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">trigPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">  </span><span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">  </span><span class="c1">// 2. Send a 10 microsecond pulse to trigger the sensor</span>
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">trigPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">  </span><span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">trigPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">trigPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">echoPin</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT</span><span class="p">);</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">redPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">greenPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">bluePin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="p">}</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="c1">// 1. Measure Distance</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">trigPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">  </span><span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">trigPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">  </span><span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">trigPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">  </span><span class="n">duration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pulseIn</span><span class="p">(</span><span class="n">echoPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">  </span><span class="n">distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">duration</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.034</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">  </span><span class="c1">// 2. Logic</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Distance: &quot;</span><span class="p">);</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">distance</span><span class="p">);</span>
 </span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
-</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">  </span><span class="c1">// 3. Measure the duration of the echo</span>
-</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">  </span><span class="n">duration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pulseIn</span><span class="p">(</span><span class="n">echoPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
-</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>
-</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">  </span><span class="c1">// 4. Calculate distance in cm</span>
-</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">  </span><span class="n">distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">duration</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.034</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
-</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>
-</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">  </span><span class="c1">// Print distance to Serial Monitor</span>
-</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Distance: &quot;</span><span class="p">);</span>
-</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">distance</span><span class="p">);</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">distance</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">    </span><span class="c1">// DANGER! Red</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">    </span><span class="n">setColor</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">    </span><span class="c1">// SAFE. Blue</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">    </span><span class="n">setColor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">);</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="p">}</span>
 </span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>
-</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="w">  </span><span class="c1">// 5. Logic: Change color based on distance</span>
-</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">distance</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="w">    </span><span class="c1">// Too close! Turn RED</span>
-</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="w">    </span><span class="n">setColor</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">distance</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="w">    </span><span class="c1">// Getting closer... Turn BLUE/YELLOW</span>
-</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="w">    </span><span class="n">setColor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">);</span>
-</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="w">    </span><span class="c1">// Safe distance. Turn GREEN</span>
-</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="w">    </span><span class="n">setColor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="p">}</span>
-</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>
-</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a><span class="c1">// Helper function to set color easily</span>
-</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setColor</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">blue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a><span class="w">  </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">redPin</span><span class="p">,</span><span class="w"> </span><span class="n">red</span><span class="p">);</span>
-</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a><span class="w">  </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">greenPin</span><span class="p">,</span><span class="w"> </span><span class="n">green</span><span class="p">);</span>
-</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a><span class="w">  </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">bluePin</span><span class="p">,</span><span class="w"> </span><span class="n">blue</span><span class="p">);</span>
-</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a><span class="p">}</span>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setColor</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">g</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="w">  </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">redPin</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">);</span>
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="w">  </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">greenPin</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">);</span>
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="w">  </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">bluePin</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="p">}</span>
 </span></code></pre></div>
-<h2 id="5-testing-troubleshooting">5. Testing &amp; Troubleshooting<a class="headerlink" href="#5-testing-troubleshooting" title="Permanent link">&para;</a></h2>
+<h2 id="5-upload-test">5. Upload &amp; Test<a class="headerlink" href="#5-upload-test" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Upload</strong> the code to your Arduino.</li>
-<li><strong>Open Serial Monitor</strong> (Magnifying glass icon top right). Set baud rate to <strong>9600</strong>.</li>
-<li>Move your hand in front of the ultrasonic sensor.<ul>
+<li>Upload code.</li>
+<li>Move your hand towards the sensor.</li>
+<li>Does it turn RED when you get close?</li>
+</ol>
+<h2 id="6-troubleshooting">6. Troubleshooting<a class="headerlink" href="#6-troubleshooting" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Distance always 0?</strong></li>
+<li>Check Trig/Echo wires (9 and 10).</li>
+<li>Check VCC (Must be 5V).</li>
+<li><strong>Colors wrong?</strong></li>
+<li>Check RGB wiring (Pins 3, 5, 6).</li>
+</ul>
+<h2 id="7-extensions-upgrades">7. Extensions &amp; Upgrades<a class="headerlink" href="#7-extensions-upgrades" title="Permanent link">&para;</a></h2>
+<p><strong>Challenge</strong>: The Warning Zone</p>
+<ul>
+<li><strong>Upgrade</strong>: Add a "Yellow" zone between 10cm and 20cm.</li>
+<li><strong>Code</strong>: Use <code>else if (distance &lt; 20) { setColor(255, 255, 0); }</code>.</li>
 <li><strong>Close (&lt; 10cm):</strong> LED should be <strong>Red</strong>.</li>
 <li><strong>Medium (10-20cm):</strong> LED should be <strong>Blue</strong>.</li>
 <li><strong>Far (&gt; 20cm):</strong> LED should be <strong>Green</strong>.</li>
 </ul>
-</li>
-</ol>
 <h3 id="not-working">Not working?<a class="headerlink" href="#not-working" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>LED Dark?</strong> Check if you connected the RGB GND pin to Arduino GND.</li>

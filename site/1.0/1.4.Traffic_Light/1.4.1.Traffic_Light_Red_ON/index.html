@@ -23,7 +23,7 @@
     
     
       
-        <title>Project 1.4.1: Red Means STOP - STEMAIDE Docs</title>
+        <title>Mission 1.4: Traffic Control - STEMAIDE Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-141-red-means-stop" class="md-skip">
+        <a href="#mission-14-traffic-control" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Project 1.4.1: Red Means STOP
+              Mission 1.4: Traffic Control
             
           </span>
         </div>
@@ -826,97 +826,75 @@
 
 
 
-<h1 id="project-141-red-means-stop">Project 1.4.1: Red Means STOP<a class="headerlink" href="#project-141-red-means-stop" title="Permanent link">&para;</a></h1>
-<h2 id="1-the-concept-naming-things">1. The Concept: Naming Things<a class="headerlink" href="#1-the-concept-naming-things" title="Permanent link">&para;</a></h2>
-<p><strong>What are we learning?</strong>
-We are going to turn on the <strong>Red Light</strong> of the traffic module.
-But this time, we will use a <strong>Variable</strong> to give the pin a name.</p>
-<p>Instead of remembering "Pin 5", we will tell the computer:</p>
+<h1 id="mission-14-traffic-control">Mission 1.4: Traffic Control<a class="headerlink" href="#mission-14-traffic-control" title="Permanent link">&para;</a></h1>
 <blockquote>
-<p><em>"Hey computer, whenever I say 'RedLight', I mean Pin 5!"</em></p>
+<p><strong>Role</strong>: Traffic Engineer<br />
+<strong>Objective</strong>: Program a traffic light system to control the flow of cars. Start with Red.</p>
 </blockquote>
-<h2 id="2-components-needed">2. Components Needed<a class="headerlink" href="#2-components-needed" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="Traffic Module" src="../../../assets/components/trafficmodule.webp" /></th>
-<th style="text-align: center;"><img alt="Arduino Uno" src="../../../assets/components/arduino.webp" /></th>
-<th style="text-align: center;"><img alt="Breadboard" src="../../../assets/components/breadboard.webp" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><strong>Traffic Light Module</strong></td>
-<td style="text-align: center;"><strong>Arduino Uno</strong></td>
-<td style="text-align: center;"><strong>Breadboard</strong></td>
-</tr>
-</tbody>
-</table>
-<h2 id="3-wiring-the-circuit">3. Wiring the Circuit<a class="headerlink" href="#3-wiring-the-circuit" title="Permanent link">&para;</a></h2>
-<p>Use the Standard Wiring for this module.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Traffic Light</th>
-<th style="text-align: center;">Arduino</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><strong>GND</strong></td>
-<td style="text-align: center;"><strong>GND</strong></td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>R (Red)</strong></td>
-<td style="text-align: center;"><strong>Pin 5</strong></td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Y (Yellow)</strong></td>
-<td style="text-align: center;"><strong>Pin 6</strong></td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>G (Green)</strong></td>
-<td style="text-align: center;"><strong>Pin 7</strong></td>
-</tr>
-</tbody>
-</table>
-<p><img alt="Traffic Light Wiring" src="../../../assets/1.0/Traffic_Light_Module/Traffic_Light_Red_On/Traffic_Light_image_2.webp" />
-<em>(Connect the Red pin to Pin 5, and GND to GND)</em></p>
-<h2 id="4-the-code">4. The Code<a class="headerlink" href="#4-the-code" title="Permanent link">&para;</a></h2>
-<p>Copy this code into your Arduino IDE.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// 1. Give the pin a name!</span>
+<h2 id="result-preview">Result Preview<a class="headerlink" href="#result-preview" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><img alt="Result GIF" src="Placeholder_for_Traffic_Red.gif" /><br />
+<em>The Red Light turns ON. Cars must STOP.</em></p>
+</blockquote>
+<hr />
+<h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
+<p>Safe roads need rules. We communicate these rules using light signals.
+Your mission is to take control of the intersection. We start with the most important signal: <strong>STOP</strong>.</p>
+<h2 id="2-the-toolkit">2. The Toolkit<a class="headerlink" href="#2-the-toolkit" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>1x Traffic Light Module</strong></li>
+<li><strong>1x Arduino Uno</strong></li>
+<li><strong>1x Breadboard</strong> (Optional, can plug directly)</li>
+</ul>
+<h2 id="3-the-blueprint">3. The Blueprint<a class="headerlink" href="#3-the-blueprint" title="Permanent link">&para;</a></h2>
+<p>The Traffic Light module has 4 pins.</p>
+<ul>
+<li><strong>GND</strong> -&gt; <strong>GND</strong> (The Common Ground)</li>
+<li><strong>R (Red)</strong> -&gt; <strong>Pin 5</strong></li>
+<li><strong>Y (Yellow)</strong> -&gt; <strong>Pin 6</strong></li>
+<li><strong>G (Green)</strong> -&gt; <strong>Pin 7</strong></li>
+</ul>
+<p><img alt="Traffic Light Wiring" src="../../../assets/1.0/Traffic_Light_Module/Traffic_Light_Red_On/Traffic_Light_image_2.webp" /></p>
+<h2 id="4-the-logic">4. The Logic<a class="headerlink" href="#4-the-logic" title="Permanent link">&para;</a></h2>
+<p>We use variables to keep our code clean. Instead of remembering "5", we call it <code>redLight</code>.</p>
+<p><strong>Step-by-Step:</strong></p>
+<ol>
+<li><strong>Define</strong>: <code>redLight</code> is Pin 5.</li>
+<li><strong>Setup</strong>: Configure Pin 5 as <strong>OUTPUT</strong>.</li>
+<li><strong>Loop</strong>: Turn Pin 5 <strong>HIGH</strong> (ON).</li>
+</ol>
+<h3 id="the-code">The Code<a class="headerlink" href="#the-code" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 1.4: Traffic Control</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">redLight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="c1">// 2. Configure the pin as OUTPUT</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">redLight</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="c1">// 3. Turn it ON</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">redLight</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">}</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">redLight</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">redLight</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// STOP!</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span>
 </span></code></pre></div>
-<h3 id="explaining-the-code">Explaining the Code<a class="headerlink" href="#explaining-the-code" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>const int redLight = 5;</code>: We create a constant integer named <code>redLight</code> and store the number <code>5</code> in it.</li>
-<li><code>digitalWrite(redLight, HIGH);</code>: The computer reads this as "Write HIGH to Pin 5".</li>
-</ul>
 <h2 id="5-upload-test">5. Upload &amp; Test<a class="headerlink" href="#5-upload-test" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Click <strong>Verify</strong>.</li>
-<li>Click <strong>Upload</strong>.</li>
-<li>Is the Red light on?</li>
+<li>Upload the code.</li>
+<li>Is the Red LED on?</li>
 </ol>
 <h2 id="6-troubleshooting">6. Troubleshooting<a class="headerlink" href="#6-troubleshooting" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>No light?</strong> Check the GND connection. The module needs GND to complete the circuit.</li>
-<li><strong>Wrong light on?</strong> You might have connected Pin 5 to the Yellow or Green pin by mistake. Check the letters on the module (R, Y, G).</li>
-<li><strong>All lights on?</strong> You might be powering them directly from 5V instead of a Pin. Check your wiring.</li>
+<li><strong>No light?</strong></li>
+<li><strong>Ground Check</strong>: Is the GND pin connected? The module needs it to complete the circuit.</li>
+<li><strong>Wrong color?</strong></li>
+<li>Trace the wires. Did you accidentally plug Pin 5 into 'Y' or 'G'?</li>
+<li><strong>Very dim?</strong></li>
+<li>Ensure your wires are fully inserted.</li>
 </ul>
-<h2 id="challenge">Challenge<a class="headerlink" href="#challenge" title="Permanent link">&para;</a></h2>
-<p>Can you change the code to turn on the <strong>Green Light</strong> (Pin 7) instead?
-<em>Hint: You will need to change the pin number at the top!</em></p>
+<h2 id="7-extensions-upgrades">7. Extensions &amp; Upgrades<a class="headerlink" href="#7-extensions-upgrades" title="Permanent link">&para;</a></h2>
+<p><strong>Challenge</strong>: The Sequence</p>
+<ul>
+<li><strong>Upgrade</strong>: Can you make it change lights? Red (3s) -&gt; Green (3s) -&gt; Yellow (1s).</li>
+<li><strong>Hint</strong>: You will need to define <code>greenLight</code> and <code>yellowLight</code> variables too!</li>
+</ul>
 
 
 
