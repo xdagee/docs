@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://docs.stemaide.com/1.0/1.1.LED/1.1.1.LED_ON/">
+        <link rel="canonical" href="https://docs.stemaide.com/3.0/3.1.Smart_Gauge/3.1.1.Mission_City_Dashboard/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Project 1.1: Light Up an LED - STEMAIDE Docs</title>
+        <title>Mission 3.1: The City Dashboard - STEMAIDE Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-11-light-up-an-led" class="md-skip">
+        <a href="#mission-31-the-city-dashboard" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Project 1.1: Light Up an LED
+              Mission 3.1: The City Dashboard
             
           </span>
         </div>
@@ -644,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../version1/" class="md-nav__link">
+      <a href="../../../1.0/version1/" class="md-nav__link">
         
   
   
@@ -826,88 +826,90 @@
 
 
 
-<h1 id="project-11-light-up-an-led">Project 1.1: Light Up an LED<a class="headerlink" href="#project-11-light-up-an-led" title="Permanent link">&para;</a></h1>
-<h2 id="1-the-concept-digital-output">1. The Concept: Digital Output<a class="headerlink" href="#1-the-concept-digital-output" title="Permanent link">&para;</a></h2>
-<p><strong>What are we learning?</strong>
-We are going to turn on a Light Emitting Diode (LED).
-To do this, we need to send an electrical signal from the Arduino to the LED.</p>
+<h1 id="mission-31-the-city-dashboard">Mission 3.1: The City Dashboard<a class="headerlink" href="#mission-31-the-city-dashboard" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Role</strong>: City Planner<br />
+<strong>Objective</strong>: Build a visual status board to monitor critical infrastructure (like a Water Tower).</p>
+</blockquote>
+<hr />
+<h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
+<p>In the <strong>Smart City</strong>, data is useless if humans can't read it. A City Mayor doesn't want to see "Distance = 3cm". They want to see <strong>"Green = Safe"</strong> or <strong>"Red = Danger"</strong>.</p>
+<p>We need a system that takes raw data (Distance) and converts it into a visual status update.</p>
+<h2 id="2-the-toolkit">2. The Toolkit<a class="headerlink" href="#2-the-toolkit" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>HIGH</strong> signal = 5V (On)</li>
-<li><strong>LOW</strong> signal = 0V (Off)</li>
+<li><strong>1x Ultrasonic Sensor</strong>: The Monitor.</li>
+<li><strong>1x Green LED</strong>: "Safe" Indicator.</li>
+<li><strong>1x Red LED</strong>: "Danger" Indicator.</li>
+<li><strong>2x Resistors</strong> (330 Ohm): Protection for LEDs.</li>
 </ul>
-<p>We will use a command called <code>digitalWrite()</code> to send this signal.</p>
-<h2 id="2-components-needed">2. Components Needed<a class="headerlink" href="#2-components-needed" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="LED" src="../../../assets/components/leds.webp" /></th>
-<th style="text-align: center;"><img alt="Arduino Uno" src="../../../assets/components/arduino.webp" /></th>
-<th style="text-align: center;"><img alt="Breadboard" src="../../../assets/components/breadboard.webp" /></th>
-<th style="text-align: center;"><img alt="Jumper Wires" src="../../../assets/components/jumperwires.webp" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><strong>LED</strong> (Any Color)</td>
-<td style="text-align: center;"><strong>Arduino Uno</strong></td>
-<td style="text-align: center;"><strong>Breadboard</strong></td>
-<td style="text-align: center;"><strong>Jumper Wires</strong></td>
-</tr>
-</tbody>
-</table>
-<h2 id="3-wiring-the-circuit">3. Wiring the Circuit<a class="headerlink" href="#3-wiring-the-circuit" title="Permanent link">&para;</a></h2>
-<p><strong>Caution:</strong> LEDs have polarity! They have a <strong>positive (+)</strong> leg and a <strong>negative (-)</strong> leg.</p>
+<h2 id="3-the-blueprint">3. The Blueprint<a class="headerlink" href="#3-the-blueprint" title="Permanent link">&para;</a></h2>
+<p>Construct the circuit on your breadboard:</p>
 <ul>
-<li><strong>Long Leg (+):</strong> Connects to the Signal (Pin 6).</li>
-<li><strong>Short Leg (-):</strong> Connects to Ground (GND).</li>
+<li><strong>Ultrasonic</strong>: Same as Mission 2.1 (Trig-&gt;9, Echo-&gt;10).</li>
+<li><strong>Red LED</strong>: Positive -&gt; <strong>Pin 6</strong>.</li>
+<li><strong>Green LED</strong>: Positive -&gt; <strong>Pin 7</strong>.</li>
 </ul>
-<p><strong>Step 1:</strong> Insert the LED into the breadboard.
-<img alt="LED fixed on breadboard" src="../../../assets/1.0/LED/LED_ON/led_on_breadboard.webp" /></p>
-<p><strong>Step 2:</strong> Connect the <strong>Positive (Long Leg)</strong> to Arduino <strong>Pin 6</strong>.
-<em>(Using a Red wire helps you remember it's positive!)</em>
-<img alt="Red wire connected" src="../../../assets/1.0/LED/LED_ON/red_wire_connected.webp" /></p>
-<p><strong>Step 3:</strong> Connect the <strong>Negative (Short Leg)</strong> to Arduino <strong>GND</strong>.
-<em>(Using a Black or Blue wire helps you remember it's Ground!)</em>
-<img alt="Blue wire connected" src="../../../assets/1.0/LED/LED_ON/blue_wire_connected.webp" /></p>
-<p><strong>Step 4:</strong> Plug the Arduino into your computer using the Blue USB cable.</p>
-<h2 id="4-the-code">4. The Code<a class="headerlink" href="#4-the-code" title="Permanent link">&para;</a></h2>
-<p>Copy this code into your Arduino IDE.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// 1. Give the pin a name so it&#39;s easier to remember</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">ledPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="c1">// 2. Tell Arduino that this pin is for OUTPUT (sending power out)</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="c1">// 3. Turn the LED ON (HIGH voltage)</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">}</span>
-</span></code></pre></div>
-<h3 id="explaining-the-lines">Explaining the lines<a class="headerlink" href="#explaining-the-lines" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>int ledPin = 6;</code> -&gt; We create a variable named <code>ledPin</code> and set it to 6. Now, whenever we say <code>ledPin</code>, the computer knows we mean Pin 6.</li>
-<li><code>pinMode(ledPin, OUTPUT);</code> -&gt; Pins can be inputs (listening) or outputs (talking). We want to talk to the LED, so we set it to <strong>OUTPUT</strong>.</li>
-<li><code>digitalWrite(ledPin, HIGH);</code> -&gt; Send 5V to the pin. <strong>Let there be light!</strong></li>
-</ul>
-<h2 id="5-upload-test">5. Upload &amp; Test<a class="headerlink" href="#5-upload-test" title="Permanent link">&para;</a></h2>
+<p><img alt="Wiring Diagram" src="../../../assets/3.0/Smart_Gauge/image_8.webp" /></p>
+<h2 id="4-the-logic">4. The Logic<a class="headerlink" href="#4-the-logic" title="Permanent link">&para;</a></h2>
+<p>We are building a <strong>State Machine</strong>.</p>
 <ol>
-<li>Click <strong>Verify</strong> (Checkmark).</li>
-<li>Click <strong>Upload</strong> (Arrow).</li>
-<li>Look at your board. Is the LED on?</li>
-</ol>
-<h2 id="6-troubleshooting">6. Troubleshooting<a class="headerlink" href="#6-troubleshooting" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>LED not turning on?</strong></li>
-<li>Try flipping the LED. Remember, the <strong>Long leg</strong> must go to Pin 6.</li>
-<li>Check if the wires are pushed all the way in.</li>
-<li>Check if you uploaded the code successfully (Look for "Done uploading").</li>
-<li><strong>Dim light?</strong></li>
-<li>Ensure you are using a digital pin (0-13), not an analog pin.</li>
+<li><strong>Measure</strong>: Get the distance.</li>
+<li><strong>Analyze</strong>: Is it safe (&gt;10cm) or dangerous (&lt;10cm)?</li>
+<li><strong>Display</strong>:<ul>
+<li><strong>Safe</strong>: Green ON, Red OFF.</li>
+<li><strong>Danger</strong>: Red ON, Green OFF.</li>
 </ul>
-<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
-<p>Congratulations! You have just built your first electronic circuit. You learned how to complete a circuit and control it with software. Next, let's make it blink!</p>
+</li>
+</ol>
+<h3 id="the-code">The Code<a class="headerlink" href="#the-code" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 3.1: The City Dashboard</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">trigPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">echoPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">redLed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">greenLed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kt">long</span><span class="w"> </span><span class="n">duration</span><span class="p">;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="kt">int</span><span class="w"> </span><span class="n">distance</span><span class="p">;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">trigPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">echoPin</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT</span><span class="p">);</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">redLed</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">greenLed</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">}</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="c1">// 1. Measure Distance</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">trigPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">  </span><span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">trigPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span><span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">trigPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">  </span><span class="n">duration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pulseIn</span><span class="p">(</span><span class="n">echoPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">  </span><span class="n">distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">duration</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.034</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">  </span><span class="c1">// 2. The Decision Logic</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">distance</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">    </span><span class="c1">// DANGER STATE (Water level too high!)</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">redLed</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">greenLed</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;STATUS: CRITICAL WARNING&quot;</span><span class="p">);</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">    </span><span class="c1">// SAFE STATE</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">redLed</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">greenLed</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;STATUS: NORMAL&quot;</span><span class="p">);</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span><span class="w"> </span><span class="c1">// Update twice a second</span>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="5-the-debrief">5. The Debrief<a class="headerlink" href="#5-the-debrief" title="Permanent link">&para;</a></h2>
+<p>Watch your dashboard. As you move your hand closer, the city's status should change instantly from <strong>Green</strong> to <strong>Red</strong>.</p>
+<p><strong>Challenge</strong>: Can you add a Yellow LED for "Warning" (between 10cm and 20cm)?</p>
 
 
 

@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://docs.stemaide.com/2.0/2.1.Ultrasonic%2BLED/2.1.1.Ultrasonic_and_1_LED/">
+        <link rel="canonical" href="https://docs.stemaide.com/2.0/2.1.Ultrasonic%2BLED/2.1.1.Mission_Bats_Warning/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Project 2.1.1: LED and Ultrasonic Sensor Control - STEMAIDE Docs</title>
+        <title>Mission 2.1: The Bat's Warning - STEMAIDE Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-211-led-and-ultrasonic-sensor-control" class="md-skip">
+        <a href="#mission-21-the-bats-warning" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Project 2.1.1: LED and Ultrasonic Sensor Control
+              Mission 2.1: The Bat's Warning
             
           </span>
         </div>
@@ -826,149 +826,88 @@
 
 
 
-<h1 id="project-211-led-and-ultrasonic-sensor-control">Project 2.1.1: LED and Ultrasonic Sensor Control<a class="headerlink" href="#project-211-led-and-ultrasonic-sensor-control" title="Permanent link">&para;</a></h1>
-<table>
-<thead>
-<tr>
-<th><strong>Description</strong></th>
-<th>You will learn how to create a simple circuit using a microcontroller, LED and an Ultrasonic Sensor.</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Use case</strong></td>
-<td>Imagine you want to use a sensor to measure the distance of an object and turn on or off and LED based on the distance measured using Arduino.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="components-things-you-will-need">Components (Things You will need)<a class="headerlink" href="#components-things-you-will-need" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th><img alt="LED" src="../../../assets/components/leds.webp" /></th>
-<th><img alt="Arduino Uno" src="../../../assets/components/arduino.webp" /></th>
-<th><img alt="Arduino USB Cable" src="../../../assets/components/usbcable.webp" /></th>
-<th><img alt="Breadboard" src="../../../assets/components/breadboard.webp" /></th>
-<th><img alt="Breadboard" src="../../../assets/components/jumperwires.webp" /></th>
-<th><img alt="Ultrasonic" src="../../../assets/components/ultrasonic.webp" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="building-the-circuit">Building the circuit<a class="headerlink" href="#building-the-circuit" title="Permanent link">&para;</a></h2>
-<p>Things Needed:</p>
+<h1 id="mission-21-the-bats-warning">Mission 2.1: The Bat's Warning<a class="headerlink" href="#mission-21-the-bats-warning" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Role</strong>: Neighborhood Engineer<br />
+<strong>Objective</strong>: Build a proximity alarm that warns us when danger is too close.</p>
+</blockquote>
+<hr />
+<h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
+<p>In the <strong>Neighborhood</strong>, blind corners are dangerous. Cars and pedestrians crash because they can't "see" what's coming.</p>
+<p>We need a system that acts like a Bat: sending out sound waves to detect obstacles in the dark. If something gets too close, the Alarm (LED) must trigger.</p>
+<h2 id="2-the-toolkit">2. The Toolkit<a class="headerlink" href="#2-the-toolkit" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Arduino Uno Board: 1</li>
-<li>Arduino USB cable: 1</li>
-<li>Breadboard: 1</li>
-<li>Red jumper wire: 1</li>
-<li>Black jumper wire: 1</li>
-<li>White jumper wire: 1</li>
-<li>Blue jumper wire: 1</li>
-<li>Brown jumper wire: 1</li>
-<li>Red LED: 1</li>
-<li>Green Jumper Wire: 1</li>
+<li><strong>1x Ultrasonic Sensor (HC-SR04)</strong>: The "Bat Eyes".</li>
+<li><strong>1x LED</strong>: The Warning Light.</li>
+<li><strong>4x Jumper Wires</strong>: For the Sensor.</li>
 </ul>
-<h2 id="mounting-the-component-on-the-breadboard">Mounting the component on the breadboard<a class="headerlink" href="#mounting-the-component-on-the-breadboard" title="Permanent link">&para;</a></h2>
-<h3 id="things-needed">Things needed:<a class="headerlink" href="#things-needed" title="Permanent link">&para;</a></h3>
+<h2 id="3-the-blueprint">3. The Blueprint<a class="headerlink" href="#3-the-blueprint" title="Permanent link">&para;</a></h2>
+<p>The Ultrasonic Sensor has 4 pins. Be careful!</p>
 <ul>
-<li>Ultrasonic Sensor = 1</li>
-<li>Breadboard =1</li>
-<li>Red LED = 1</li>
+<li><strong>VCC</strong> -&gt; <strong>5V</strong></li>
+<li><strong>GND</strong> -&gt; <strong>GND</strong></li>
+<li><strong>Trig</strong> (Trigger) -&gt; <strong>Pin 11</strong> (Sends the shout)</li>
+<li><strong>Echo</strong> (Listener) -&gt; <strong>Pin 12</strong> (Hears the echo)</li>
+<li><strong>LED Positive</strong> -&gt; <strong>Pin 13</strong></li>
 </ul>
-<p><strong>Step 1:</strong> Take the breadboard and the ultrasonic sensor. Insert the ultrasonic sensor into the horizontal connectors on the breadboard, with the pins facing outwards as shown in the picture below</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/ultrasonic_on_breadboard.webp" />.</p>
-<p><strong>Step 2:</strong> Insert the red LED into the horizontal connectors on the breadboard beside the ultrasonic sensor and take note of where the positive pin (long pin) is and where the negative pin (short pin) is as shown in the picture below.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/ultrasonic_led.webp" />.</p>
-<h2 id="wiring-the-circuit">WIRING THE CIRCUIT<a class="headerlink" href="#wiring-the-circuit" title="Permanent link">&para;</a></h2>
-<h3 id="things-needed_1">Things Needed:<a class="headerlink" href="#things-needed_1" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Red male-to-male jumper wire: 1</li>
-<li>Black male-to-male jumper wire: 1</li>
-<li>White male-to-male jumper wire: 1</li>
-<li>Blue male-to-male jumper wire: 1</li>
-<li>Brown jumper wire: 1</li>
-<li>Green Jumper Wire: 1</li>
-</ul>
-<p><strong>Step 1:</strong> Connect one end of the red male-to-male jumper wire to the VCC pin of the Ultrasonic sensor and the other end to the 5V pin on the Arduino Uno board as shown in the picture below.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/circuit_1.webp" /></p>
-<p><strong>Step 2:</strong> Connect one end of the black male-to-male jumper wire to the GND pin of the Ultrasonic sensor and the other end to the GND pin on the Arduino Uno board as shown in the picture below.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/circuit_2.webp" />.</p>
-<p><strong>Step 3:</strong> Connect one end of the white male-to-male jumper wire to the Trig pin of the Ultrasonic sensor and the other end to digital pin 11 on the Arduino Uno board as shown in the picture below.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/circuit_3.webp" />.</p>
-<p><strong>Step 4:</strong> Connect one end of the blue male-to-male jumper wire to the Echo pin of the Ultrasonic sensor and the other end to digital pin 12 on the Arduino Uno board as shown in the picture below.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/circuit_4.webp" />.</p>
-<p><strong>Step 5:</strong> Connect one end of the green male-to-male jumper wire to the positive pin of the LED and the other end to digital pin 13 on the Arduino Uno board as shown in the picture below.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/circuit_5.webp" />.</p>
-<p><strong>Step 6:</strong> Connect one end of the brown male-to-male jumper wire to the positive pin of the LED and the other end to the GND pin on the Arduino Uno board as shown in the picture below.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/circuit_6.webp" />.</p>
-<h2 id="programming">PROGRAMMING<a class="headerlink" href="#programming" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Open your Arduino IDE. See how to set up here: <a href="../../../getting-started/overview/">Getting Started</a>.</p>
-<p><strong>Step 2:</strong> <code>const int Echo = 12;</code> to define the Echo pin.</p>
-<p><img alt="Code 1" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/code_1.webp" />.</p>
-<p><strong>Step 3:</strong> Type <code>const int Trig = 11;</code> to define the Trig pin.</p>
-<p><img alt="Code 2" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/code_2.webp" />.</p>
-<p><strong>Step 4:</strong> Press ENTER to go to the next line, type <code>const int led = 13;</code> to define the pin for the led</p>
-<p><img alt="Code 3" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/code_3.webp" />.</p>
-<p><strong>Step 5:</strong> Type <code>long duration;</code> to declare the duration variable.</p>
-<p><img alt="Code 4" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/code_4.webp" />.</p>
-<p><strong>Step 6:</strong> Type <code>int distance;</code> to declare the distance variable.</p>
-<p><img alt="Code 5" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/code_5.webp" />.</p>
-<p><strong>Step 7:</strong> Type <code>const int distance_threshold = 20;</code> to declare the distance threshold variable.</p>
-<p><img alt="Code 6" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/code_6.webp" />.</p>
-<p><strong>Step 8:</strong> Inside the curly brackets of the void setup () function, type <code>pinMode(Trig, OUTPUT);</code> to set the Trig pin as an output.</p>
-<p><img alt="Code 7" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/code_7.webp" />.</p>
-<p><strong>Step 9:</strong> Type <code>pinMode(Echo, INPUT);</code> to set the Echo pin as an input.</p>
-<p><img alt="Code 8" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/code_8.webp" />.</p>
-<p><strong>Step 10:</strong> Type <code>Serial.begin (9600);</code> As shown in the picture below. This is to activate the serial monitor.</p>
-<p><img alt="Code 9" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/code_9.webp" />.</p>
-<p><strong>Step 11:</strong> Type <code>pinMode(led, OUTPUT);</code> As shown in the picture below. This is to activate the serial monitor.</p>
-<p><img alt="Code 10" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/code_10.webp" />.</p>
-<p><strong>Step 12:</strong> Inside the curly brackets of the void loop (), which is where you put your code to run repeatedly. Type <code>digitalWrite(Trig, LOW);</code> As shown in the picture below.</p>
-<p><img alt="Code 11" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/code_11.webp" />.</p>
-<p><strong>Step 13:</strong> Type <code>delay (200);</code> to introduce a delay.</p>
-<p><img alt="Code 12" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/code_12.webp" />.</p>
-<p><strong>Step 14:</strong> Type the following code as shown in the picture below to turn ON the ultrasonic sensor.
-   <div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">digitalWrite</span><span class="p">(</span><span class="n">Trig</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">introduce</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">delay</span>
-</span></code></pre></div></p>
-<p><img alt="Code 13" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/code_13.webp" />.</p>
-<p><strong>Step 15:</strong> Type <code>digitalWrite (Trig, LOW);</code> to turn off the ultrasonic sensor. As shown in the picture below to turn OFF the ultrasonic sensor.</p>
-<p><img alt="Code 14" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/code_14.webp" />.</p>
-<p><strong>Step 16:</strong> Type the following code
-   <div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">duration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pulseIn</span><span class="w"> </span><span class="p">(</span><span class="n">Echo</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// to read the duration from the Echo pin. As shown in the picture below.</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1">//This is to take input from the Echo pin.</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">duration</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.034</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// to calculate the distance. As shown in the picture below.</span>
-</span></code></pre></div></p>
-<p><img alt="Code 15" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/code_15.webp" />.</p>
-<p><strong>Step 17:</strong> Type the conditional statement to turn on the LED at a distance less than the threshold distance.
-   <div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">distance</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">distance_threshold</span><span class="p">)</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">   </span><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">led</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">else</span><span class="w"> </span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">   </span><span class="n">digitalWrite</span><span class="w"> </span><span class="p">(</span><span class="n">led</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span>
+<p><img alt="Wiring Diagram" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/circuit_5.webp" /></p>
+<h2 id="4-the-logic">4. The Logic<a class="headerlink" href="#4-the-logic" title="Permanent link">&para;</a></h2>
+<p>How do we measure distance with sound?
+<code>Distance = (Time * Speed of Sound) / 2</code></p>
+<ol>
+<li><strong>Trigger</strong>: Send a 10-microsecond pulse (Shout).</li>
+<li><strong>Echo</strong>: Wait for the pulse to bounce back (Listen).</li>
+<li><strong>Calculate</strong>: Use the time to find centimeters.</li>
+</ol>
+<h3 id="the-code">The Code<a class="headerlink" href="#the-code" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 2.1: The Bat&#39;s Warning</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">trigPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">11</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">echoPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ledPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span><span class="p">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="kt">long</span><span class="w"> </span><span class="n">duration</span><span class="p">;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kt">int</span><span class="w"> </span><span class="n">distance</span><span class="p">;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">trigPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"> </span><span class="c1">// Mouth (Speaks)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">echoPin</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT</span><span class="p">);</span><span class="w">  </span><span class="c1">// Ear (Listens)</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span><span class="w">       </span><span class="c1">// Open Communications to PC</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">}</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="c1">// 1. Clear the throat</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">trigPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">  </span><span class="c1">// 2. SHOUT! (Send sound wave)</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">trigPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span><span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">trigPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">  </span><span class="c1">// 3. LISTEN (Measure how long it takes to return)</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">  </span><span class="n">duration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pulseIn</span><span class="p">(</span><span class="n">echoPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">  </span><span class="c1">// 4. Calculate Distance (Speed of sound is 0.034 cm/us)</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">  </span><span class="n">distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">duration</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.034</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">  </span><span class="c1">// 5. Logic: Is it too close? (&lt; 20cm)</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">distance</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// DANGER! Turn ON.</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">  </span><span class="c1">// Safe. Turn OFF.</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">  </span><span class="c1">// Debugging: Print to screen</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Distance: &quot;</span><span class="p">);</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">distance</span><span class="p">);</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot; cm&quot;</span><span class="p">);</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="p">}</span>
 </span></code></pre></div>
-<img alt="Code 16" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/code_16.webp" />.</p>
-<p><strong>Step 18:</strong> Type the following code to print the distance value to the serial monitor.  As shown in the picture below.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="w"> </span><span class="p">(</span><span class="n">distance</span><span class="p">);</span><span class="w"> </span><span class="c1">//This code allows the serial monitor to print the values for distance.</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="w"> </span><span class="p">(</span><span class="err">“</span><span class="n">cm</span><span class="err">”</span><span class="p">);</span><span class="w"> </span><span class="c1">//Here a unit is given to the distance values.</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
-</span></code></pre></div>
-<p><img alt="Code 17" src="../../../assets/2.0/1.1.Ultrasonic%2BLED/code_17.webp" />.</p>
-<p><strong>Step 19:</strong> Save your code. <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section</em></p>
-<p><strong>Step 20:</strong> Select the arduino board and port <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section:Selecting Arduino Board Type and Uploading your code</em>.</p>
-<p><strong>Step 21:</strong> Upload your code. <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section:Selecting Arduino Board Type and Uploading your code</em></p>
-<h2 id="conclusion">CONCLUSION<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
-<p>To sum up, the one LED blink project demonstrates a foundational concept in electronics and programming. Through this simple yet illuminating endeavor, learners grasp the essentials of hardware interfacing, coding logic, and timing control. This project lays the groundwork for more advanced explorations while showcasing the transformative power of just a single LED, sparking curiosity and creativity in the world of DIY electronics.</p>
+<h2 id="5-the-debrief">5. The Debrief<a class="headerlink" href="#5-the-debrief" title="Permanent link">&para;</a></h2>
+<p>Open the <strong>Serial Monitor</strong> (Top Right Magnifying Glass).
+Move your hand in front of the sensor. Does the LED turn on when you get close?</p>
+<p><strong>Challenge</strong>: Can you add a Buzzer that beeps only when it is <em>extremely</em> close (5cm)?</p>
 
 
 
