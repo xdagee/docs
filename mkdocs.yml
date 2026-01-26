@@ -39,11 +39,6 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
-font:
-    text: Inter
-    code: JetBrains Mono
-
-
 plugins:
   - search
   - tags
