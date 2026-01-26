@@ -57,5 +57,5 @@ hide:
 ## Popular Topics
 
 * [**Standard Wiring Guide**](photoshoot_plan.md) - The "Gold Standard" for pin connections.
-* [**Traffic Light Module**](1.0/1.4.Traffic_Light/1.4.0.Taffic_Light_Intro.md) - Wiring and Logic.
+* [**Traffic Light Module**](1.0/1.4.Traffic_Light/1.4.0.Traffic_Light_Intro.md) - Wiring and Logic.
 * [**Servo Motors**](1.0/1.7.Servo_Motor/1.7.0.Servo_Motor_One_Angle.md) - Precision Movement.
