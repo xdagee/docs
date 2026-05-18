@@ -23,3 +23,7 @@
 ### 3.6 Smart Clap Device
 
 - [Smart Clap Device](3.6.Smart_Clap_Device/3.6.1.Smart_Clap_device.md)
+
+### 3.7 Smart Irrigation
+
+- [Mission 3.7: The Smart Farm](3.7.Smart_Irrigation/3.7.1.Smart_Irrigation.md)

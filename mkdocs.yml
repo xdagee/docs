@@ -55,6 +55,9 @@ nav:
       - Appentice's Handbook: guides/user-guide.md
       - The Lab (Level 1): 1.0/version1.md
       - The Neighborhood (Level 2): 2.0/version2.md
+      - The Smart City (Level 3):
+        - Manual 3.0: 3.0/version3.md
+        - Smart Irrigation: 3.0/3.7.Smart_Irrigation/3.7.1.Smart_Irrigation.md
       - Developer Guide: guides/developer-guide.md
 
   - Contributing: CONTRIBUTING.md

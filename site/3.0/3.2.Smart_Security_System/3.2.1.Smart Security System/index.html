@@ -19,11 +19,11 @@
       
       
       <link rel="icon" href="../../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Project 3.2.1: SMART SECURITY SYSTEM - STEMAIDE Docs</title>
+        <title>Mission 3.2: The Silent Alarm - STEMAIDE Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-321-smart-security-system" class="md-skip">
+        <a href="#mission-32-the-silent-alarm" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Project 3.2.1: SMART SECURITY SYSTEM
+              Mission 3.2: The Silent Alarm
             
           </span>
         </div>
@@ -562,6 +562,8 @@
       
         
       
+        
+      
     
     
     
@@ -688,6 +690,130 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Smart City (Level 3)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    The Smart City (Level 3)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../version3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manual 3.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.7.Smart_Irrigation/3.7.1.Smart_Irrigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Smart Irrigation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -826,148 +952,106 @@
 
 
 
-<h1 id="project-321-smart-security-system">Project 3.2.1: SMART SECURITY SYSTEM<a class="headerlink" href="#project-321-smart-security-system" title="Permanent link">&para;</a></h1>
-<table>
-<thead>
-<tr>
-<th><strong>Description</strong></th>
-<th>This smart security system uses an ultrasonic sensor to detect objects within a specified range. When an object is detected, a red LED lights up, and a buzzer sounds to alert users.</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Use case</strong></td>
-<td>Ideal for securing entry points, monitoring restricted areas, or alerting when someone enters a protected zone..</td>
-</tr>
-</tbody>
-</table>
-<h2 id="components-things-you-will-need">Components (Things You will need)<a class="headerlink" href="#components-things-you-will-need" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th><img alt="LED" src="../../../assets/components/leds.webp" /></th>
-<th><img alt="Arduino Uno" src="../../../assets/components/arduino.webp" /></th>
-<th><img alt="Arduino USB Cable" src="../../../assets/components/usbcable.webp" /></th>
-<th><img alt="Breadboard" src="../../../assets/components/breadboard.webp" /></th>
-<th><img alt="Jumper wires" src="../../../assets/components/jumperwires.webp" /></th>
-<th><img alt="Ultrasonic sensor" src="../../../assets/components/ultrasonic.webp" /></th>
-<th><img alt="Buzzer" src="../../../assets/components/buzzer.webp" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="building-the-circuit">Building the circuit<a class="headerlink" href="#building-the-circuit" title="Permanent link">&para;</a></h2>
-<p>Things Needed:</p>
+<h1 id="mission-32-the-silent-alarm">Mission 3.2: The Silent Alarm<a class="headerlink" href="#mission-32-the-silent-alarm" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Role</strong>: Security Systems Architect<br />
+<strong>Objective</strong>: Protect the Vault. If anything gets too close, trigger the alarm.</p>
+</blockquote>
+<h2 id="result-preview">Result Preview<a class="headerlink" href="#result-preview" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><img alt="Result GIF" src="Placeholder_for_Silent_Alarm.gif" /><br />
+<em>Intruder detected (&lt; 20cm) -&gt; LED turns ON + Buzzer sounds.</em></p>
+</blockquote>
+<hr />
+<h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
+<p>The city bank needs a new security system.
+Your mission is to build a "Proximity Alarm" that detects invisible intruders using sound waves.</p>
+<h2 id="2-the-toolkit">2. The Toolkit<a class="headerlink" href="#2-the-toolkit" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Arduino Uno = 1</li>
-<li>Arduino USB cable = 1</li>
-<li>Red LED = 1</li>
-<li>Ultrasonic sensor = 1</li>
-<li>Buzzer = 1</li>
-<li>Red jumper wire = 1</li>
-<li>Blue jumper wire = 1</li>
-<li>Black jumper wires = 2</li>
-<li>White jumper wire = 1</li>
-<li>Orange jumper wire = 1</li>
-<li>Green jumper wire = 1</li>
-<li>Brown jumper wire =1</li>
+<li><strong>1x Ultrasonic Sensor</strong> (Eyes)</li>
+<li><strong>1x Buzzer</strong> (Siren)</li>
+<li><strong>1x Red LED</strong> (Warning Light)</li>
+<li><strong>1x Arduino Uno</strong> (Brain)</li>
 </ul>
-<h2 id="mounting-the-component-on-the-breadboard">Mounting the component on the breadboard<a class="headerlink" href="#mounting-the-component-on-the-breadboard" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Take the breadboard, the Ultrasonic sensor and insert it into the vertical connectors on the breadboard as shown below.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/3.0/Smart_Security_System/IMG_E7853.webp" />.</p>
-<p><strong>Step 2:</strong> Take the Buzzer and insert it into the vertical connectors on the breadboard beside the Ultrasonic sensor as shown below.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/3.0/Smart_Security_System/IMG_E7854.webp" />.</p>
-<p><strong>Step 3:</strong> Take the red LED and insert it into the vertical connectors on the breadboard beside the buzzer as shown below.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/3.0/Smart_Security_System/IMG_E7855.webp" />.</p>
-<p><em><strong>NB:</strong> Make sure you identify where the positive pin (+) and the negative pin (-) is connected to on the breadboard. The longer pin of the LED is the positive pin and the shorter one, the negative PIN</em>.</p>
-<h2 id="wiring-the-circuit">WIRING THE CIRCUIT<a class="headerlink" href="#wiring-the-circuit" title="Permanent link">&para;</a></h2>
-<h3 id="things-needed">Things Needed:<a class="headerlink" href="#things-needed" title="Permanent link">&para;</a></h3>
+<h2 id="3-the-blueprint">3. The Blueprint<a class="headerlink" href="#3-the-blueprint" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Red jumper wire = 1</li>
-<li>Blue jumper wire = 1</li>
-<li>Black jumper wires = 2</li>
-<li>White jumper wire = 1</li>
-<li>Orange jumper wire = 1</li>
-<li>Green jumper wire = 1</li>
-<li>Brown jumper wire =1</li>
+<li><strong>Ultrasonic Trig</strong>: Pin 6</li>
+<li><strong>Ultrasonic Echo</strong>: Pin 7</li>
+<li><strong>Buzzer +</strong>: Pin 8</li>
+<li><strong>LED +</strong>: Pin 9</li>
+<li><strong>GND</strong>: Common Ground</li>
 </ul>
-<p><strong>Step 1:</strong> Connect one end of red male-to-male jumper wire to the VCC pin of the ultrasonic sensor on the breadboard and the other end to 5v on the Arduino UNO as shown below.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/3.0/Smart_Security_System/IMG_7856.webp" /></p>
-<p><strong>Step 2:</strong> Connect one end of white male-to-male jumper wire to the TRIG pin of the ultrasonic sensor on the breadboard and the other end to digital pin number 6 on the Arduino UNO as shown below.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/3.0/Smart_Security_System/IMG_7857.webp" />.</p>
-<p><strong>Step 3:</strong> Connect one end of black male-to-male jumper wire to the ECHO pin of the ultrasonic sensor on the breadboard and the other end to digital pin number 7 on the Arduino UNO as shown below.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/3.0/Smart_Security_System/IMG_7858.webp" /></p>
-<p><strong>Step 4:</strong>Connect one end of brown male-to-male jumper wire to the GND pin of the ultrasonic sensor on the breadboard and the other end to GND on the Arduino UNO as shown below.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/3.0/Smart_Security_System/IMG_7859.webp" />.</p>
-<p><strong>Step 5:</strong> Connect one end of the black male-to-male jumper wire to the positive pin of the buzzer on the breadboard to digital pin number 8 on the Arduino UNO as shown below</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/3.0/Smart_Security_System/IMG_7861.webp" />.</p>
-<p><strong>Step 6:</strong> Connect one end of the orange male-to-male jumper wire to the negative pin of the buzzer on the bread board to GND on the Arduino UNO.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/3.0/Smart_Security_System/IMG_7862.webp" />.</p>
-<p><strong>Step 7:</strong> Connect one end of the green male-to-male jumper wire to the positive pin of Red LED on the breadboard to digital pin number 9 on the Arduino UNO as shown below.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/3.0/Smart_Security_System/IMG_7863.webp" />.</p>
-<p><strong>Step 8:</strong> Connect one end of the blue male-to-male jumper wire to the negative pin of Red LED on the bread board to GND on the Arduino UNO.</p>
-<p><img alt="LED fixed on breadboard" src="../../../assets/3.0/Smart_Security_System/IMG_7864.webp" />.
-<em>make sure you connect the arduino usb use blue cable to the Arduino board</em>.</p>
-<h2 id="programming">PROGRAMMING<a class="headerlink" href="#programming" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Open your Arduino IDE. See how to set up here: <a href="../../../getting-started/overview/">Getting Started</a>.</p>
-<p>``` cpp
-// Pin definitions
-const int trigPin = 6;
-const int echoPin = 7;
-const int redLEDPin = 9;
-const int buzzerPin = 8;
-const int distanceThreshold = 20; // Threshold in cm</p>
-<p>void setup() {
- // put your setup code here, to run once:
-  pinMode(trigPin, OUTPUT);
-  pinMode(echoPin, INPUT);
-  pinMode(redLEDPin, OUTPUT);
-  pinMode(buzzerPin, OUTPUT);
-  Serial.begin(9600);
-}</p>
-<p>void loop() { 
- // put your main code here, to run repeatedly:
-  long duration;
-  int distance;</p>
-<p>// Trigger ultrasonic sensor
-  digitalWrite(trigPin, LOW);
-  delayMicroseconds(2);
-  digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);</p>
-<p>// Read echo pin
-  duration = pulseIn(echoPin, HIGH);
-  distance = duration * 0.034 / 2;</p>
-<p>// Check distance and activate alarm
-  if (distance &lt; distanceThreshold) {
-    digitalWrite(redLEDPin, HIGH);
-    tone(buzzerPin, 1000);
-  } else {
-    digitalWrite(redLEDPin, LOW);
-    noTone(buzzerPin);
-  }</p>
-<p>delay(100);
-  //Read the Serial monitor
-  Serial.print(distance);
-  Serial.println("cm");
-  delay(500);
-}
-  ```</p>
-<p><strong>Step 4:</strong> Save your code. <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section</em></p>
-<p><strong>Step 5:</strong> Select the arduino board and port <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section:Selecting Arduino Board Type and Uploading your code</em>.</p>
-<p><strong>Step 6:</strong> Upload your code.</p>
-<h2 id="conclusion">CONCLUSION<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
-<p>This project provides a simple and effective way to enhance security using readily available components. It’s easy to set up and suitable for beginners.</p>
+<p><img alt="LED fixed on breadboard" src="../../../assets/3.0/Smart_Security_System/IMG_7864.webp" /></p>
+<h2 id="4-the-logic">4. The Logic<a class="headerlink" href="#4-the-logic" title="Permanent link">&para;</a></h2>
+<p><strong>Algorithm:</strong></p>
+<ol>
+<li><strong>Ping</strong>: Send a sound wave.</li>
+<li><strong>Listen</strong>: Measure how long it takes to return.</li>
+<li><strong>Calculate</strong>: Distance = Time x Speed of Sound.</li>
+<li><strong>Decide</strong>: If Distance &lt; 20cm -&gt; <strong>ALARM!</strong></li>
+</ol>
+<h3 id="the-code">The Code<a class="headerlink" href="#the-code" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 3.2: Smart Security System</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">trigPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">echoPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">buzzerPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ledPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">trigPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">echoPin</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT</span><span class="p">);</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">buzzerPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">}</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="kt">long</span><span class="w"> </span><span class="n">duration</span><span class="p">,</span><span class="w"> </span><span class="n">distance</span><span class="p">;</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="c1">// 1. Send Pulse</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">trigPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">  </span><span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">trigPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">trigPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">  </span><span class="c1">// 2. Measure Pulse</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">  </span><span class="n">duration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pulseIn</span><span class="p">(</span><span class="n">echoPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">  </span><span class="c1">// 3. Calculate Distance (cm)</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">  </span><span class="n">distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">duration</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">29.1</span><span class="p">;</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">distance</span><span class="p">);</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot; cm&quot;</span><span class="p">);</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">  </span><span class="c1">// 4. Security Logic</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">distance</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">    </span><span class="c1">// INTRUDER ALERT!</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">    </span><span class="n">tone</span><span class="p">(</span><span class="n">buzzerPin</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">);</span><span class="w"> </span><span class="c1">// 1 kHz sound</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">    </span><span class="c1">// Safe</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">    </span><span class="n">noTone</span><span class="p">(</span><span class="n">buzzerPin</span><span class="p">);</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="5-upload-test">5. Upload &amp; Test<a class="headerlink" href="#5-upload-test" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Upload code.</li>
+<li>Place your hand far away (Safe).</li>
+<li>Move hand closer (&lt; 20cm).</li>
+<li><strong>BEEP!</strong> LED ON.</li>
+</ol>
+<h2 id="6-troubleshooting">6. Troubleshooting<a class="headerlink" href="#6-troubleshooting" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Alarm triggering constantly?</strong></li>
+<li>Ultrasonic sensors can be noisy. Ensure it's pointing at empty space.</li>
+<li><strong>Distance is 0?</strong></li>
+<li>Check VCC (5V) and GND connections on the sensor. 0 usually means "Unplugged".</li>
+</ul>
 
 
 

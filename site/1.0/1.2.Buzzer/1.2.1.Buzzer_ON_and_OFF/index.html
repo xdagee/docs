@@ -19,11 +19,11 @@
       
       
       <link rel="icon" href="../../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Mission 1.2: Buzzing with Sound - STEMAIDE Docs</title>
+        <title>Mission 1.11: The Silent Alarm - STEMAIDE Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mission-12-buzzing-with-sound" class="md-skip">
+        <a href="#mission-111-the-silent-alarm" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Mission 1.2: Buzzing with Sound
+              Mission 1.11: The Silent Alarm
             
           </span>
         </div>
@@ -562,6 +562,8 @@
       
         
       
+        
+      
     
     
     
@@ -688,6 +690,130 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Smart City (Level 3)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    The Smart City (Level 3)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3.0/version3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manual 3.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3.0/3.7.Smart_Irrigation/3.7.1.Smart_Irrigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Smart Irrigation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -826,10 +952,10 @@
 
 
 
-<h1 id="mission-12-buzzing-with-sound">Mission 1.2: Buzzing with Sound<a class="headerlink" href="#mission-12-buzzing-with-sound" title="Permanent link">&para;</a></h1>
+<h1 id="mission-111-the-silent-alarm">Mission 1.11: The Silent Alarm<a class="headerlink" href="#mission-111-the-silent-alarm" title="Permanent link">&para;</a></h1>
 <blockquote>
-<p><strong>Role</strong>: Warning System Engineer<br />
-<strong>Objective</strong>: Create an audible alert system using a piezoelectric buzzer.</p>
+<p><strong>Role</strong>: Security Specialist<br />
+<strong>Objective</strong>: Create a audible alert system to guard the perimeter.</p>
 </blockquote>
 <h2 id="result-preview">Result Preview<a class="headerlink" href="#result-preview" title="Permanent link">&para;</a></h2>
 <blockquote>
@@ -838,67 +964,61 @@
 </blockquote>
 <hr />
 <h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
-<p>Visual signals (lights) are great, but what if the operator is asleep? We need Sound.
-Your mission is to make the STEMAIDE kit <strong>speak</strong>.</p>
+<p>Lights are great for visual alerts, but sound is the only way to wake up a sleeping guard.
+Your mission is to add a voice to your machine.</p>
 <h2 id="2-the-toolkit">2. The Toolkit<a class="headerlink" href="#2-the-toolkit" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>1x Buzzer</strong> (The Speaker)</li>
-<li><strong>2x Jumper Wires</strong> (Male-to-Male)</li>
+<li><strong>1x Buzzer</strong> (Active piezoelectric)</li>
+<li><strong>1x Arduino Uno</strong></li>
+<li><strong>2x Jumper Wires</strong></li>
 <li><strong>1x Breadboard</strong></li>
 </ul>
 <h2 id="3-the-blueprint">3. The Blueprint<a class="headerlink" href="#3-the-blueprint" title="Permanent link">&para;</a></h2>
-<p><strong>Caution:</strong> The Buzzer has polarity!</p>
 <ul>
-<li><strong>Long Leg (+):</strong> Connects to <strong>Pin 3</strong> (Signal).</li>
-<li><strong>Short Leg (-):</strong> Connects to <strong>GND</strong> (Ground).</li>
+<li><strong>Long Leg (+)</strong> -&gt; <strong>Pin 3</strong></li>
+<li><strong>Short Leg (-)</strong> -&gt; <strong>GND</strong></li>
 </ul>
 <p><img alt="Wiring Diagram" src="../../../assets/1.0/BUZZER/buzzer_wire_2.webp" /></p>
 <h2 id="4-the-logic">4. The Logic<a class="headerlink" href="#4-the-logic" title="Permanent link">&para;</a></h2>
-<p>We control sound just like we control light—by turning the power ON and OFF.</p>
+<p><strong>Algorithm:</strong></p>
 <ol>
-<li><strong>Define</strong>: Give Pin 3 the name <code>buzzerPin</code>.</li>
-<li><strong>Setup</strong>: Configure Pin 3 as an <strong>OUTPUT</strong>.</li>
+<li><strong>Define</strong>: Use Pin 3 for the signal.</li>
+<li><strong>Setup</strong>: Set Pin 3 to <code>OUTPUT</code>.</li>
 <li><strong>Loop</strong>:<ul>
-<li><strong>ON</strong>: <code>digitalWrite(HIGH)</code> -&gt; Beep!</li>
-<li><strong>Wait</strong>: <code>delay(1000)</code> -&gt; Hold the beep.</li>
-<li><strong>OFF</strong>: <code>digitalWrite(LOW)</code> -&gt; Silence.</li>
-<li><strong>Wait</strong>: <code>delay(1000)</code> -&gt; Hold the silence.</li>
+<li>Turn <code>HIGH</code> (ON) to beep.</li>
+<li>Wait 1 second.</li>
+<li>Turn <code>LOW</code> (OFF) to silence.</li>
+<li>Wait 1 second.</li>
 </ul>
 </li>
 </ol>
 <h3 id="the-code">The Code<a class="headerlink" href="#the-code" title="Permanent link">&para;</a></h3>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 1.2: Buzzing with Sound</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">buzzerPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 1.11: The Silent Alarm</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">buzzerPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">buzzerPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">buzzerPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// Beep</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w">                   </span><span class="c1">// Wait 1 sec</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">buzzerPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">  </span><span class="c1">// Silence</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w">                   </span><span class="c1">// Wait 1 sec</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">}</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">buzzerPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// Sound ON</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">buzzerPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">  </span><span class="c1">// Sound OFF</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="5-upload-test">5. Upload &amp; Test<a class="headerlink" href="#5-upload-test" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Click <strong>Verify</strong> -&gt; <strong>Upload</strong>.</li>
-<li>Listen! Do you hear the pattern?</li>
+<li>Upload the code.</li>
+<li>Listen! Do you hear the steady alarm?</li>
+<li><strong>Experiment</strong>: Change the delay to <code>100</code> for a high-speed panic alarm.</li>
 </ol>
 <h2 id="6-troubleshooting">6. Troubleshooting<a class="headerlink" href="#6-troubleshooting" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>No Sound?</strong></li>
-<li>Did you remove the <strong>Sticker</strong> on top of the buzzer? (REMOVE SEAL).</li>
-<li>Check polarity: Long leg must go to Pin 3.</li>
-<li><strong>Clicking only?</strong></li>
-<li>You might have a "Passive Buzzer" that needs a frequency (tone), but most kits come with Active Buzzers. If it just clicks, try using <code>tone(3, 1000);</code>.</li>
-</ul>
-<h2 id="7-extensions-upgrades">7. Extensions &amp; Upgrades<a class="headerlink" href="#7-extensions-upgrades" title="Permanent link">&para;</a></h2>
-<p><strong>Challenge</strong>: SOS Signal</p>
-<ul>
-<li><strong>Upgrade</strong>: Can you program an S-O-S pattern? (3 short, 3 long, 3 short).</li>
+<li><strong>No sound?</strong></li>
+<li>Did you remove the <strong>REMOVE SEAL</strong> sticker from the top of the buzzer?</li>
+<li>Check if the buzzer legs are deep enough in the breadboard.</li>
+<li><strong>Sounds like clicking?</strong> If it doesn't beep, your kit might have a "Passive Buzzer". Try using <code>tone(3, 1000);</code> instead of <code>digitalWrite</code>.</li>
 </ul>
 
 

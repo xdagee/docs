@@ -19,11 +19,11 @@
       
       
       <link rel="icon" href="../../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Project 2.12.1: TRAFFIC LIGHT with STEMAIDE - STEMAIDE Docs</title>
+        <title>Mission 2.12: Smart Night Mode - STEMAIDE Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-2121-traffic-light-with-stemaide" class="md-skip">
+        <a href="#mission-212-smart-night-mode" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Project 2.12.1: TRAFFIC LIGHT with STEMAIDE
+              Mission 2.12: Smart Night Mode
             
           </span>
         </div>
@@ -562,6 +562,8 @@
       
         
       
+        
+      
     
     
     
@@ -688,6 +690,130 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Smart City (Level 3)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    The Smart City (Level 3)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3.0/version3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manual 3.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3.0/3.7.Smart_Irrigation/3.7.1.Smart_Irrigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Smart Irrigation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -826,144 +952,104 @@
 
 
 
-<h1 id="project-2121-traffic-light-with-stemaide">Project 2.12.1: TRAFFIC LIGHT with STEMAIDE<a class="headerlink" href="#project-2121-traffic-light-with-stemaide" title="Permanent link">&para;</a></h1>
-<table>
-<thead>
-<tr>
-<th><strong>Description</strong></th>
-<th>You will learn how to detect the presence or absence of light.</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Use case</strong></td>
-<td>Controlling visibility of light in streetlights at different times of the day.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="components-things-you-will-need">Components (Things You will need)<a class="headerlink" href="#components-things-you-will-need" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th><img alt="Arduino Uno" src="../../../assets/components/arduino.webp" /></th>
-<th><img alt="Arduino USB Cable" src="../../../assets/components/usbcable.webp" /></th>
-<th><img alt="Breadboard" src="../../../assets/components/breadboard.webp" /></th>
-<th><img alt="Jump wire" src="../../../assets/components/jumperwires.webp" /></th>
-<th><img alt="Traffic Light Module" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Traffic_Light_Module.webp" /></th>
-<th><img alt="Light Dependable Resistor" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Light_Dependable_Resistor.webp" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="building-the-circuit">Building the circuit<a class="headerlink" href="#building-the-circuit" title="Permanent link">&para;</a></h2>
-<p>Things Needed:</p>
+<h1 id="mission-212-smart-night-mode">Mission 2.12: Smart Night Mode<a class="headerlink" href="#mission-212-smart-night-mode" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Role</strong>: City Operations Manager<br />
+<strong>Objective</strong>: Modify the traffic lights. At night, they should save energy and just blink yellow.</p>
+</blockquote>
+<h2 id="result-preview">Result Preview<a class="headerlink" href="#result-preview" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><img alt="Result GIF" src="Placeholder_for_Smart_Night_Mode.gif" /><br />
+<em>Daytime -&gt; Normal Cycle (R-Y-G). Night -&gt; Blinking Yellow.</em></p>
+</blockquote>
+<hr />
+<h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
+<p>In the middle of the night, waiting for a green light when no one is around is annoying.
+Major cities switch to "Caution Mode" (Blinking Yellow) at night.
+Your mission is to automate this using the <strong>LDR</strong>.</p>
+<h2 id="2-the-toolkit">2. The Toolkit<a class="headerlink" href="#2-the-toolkit" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Arduino Uno = 1  </li>
-<li>Arduino USB cable = 1</li>
-<li>Light dependent resistor   = 1</li>
-<li>Traffic module= 1</li>
-<li>Red jumper wire = 1</li>
-<li>Black jumper wire = 1</li>
-<li>Green jumper wire = 2</li>
-<li>Brown jumper wire = 1</li>
-<li>Purple jumper wire = 1</li>
-<li>Yellow jumper wire = 1</li>
-<li>Orange jumper wire = 1</li>
+<li><strong>1x Traffic Light Module</strong></li>
+<li><strong>1x LDR Sensor</strong></li>
+<li><strong>1x Arduino Uno</strong></li>
 </ul>
-<h2 id="mounting-the-component-on-the-breadboard">Mounting the component on the breadboard<a class="headerlink" href="#mounting-the-component-on-the-breadboard" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Take the light-dependent resistor and the breadboard and insert the light-dependent resistor into the horizontal connectors on the breadboard.</p>
-<p><img alt="Step1" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step1.webp" /></p>
-<p><strong>Step 2:</strong> Take the traffic light and insert it into the horizontal connectors on the breadboard.</p>
-<p><img alt="Step2" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step2.webp" /></p>
-<h2 id="wiring-the-components">WIRING THE COMPONENTS<a class="headerlink" href="#wiring-the-components" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Take the green jumper wire. Connect one end of the wire to the “VCC” port on the resistor and the other end to the “5V” port on the Arduino UNO.</p>
-<p><img alt="Step3" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step3.webp" /></p>
-<p><strong>Step 2:</strong> Take the purple jumper wire. Connect one end of the wire to the “GND” hole on the Arduino UNO and the other end to the “GND” port on the resistor.</p>
+<h2 id="3-the-blueprint">3. The Blueprint<a class="headerlink" href="#3-the-blueprint" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Traffic Light</strong>: 5, 6, 7 (R, Y, G)</li>
+<li><strong>LDR</strong>: A0 (Analog)</li>
+</ul>
 <p><img alt="Step4" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step4.webp" /></p>
-<p><strong>Step 3:</strong> Take the black jumper wire. Connect one end of the wire to the “DO” hole on the resistor and the other end to hole number 8 on the Arduino UNO.</p>
-<p><img alt="Step5" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step5.webp" /></p>
-<p><strong>Step 4:</strong> Take the brown jumper wire. Connect one end of the wire to the “AO” port on the Arduino UNO to the “AO” port on the resistor.</p>
-<p><img alt="Step6" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step6.webp" /></p>
-<p><strong>Step 5:</strong>Take the orange jumper wire.  Connect one end of the wire to the port labelled “R” on the traffic light and connect the other end to digital pin 5 on the Arduino UNO.</p>
-<p><img alt="Step7" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step7.webp" /></p>
-<p><strong>Step 6:</strong> Take the green jumper wire. Connect one end of the wire to the port labelled “Y” on the traffic light and connect the other end to digital pin 6 on the Arduino UNO.</p>
-<p><img alt="Step8" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step8.webp" /></p>
-<p><strong>Step 7:</strong> Take the yellow jumper wire. Connect one end of the wire to the port labelled “G” on the traffic light and connect the other end to digital pin 7 on the Arduino UNO.</p>
-<p><img alt="Step9" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step9.webp" /></p>
-<p><strong>Step 8:</strong> Take the red jumper wire. Connect one end of the wire to the port labelled “GND” on the traffic light and connect the other end to the “GND” on the Arduino UNO.</p>
-<p><img alt="Step9" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step9.webp" /></p>
-<p><strong>Step 9:</strong> Take the yellow jumper wire. Connect one end of the wire to the port labelled “G” on the traffic light and connect the other end to digital pin 7 on the Arduino UNO.</p>
-<p><img alt="Step10" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step10.webp" /></p>
-<h2 id="programming">PROGRAMMING<a class="headerlink" href="#programming" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Open your Arduino IDE. See how to set up here: <a href="../../../getting-started/overview/">Getting Started</a>.</p>
-<p><strong>Step 2:</strong> Type <code>const int LDR_PIN = A0;</code> as shown below in the image</p>
-<p><em><strong>NB:</strong> Make sure you avoid errors when typing. Do not omit any character or symbol especially the bracket { }  and semicolons ;  and place them as you see in the image . The code that comes after the two ash backslashes “//” are called comments. They are not part of the code that will be run, they only explain the lines of code. You can avoid typing them.</em></p>
-<p><img alt="Step11" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step11.webp" /></p>
-<p><strong>Step 3:</strong> Type <code>const int DO_PIN = 8;</code> as shown below in the image.</p>
-<p><img alt="Step12" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step12.webp" /></p>
-<p><strong>Step 4:</strong> Type <code>const int RED_PIN = 5;</code> as shown below in the image.</p>
-<p><img alt="Step13" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step13.webp" /></p>
-<p><strong>Step 5:</strong> Type <code>const int GREEN_PIN = 6;</code> as shown below in the image.</p>
-<p><img alt="Step14" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step14.webp" /></p>
-<p><strong>Step 6:</strong> Type <code>const int YELLOW_PIN = 7;</code> as shown below in the image.</p>
-<p><img alt="Step15" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step15.webp" /></p>
-<p><strong>Step 7:</strong> Type <code>int 1drValue;</code> as shown below in the image.</p>
-<p><img alt="Step16" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step16.webp" /></p>
-<p><strong>Step 8:</strong> Type <code>int digitalValue;</code> as shown below in the image.</p>
-<p><img alt="Step17" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step17.webp" /></p>
-<p><strong>Step 9:</strong> Type <code>int redValue, greenValue, blueValue;</code> as shown below in the image.</p>
-<p><img alt="Step18" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step18.webp" /></p>
-<p><strong>Step 10:</strong> Type <code>pinMode (DO_PIN, INPUT);</code> as shown below in the image.</p>
-<p><img alt="Step19" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step19.webp" /></p>
-<p><strong>Step 11:</strong> Type <code>Serial.begin(9600);</code> as shown below in the image.</p>
-<p><img alt="Step20" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step20.webp" /></p>
-<p><strong>Step 12:</strong> Type <code>pinMode (RED_PIN, OUTPUT);</code> as shown below in the image.</p>
-<p><img alt="Step21" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step21.webp" /></p>
-<p><strong>Step 13:</strong> Type <code>pinMode (GREEN_PIN, OUTPUT);</code> as shown below in the image.</p>
-<p><img alt="Step22" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step22.webp" /></p>
-<p><strong>Step 14:</strong> Type <code>pinMode (YELLOW_PIN, OUTPUT);</code> as shown below in the image.</p>
-<p><img alt="Step23" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step23.webp" /></p>
-<p><strong>Step 15:</strong> Type </p>
-<p>Serial.print (“Analog Value:”);
-              Serial.printIn (ldrValue);
-               Serial.printIn (“Digital Value:”);
-               Serial.printIn (digitalValue);
-             ;  as shown below in the image.</p>
-<p><img alt="Step24" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step26.webp" /></p>
-<p><strong>Step 16:</strong> Type </p>
-<p>if (ldrValue &lt; 100) {
-          digitalWrite (RED_PIN, HIGH);
-          delay (1000);
-         digitalWrite (RED_PIN, LOW);
-          delay (1000);
-          digitalWrite (GREEN_PIN, HIGH);
-          delay (1000);
-          digitalWrite (GREEN_PIN, LOW);
-          delay (1000);
-          digitalWrite (YELLOW_PIN, HIGH);
-          delay (1000);
-          digitalWrite (YELLOW_PIN, LOW);
-          delay (1000);
-             } as shown below in the image.</p>
-<p><img alt="Step25" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step27.webp" /></p>
-<p><strong>Step 17:</strong> Type </p>
-<p>else {
-        digitalWrite (RED_PIN, LOW);
-        digitalWrite (GREEN_PIN, LOW); 
-        digitalWrite (YELLOW_PIN, LOW) ; } as shown below in the image.</p>
-<p><img alt="Step26" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step28.webp" /></p>
-<p><img alt="Step27" src="../../../assets/2.0/3.3.Traffic_Light_STEMAIDE/Step29.webp" /></p>
-<h2 id="conclusion">CONCLUSION<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
-<p>If you encounter any problems when trying to upload your code to the board, run through your code again to check for any errors or missing lines of code. If you did not encounter any problems and the program ran as expected Congratulations on a job well done. You have now learnt how to code the traffic light to change colors in the presence of light. Practice, as they say makes perfect. Continue to work hard and in time you’ll master it.</p>
+<h2 id="4-the-logic">4. The Logic<a class="headerlink" href="#4-the-logic" title="Permanent link">&para;</a></h2>
+<p><strong>Algorithm:</strong></p>
+<ol>
+<li><strong>Check Light Level</strong>.</li>
+<li><strong>IF Dark (&lt; 300)</strong>:<ul>
+<li>Blink Yellow (ON 500ms, OFF 500ms).</li>
+</ul>
+</li>
+<li><strong>ELSE (Day)</strong>:<ul>
+<li>Run Standard Traffic Cycle (Red -&gt; Green -&gt; Yellow).</li>
+</ul>
+</li>
+</ol>
+<h3 id="the-code">The Code<a class="headerlink" href="#the-code" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 2.12: Smart Night Mode</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ldrPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A0</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">red</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">yellow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">green</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">yellow</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">}</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">brightness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">ldrPin</span><span class="p">);</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">brightness</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">300</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="c1">// NIGHT MODE: Blink Yellow</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">yellow</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">yellow</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">    </span><span class="c1">// DAY MODE: Normal Cycle</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">    </span><span class="c1">// Red</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">    </span><span class="c1">// Green</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">    </span><span class="c1">// Yellow</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">yellow</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">yellow</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="5-upload-test">5. Upload &amp; Test<a class="headerlink" href="#5-upload-test" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Upload code.</li>
+<li>Cover the LDR. Does it switch to Yellow Blinking?</li>
+<li>Uncover. Does it go back to Red/Green/Yellow?</li>
+</ol>
+<h2 id="6-troubleshooting">6. Troubleshooting<a class="headerlink" href="#6-troubleshooting" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Stuck in Night Mode?</strong></li>
+<li>Your room is too dark. Decrease <code>300</code> to <code>100</code>.</li>
+<li><strong>Traffic Light mixing colors?</strong></li>
+<li>Ensure we <code>digitalWrite(LOW)</code> the previous light before turning the next one <code>HIGH</code>.</li>
+</ul>
 
 
 

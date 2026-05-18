@@ -35,6 +35,14 @@ jobs:
             mkdocs-material-
             
       - run: pip install -r requirements.txt
+      - run: pip install pyyaml
+
+      # Run Custom Validators
+      - name: Validate Navigation Coverage
+        run: python scripts/validate_nav.py
+        
+      - name: Lint C++ Code Blocks
+        run: python scripts/lint_cpp.py
       
       # Build site with strict mode to fail on warnings (like broken links)
       - run: mkdocs build --strict

@@ -19,11 +19,11 @@
       
       
       <link rel="icon" href="../../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Mission 1.6: The Night Watch (LDR) - STEMAIDE Docs</title>
+        <title>Mission 1.32: The Night Watch - STEMAIDE Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mission-16-the-night-watch-ldr" class="md-skip">
+        <a href="#mission-132-the-night-watch" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Mission 1.6: The Night Watch (LDR)
+              Mission 1.32: The Night Watch
             
           </span>
         </div>
@@ -562,6 +562,8 @@
       
         
       
+        
+      
     
     
     
@@ -688,6 +690,130 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Smart City (Level 3)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    The Smart City (Level 3)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3.0/version3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manual 3.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3.0/3.7.Smart_Irrigation/3.7.1.Smart_Irrigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Smart Irrigation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -826,7 +952,7 @@
 
 
 
-<h1 id="mission-16-the-night-watch-ldr">Mission 1.6: The Night Watch (LDR)<a class="headerlink" href="#mission-16-the-night-watch-ldr" title="Permanent link">&para;</a></h1>
+<h1 id="mission-132-the-night-watch">Mission 1.32: The Night Watch<a class="headerlink" href="#mission-132-the-night-watch" title="Permanent link">&para;</a></h1>
 <blockquote>
 <p><strong>Role</strong>: Smart City Engineer<br />
 <strong>Objective</strong>: Build a system that can detect Day vs Night.</p>
@@ -838,16 +964,17 @@
 </blockquote>
 <hr />
 <h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
-<p>Streetlights shouldn't be on during the day—it wastes energy. We need a sensor that can "see" sunlight.
-Your mission is to use a <strong>Light Dependent Resistor (LDR)</strong> to measure brightness and report it to the city control center (your computer).</p>
+<p>Streetlights shouldn't be on during the day—it wastes energy. We need a sensor that can "see" sunlight just like a human eye.
+Your mission is to use a <strong>Light Dependent Resistor (LDR)</strong> to measure brightness and report the environment's state to your computer.</p>
 <h2 id="2-the-toolkit">2. The Toolkit<a class="headerlink" href="#2-the-toolkit" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>1x LDR Module</strong> (The Eye)</li>
-<li><strong>3x Jumper Wires</strong></li>
 <li><strong>1x Arduino Uno</strong></li>
+<li><strong>3x Jumper Wires</strong></li>
+<li><strong>1x Breadboard</strong></li>
 </ul>
 <h2 id="3-the-blueprint">3. The Blueprint<a class="headerlink" href="#3-the-blueprint" title="Permanent link">&para;</a></h2>
-<p>The LDR module has 3 or 4 pins. We will use the <strong>Analog Output (AO)</strong> to get a precise number.</p>
+<p>The LDR module uses the <strong>Analog Output (AO)</strong> to give a precise number between 0 and 1023.</p>
 <ul>
 <li><strong>VCC</strong> -&gt; <strong>5V</strong></li>
 <li><strong>GND</strong> -&gt; <strong>GND</strong></li>
@@ -855,23 +982,13 @@ Your mission is to use a <strong>Light Dependent Resistor (LDR)</strong> to meas
 </ul>
 <p><img alt="LDR Wiring" src="../../../assets/1.0/LDR_Module/ldr_wire_4.webp" /></p>
 <h2 id="4-the-logic">4. The Logic<a class="headerlink" href="#4-the-logic" title="Permanent link">&para;</a></h2>
-<p>Digital pins are just 0 or 1. Analog pins can see <strong>1024</strong> levels of brightness!</p>
+<p>Digital pins are just 0 or 1. Analog pins can see <strong>1024</strong> unique levels of brightness!</p>
 <ul>
 <li><strong>0</strong> = Pitch Black.</li>
 <li><strong>1023</strong> = Blinding Light.</li>
 </ul>
-<p><strong>Step-by-Step:</strong></p>
-<ol>
-<li><strong>Define</strong>: LDR is on <code>A0</code>.</li>
-<li><strong>Setup</strong>: Start the Serial Monitor (Communication line).</li>
-<li><strong>Loop</strong>:<ul>
-<li><strong>Read</strong>: Get the brightness number (<code>analogRead</code>).</li>
-<li><strong>Report</strong>: Send it to the computer (<code>Serial.println</code>).</li>
-</ul>
-</li>
-</ol>
 <h3 id="the-code">The Code<a class="headerlink" href="#the-code" title="Permanent link">&para;</a></h3>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 1.6: Light Intensity Checker</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 1.32: The Night Watch</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ldrPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A0</span><span class="p">;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -883,34 +1000,24 @@ Your mission is to use a <strong>Light Dependent Resistor (LDR)</strong> to meas
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="c1">// 1. Read the brightness (0-1023)</span>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">brightness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">ldrPin</span><span class="p">);</span>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="c1">// 2. Report it</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Brightness Level: &quot;</span><span class="p">);</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="c1">// 2. Report it to the Serial Monitor</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Current Light Level: &quot;</span><span class="p">);</span>
 </span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">brightness</span><span class="p">);</span>
 </span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="c1">// 3. Slow down so we can read it</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="p">}</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w"> </span><span class="c1">// Slow down for readability</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="5-upload-test">5. Upload &amp; Test<a class="headerlink" href="#5-upload-test" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Upload the code.</li>
-<li><strong>Open Serial Monitor</strong> (Top Right Magnifying Glass).</li>
-<li>Cover the sensor with your hand. Does the number go down?</li>
-<li>Shine a flashlight on it. Does the number go up?</li>
+<li><strong>Open Serial Monitor</strong> (Top Right Magnifying Glass icon).</li>
+<li>Cover the sensor with your hand. Does the number drop?</li>
+<li><strong>Upgrade</strong>: Connect an LED to Pin 13 and make it turn on ONLY when it's dark!</li>
 </ol>
 <h2 id="6-troubleshooting">6. Troubleshooting<a class="headerlink" href="#6-troubleshooting" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Numbers are random?</strong></li>
-<li>Check if you used <strong>AO</strong> (Analog) or <strong>DO</strong> (Digital). <code>analogRead</code> needs <code>AO</code>.</li>
-<li><strong>Value always 1023 or 0?</strong></li>
-<li>Check VCC (5V) and GND connections.</li>
-<li>Adjust the little blue screw (Potentiometer) on the module if it has one—it acts as a sensitivity tuner.</li>
-</ul>
-<h2 id="7-extensions-upgrades">7. Extensions &amp; Upgrades<a class="headerlink" href="#7-extensions-upgrades" title="Permanent link">&para;</a></h2>
-<p><strong>Challenge</strong>: Automatic Streetlight</p>
-<ul>
-<li><strong>Upgrade</strong>: Connect an LED to Pin 13.</li>
-<li><strong>Code</strong>: <code>if (brightness &lt; 300) { digitalWrite(13, HIGH); } else { digitalWrite(13, LOW); }</code></li>
+<li><strong>Numbers are random?</strong> Check if you used <strong>AO</strong> (Analog) or <strong>DO</strong> (Digital). <code>analogRead</code> needs the Analog pin.</li>
+<li><strong>Value always 1023?</strong> Check your GND connection. If the circuit is "Open", it might float to the maximum value.</li>
 </ul>
 
 

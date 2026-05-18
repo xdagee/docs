@@ -19,11 +19,11 @@
       
       
       <link rel="icon" href="../../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Mission 1.4: The Unsafe Intersection (Traffic Light) - STEMAIDE Docs</title>
+        <title>Mission 1.17: The Unsafe Intersection - STEMAIDE Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mission-14-the-unsafe-intersection-traffic-light" class="md-skip">
+        <a href="#mission-117-the-unsafe-intersection" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Mission 1.4: The Unsafe Intersection (Traffic Light)
+              Mission 1.17: The Unsafe Intersection
             
           </span>
         </div>
@@ -562,6 +562,8 @@
       
         
       
+        
+      
     
     
     
@@ -688,6 +690,130 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Smart City (Level 3)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    The Smart City (Level 3)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3.0/version3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manual 3.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3.0/3.7.Smart_Irrigation/3.7.1.Smart_Irrigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Smart Irrigation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -826,25 +952,25 @@
 
 
 
-<h1 id="mission-14-the-unsafe-intersection-traffic-light">Mission 1.4: The Unsafe Intersection (Traffic Light)<a class="headerlink" href="#mission-14-the-unsafe-intersection-traffic-light" title="Permanent link">&para;</a></h1>
+<h1 id="mission-117-the-unsafe-intersection">Mission 1.17: The Unsafe Intersection<a class="headerlink" href="#mission-117-the-unsafe-intersection" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Role</strong>: Lead Safety Engineer<br />
+<strong>Objective</strong>: Building the infrastructure for a smart city.</p>
+</blockquote>
 <h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
-<p><strong>Location:</strong> The busiest road in your community.
+<p><strong>Location:</strong> The busiest road in your community.<br />
 <strong>The Problem:</strong> Cars, bicycles, and pedestrians are all trying to cross at the same time. It's dangerous! The community needs a system to tell people when to <strong>STOP</strong> and when to <strong>GO</strong>.</p>
-<p><strong>Your Objective:</strong>
-As the <strong>Lead Engineer</strong>, you must build an automated <strong>Traffic Light System</strong>.</p>
-<ul>
-<li><strong>Red Light</strong>: Stop everyone. Dangerous! (Pin 5)</li>
-<li><strong>Yellow Light</strong>: Warning. Get ready. (Pin 6)</li>
-<li><strong>Green Light</strong>: Safe to go. (Pin 7)</li>
-</ul>
+<p>Your mission is to build and program an automated <strong>Traffic Light System</strong>.</p>
+<hr />
 <h2 id="2-the-toolkit">2. The Toolkit<a class="headerlink" href="#2-the-toolkit" title="Permanent link">&para;</a></h2>
 <p>To solve this, you will need:</p>
 <ul>
-<li><strong>Traffic Light Module</strong>: A pre-built set of 3 digital beacons.</li>
-<li><strong>Arduino Uno</strong>: The brain that controls the timing.</li>
+<li><strong>1x Traffic Light Module</strong>: A pre-built set of 3 digital beacons (Red, Yellow, Green).</li>
+<li><strong>1x Arduino Uno</strong>: The brain that controls the timing.</li>
+<li><strong>4x Jumper Wires</strong>: To connect the brain to the signals.</li>
 </ul>
 <h2 id="3-the-blueprint-wiring">3. The Blueprint (Wiring)<a class="headerlink" href="#3-the-blueprint-wiring" title="Permanent link">&para;</a></h2>
-<p>We need to connect our beacons to the brain. We use the <strong>Standard Wiring</strong>:</p>
+<p>We use a standard wiring plan to ensure every module behaves the same.</p>
 <table>
 <thead>
 <tr>
@@ -871,17 +997,18 @@ As the <strong>Lead Engineer</strong>, you must build an automated <strong>Traff
 </tr>
 </tbody>
 </table>
+<p><img alt="Traffic Light Wiring" src="../../../assets/1.0/Traffic_Light_Module/Traffic_Light_Red_On/Traffic_Light_image_2.webp" /></p>
 <h2 id="4-the-logic-code-strategy">4. The Logic (Code Strategy)<a class="headerlink" href="#4-the-logic-code-strategy" title="Permanent link">&para;</a></h2>
-<p>Before writing code, good engineers plan. We will use <code>const int</code> into give our pins names.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Naming our tools</span>
+<p>Before writing code, good engineers plan. We will use <code>const int</code> to give our pins names. This makes the code readable for humans!</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Naming our beacons</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">red</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">yellow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">green</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
 </span></code></pre></div>
-<p>Now, we can just say <code>digitalWrite(red, HIGH);</code> instead of remembering numbers.</p>
+<hr />
 <h2 id="5-mission-start">5. Mission Start<a class="headerlink" href="#5-mission-start" title="Permanent link">&para;</a></h2>
-<p>The community is waiting. Let's build the first part of the system!</p>
-<p>👉 <strong><a href="../1.4.1.Traffic_Light_Red_ON/">Task 1: The Red Beacons (Turning on Red)</a></strong></p>
+<p>The community is waiting. Let's build the first part of the system: the STOP signal.</p>
+<p>👉 <strong><a href="../1.4.1.Traffic_Light_Red_ON/">Mission 1.18: The Red Signal</a></strong></p>
 
 
 

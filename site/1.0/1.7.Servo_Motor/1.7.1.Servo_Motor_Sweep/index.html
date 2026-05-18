@@ -19,11 +19,11 @@
       
       
       <link rel="icon" href="../../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Project 1.7.1: Car windshield wiper - STEMAIDE Docs</title>
+        <title>Mission 1.34: The Radar Sweep - STEMAIDE Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-171-car-windshield-wiper" class="md-skip">
+        <a href="#mission-134-the-radar-sweep" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Project 1.7.1: Car windshield wiper
+              Mission 1.34: The Radar Sweep
             
           </span>
         </div>
@@ -562,6 +562,8 @@
       
         
       
+        
+      
     
     
     
@@ -688,6 +690,130 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Smart City (Level 3)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    The Smart City (Level 3)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3.0/version3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manual 3.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3.0/3.7.Smart_Irrigation/3.7.1.Smart_Irrigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Smart Irrigation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -826,111 +952,71 @@
 
 
 
-<h1 id="project-171-car-windshield-wiper">Project 1.7.1: Car windshield wiper<a class="headerlink" href="#project-171-car-windshield-wiper" title="Permanent link">&para;</a></h1>
-<table>
-<thead>
-<tr>
-<th><strong>Description</strong></th>
-<th>This project demonstrates how to create a back-and-forth sweeping motion using a servo motor, similar to the movement of a car windshield wiper or a sweeping robot. This concept can also be applied in smart doors that open and close automatically.</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Use case</strong></td>
-<td>Creating a smart Car windshield wiper</td>
-</tr>
-</tbody>
-</table>
-<p>opens by itself and closes by itself.
-|</p>
-<h2 id="components-things-you-will-need">Components (Things You will need)<a class="headerlink" href="#components-things-you-will-need" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th><img alt="Arduino Uno" src="../../../assets/components/arduino.webp" /></th>
-<th><img alt="Arduino USB Cable" src="../../../assets/components/usbcable.webp" /></th>
-<th><img alt="Servo Motor" src="../../../assets/components/servomotor.webp" /></th>
-<th><img alt="Jumper wires" src="../../../assets/components/jumperwires.webp" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="building-the-circuit">Building the circuit<a class="headerlink" href="#building-the-circuit" title="Permanent link">&para;</a></h2>
-<p>Things Needed:</p>
+<h1 id="mission-134-the-radar-sweep">Mission 1.34: The Radar Sweep<a class="headerlink" href="#mission-134-the-radar-sweep" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Role</strong>: Surveillance Specialist<br />
+<strong>Objective</strong>: Create a continuous sweeping motion to scan an area.</p>
+</blockquote>
+<h2 id="result-preview">Result Preview<a class="headerlink" href="#result-preview" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><img alt="Result GIF" src="Placeholder_for_Servo_Sweep.gif" /><br />
+<em>The Servo moves smoothly back and forth from 0° to 180°.</em></p>
+</blockquote>
+<hr />
+<h2 id="1-the-call-to-adventure">1. The Call to Adventure<a class="headerlink" href="#1-the-call-to-adventure" title="Permanent link">&para;</a></h2>
+<p>A stationary sensor has blind spots. To see everything, we need to move.
+Your mission is to program the Servo to "Sweep"—moving one degree at a time to create a fluid, scanning motion like a radar dish.</p>
+<h2 id="2-the-toolkit">2. The Toolkit<a class="headerlink" href="#2-the-toolkit" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Arduino Uno = 1</li>
-<li>Arduino Uno = 1</li>
-<li>Arduino USB cable = 1</li>
-<li>Servo Motor = 1</li>
-<li>Servo Motor blade =1</li>
-<li>Brown Jumper Wire = 1</li>
-<li>Red Jumper Wire = 1</li>
-<li>Orange Jumper Wire = 1</li>
+<li><strong>1x Micro Servo</strong></li>
+<li><strong>1x Arduino Uno</strong></li>
+<li><strong>3x Jumper Wires</strong></li>
 </ul>
-<h2 id="mounting-the-component-on-the-breadboard">Mounting the component on the breadboard<a class="headerlink" href="#mounting-the-component-on-the-breadboard" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Attach the Servo Arm: Place the swing arm on the white tip of the servo motor and press down gently until it fits securely.</p>
-<p><img alt="Angle fixed on Servo Motor" src="../../../assets/1.0/Servo_Motor/One_Angle/servo.webp" />.</p>
-<p><em><strong>NB:</strong> Make sure you identify where the positive pin (+) and the negative pin (-) is connected to on the breadboard. The longer pin of the LED is the positive pin and the shorter one, the negative PIN</em>.</p>
-<h2 id="wiring-the-circuit">WIRING THE CIRCUIT<a class="headerlink" href="#wiring-the-circuit" title="Permanent link">&para;</a></h2>
-<h3 id="things-needed">Things Needed:<a class="headerlink" href="#things-needed" title="Permanent link">&para;</a></h3>
+<h2 id="3-the-blueprint">3. The Blueprint<a class="headerlink" href="#3-the-blueprint" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Red male-male-to-male jumper wires = 1</li>
-<li>Brown male-to-male jumper wires = 1</li>
-<li>Yellow male-to-male jumper wires = 1</li>
+<li><strong>Brown/Black</strong> -&gt; <strong>GND</strong></li>
+<li><strong>Red</strong> -&gt; <strong>5V</strong></li>
+<li><strong>Orange/Yellow</strong> -&gt; <strong>Pin 10</strong></li>
 </ul>
-<p><strong>Step 2:</strong> Connect the male end of the red jumper wire to the female connector on the servo’s red wire.</p>
-<p><img alt="connect red jumper wire to red on Servo Motor" src="../../../assets/1.0/Servo_Motor/One_Angle/red_servo.webp" />.</p>
-<p><strong>Step 3:</strong> Connect the male end of the brown jumper wire to the female connector on the servo’s brown wire.</p>
-<p><img alt="connect brown jumper wire to brown on Servo Motor" src="../../../assets/1.0/Servo_Motor/One_Angle/brown_servo.webp" />.</p>
-<p><strong>Step 4:</strong> Connect the male end of the orange jumper wire to the female connector on the servo’s orange wire.</p>
-<p><img alt="connect orange jumper wire to orange on Servo Motor" src="../../../assets/1.0/Servo_Motor/One_Angle/orange_servo.webp" />.</p>
-<p><strong>Step 5:</strong> Connect the other end of the red jumper wire to the 5V pin on the Arduino Uno.</p>
-<p><img alt="connect the other red jumper wire to 5V on Arduino Uno" src="../../../assets/1.0/Servo_Motor/One_Angle/red_5v.webp" />.</p>
-<p><strong>Step 6:</strong> Connect the other end of the brown jumper wire to gnd pin on the Arduino Uno.</p>
-<p><img alt="connect the other brown jumper wire to gnd on Arduino Uno" src="../../../assets/1.0/Servo_Motor/One_Angle/brown_gnd.webp" />.</p>
-<p><strong>Step 7:</strong> Connect the other end orange jumper wire to Digital pin 10 on the Arduino Uno.</p>
-<p><img alt="connect the other orange jumper wire to pin 10 on Arduino Uno" src="../../../assets/1.0/Servo_Motor/One_Angle/orange_10.webp" />.</p>
-<p><em>just as shown above, connect your USB cable to the Arduino board and to your laptop.</em></p>
-<h2 id="programming">PROGRAMMING<a class="headerlink" href="#programming" title="Permanent link">&para;</a></h2>
-<p><strong>Step 1:</strong> Open your Arduino IDE. See how to set up here: <a href="../../../getting-started/overview/">Getting Started</a>.</p>
-<p><strong>Step 2:</strong> Type <code>#include &lt;Servo.h&gt;;</code> on line one before void Setup() function.</p>
-<p><img alt="Include the Servo Library" src="../../../assets/1.0/Servo_Motor/One_Angle/library.webp" />.</p>
-<p><strong>Step 3:</strong> Type <code>Servo motor;</code> on line two before void Setup() function.</p>
-<p><img alt="Define the Servo Motor" src="../../../assets/1.0/Servo_Motor/One_Angle/servo_Define.webp" />.</p>
-<p><strong>Step 4:</strong> Type <code>motor.attach(10);</code> inside the void Setup() function.</p>
-<p><img alt="Attach the Servo to Pin 10:" src="../../../assets/1.0/Servo_Motor/One_Angle/attach.webp" />.</p>
-<p><strong>Step 5:</strong> Type</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">180</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">motor</span><span class="p">.</span><span class="n">write</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">180</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">motor</span><span class="p">.</span><span class="n">write</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">10</span><span class="p">).</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}</span>
+<p><img alt="Wiring Diagram" src="../../../assets/1.0/Servo_Motor/One_Angle/orange_10.webp" /></p>
+<h2 id="4-the-logic">4. The Logic<a class="headerlink" href="#4-the-logic" title="Permanent link">&para;</a></h2>
+<p>We use <strong><code>for</code> loops</strong> to move the servo one small step at a time. This makes the movement look professional and smooth.</p>
+<h3 id="the-code">The Code<a class="headerlink" href="#the-code" title="Permanent link">&para;</a></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mission 1.34: The Radar Sweep</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Servo.h&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">Servo</span><span class="w"> </span><span class="n">scanner</span><span class="p">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Current position</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="n">scanner</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">}</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="c1">// 1. Sweep from 0 to 180</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">180</span><span class="p">;</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="n">scanner</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">pos</span><span class="p">);</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span><span class="w"> </span><span class="c1">// Wait for the arm to reach the position</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="c1">// 2. Sweep back from 180 to 0</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">180</span><span class="p">;</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="n">scanner</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">pos</span><span class="p">);</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>inside the void loop() function.</p>
-<p><img alt="Set the Servo Angle (i):" src="../../../assets/1.0/Servo_Motor/One_Angle/wiper.webp" />.</p>
-<p>_<strong>NB:</strong></p>
+<h2 id="5-upload-test">5. Upload &amp; Test<a class="headerlink" href="#5-upload-test" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Upload the code.</li>
+<li>Watch the motion. Is it smoother than the previous mission?</li>
+<li><strong>Upgrade</strong>: Change <code>delay(15)</code> to <code>delay(5)</code>. What happens to the "Speed" of the scan?</li>
+</ol>
+<h2 id="6-troubleshooting">6. Troubleshooting<a class="headerlink" href="#6-troubleshooting" title="Permanent link">&para;</a></h2>
 <ul>
-<li>In this loop:</li>
-<li>The first for loop gradually moves the servo from 0° to 180°, creating an upward sweep.</li>
-<li>The second for loop moves the servo back from 180° to 0°, creating a downward sweep.</li>
+<li><strong>Movement is jerky?</strong> Ensure your <code>delay()</code> is at least <code>10ms</code>. The motor needs time to physically move to each degree!</li>
+<li><strong>Stuck at one side?</strong> Check your <code>for</code> loop logic. Did you use <code>&lt;</code> or <code>&gt;</code> correctly?</li>
 </ul>
-<p><img alt="Set the Servo Angle (180):" src="../../../assets/1.0/Servo_Motor/One_Angle/write_180.webp" />.</p>
-<p>_<strong>NB:</strong> Here, motor.write(90); sets the servo to 90 degrees. You can change the angle by adjusting the number (from 0 to 180) in parentheses, such as motor.write(180);</p>
-<p><strong>Step 6:</strong> Save your code. <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section</em></p>
-<p><strong>Step 7:</strong> Select the arduino board and port <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section:Selecting Arduino Board Type and Uploading your code</em>.</p>
-<p><strong>Step 8:</strong> Upload your code. <em>See the <a href="../../../getting-started/overview/">Getting Started</a> section:Selecting Arduino Board Type and Uploading your code</em></p>
-<h2 id="conclusion">CONCLUSION<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
-<p>This project teaches you the basics of controlling a servo motor, which is essential in many electronics and robotics applications. By adjusting the rotation angle, you can experiment with different movements, exploring how targeted motion can be used in various devices.</p>
 
 
 
