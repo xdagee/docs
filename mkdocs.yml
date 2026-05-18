@@ -23,17 +23,19 @@ theme:
 
   features:
     - navigation.instant
+    - navigation.instant.progress
+    - navigation.instant.prefetch
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
-    - navigation.expand
     - navigation.indexes
-    - toc.integrate
     - navigation.top
     - search.suggest
     - search.share
     - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
     - content.tooltips
 
 extra_css:
@@ -49,15 +51,123 @@ nav:
       - Overview: getting-started/overview.md
       - Installation: getting-started/installation.md
       - Quick Start: getting-started/quick-start.md
-  
 
   - Guides:
-      - Appentice's Handbook: guides/user-guide.md
-      - The Lab (Level 1): 1.0/version1.md
-      - The Neighborhood (Level 2): 2.0/version2.md
+      - Apprentice's Handbook: guides/user-guide.md
+      - The Lab (Level 1):
+          - Manual 1.0: 1.0/version1.md
+          - "1.1 LED":
+              - "Mission 1.1 — First Light": 1.0/1.1.LED/1.1.1.Mission_First_Light.md
+              - "Mission 1.2 — The Heartbeat": 1.0/1.1.LED/1.1.2.One_LED_Blink.md
+              - "Mission 1.3 — Dual Power": 1.0/1.1.LED/1.1.3.LEDS_ON.md
+              - "Mission 1.4 — The Alternator": 1.0/1.1.LED/1.1.4.Two_LED_Blink.md
+              - "Mission 1.5 — The Trio": 1.0/1.1.LED/1.1.5.Three_LEDs_ON.md
+              - "Mission 1.6 — SOS Signal": 1.0/1.1.LED/1.1.6.Three_LEDs_Blink.md
+              - "Mission 1.7 — The Tower Light": 1.0/1.1.LED/1.1.7.Four_LEDs_ON.md
+              - "Mission 1.8 — Runway Pulse": 1.0/1.1.LED/1.1.8.Four_LEDs_Blink.md
+              - "Mission 1.9 — The Superlight": 1.0/1.1.LED/1.1.9.Five_LEDs_ON.md
+              - "Mission 1.10 — The Knight Rider": 1.0/1.1.LED/1.1.10.Five_LEDs_Blink.md
+          - "1.2 Buzzer":
+              - "Mission 1.11 — The Silent Alarm": 1.0/1.2.Buzzer/1.2.1.Buzzer_ON_and_OFF.md
+              - "Mission 1.12 — The Morse Code": 1.0/1.2.Buzzer/1.2.2.Buzzer_Beep.md
+          - "1.3 Push Button":
+              - "Mission 1.13 — The Manual Trigger": 1.0/1.3.Push_Button/1.3.1.Push_Button_press_with_1_LED.md
+              - "Mission 1.14 — The Twin Safety": 1.0/1.3.Push_Button/1.3.2.Push_Button_press_with_2_LEDs.md
+              - "Mission 1.15 — The Tri-Power Array": 1.0/1.3.Push_Button/1.3.3.Push_Button_press_with_3_LEDs.md
+              - "Mission 1.16 — The Shield Override": 1.0/1.3.Push_Button/1.3.4.Push_Button_press_with_4_LEDs.md
+          - "1.4 Traffic Light":
+              - "Mission 1.17 — The Unsafe Intersection": 1.0/1.4.Traffic_Light/1.4.0.Traffic_Light_Intro.md
+              - "Mission 1.18 — The Red Signal": 1.0/1.4.Traffic_Light/1.4.1.Traffic_Light_Red_ON.md
+              - "Mission 1.19 — The Danger Flash": 1.0/1.4.Traffic_Light/1.4.2.Traffic_Light_Red_BLINK.md
+              - "Mission 1.20 — Yellow Means Ready": 1.0/1.4.Traffic_Light/1.4.3.Traffic_Light_Yellow_ON.md
+              - "Mission 1.21 — The Caution Flash": 1.0/1.4.Traffic_Light/1.4.4.Traffic_Light_Yellow_Blink.md
+              - "Mission 1.22 — Green Means GO!": 1.0/1.4.Traffic_Light/1.4.5.Traffic_Light_Green_ON.md
+              - "Mission 1.23 — The Awareness Pulse": 1.0/1.4.Traffic_Light/1.4.6.Traffic_Light_Green_Blink.md
+          - "1.5 RGB":
+              - "Mission 1.24 — The Prism of Power": 1.0/1.5.RGB/1.5.0.RGB_Intro.md
+              - "Mission 1.25 — The Ruby Signal": 1.0/1.5.RGB/1.5.1.RGB_Red_On.md
+              - "Mission 1.26 — The Crimson Pulse": 1.0/1.5.RGB/1.5.2.RGB_Red_Blink.md
+              - "Mission 1.27 — The Emerald Gate": 1.0/1.5.RGB/1.5.3.RGB_Green_On.md
+              - "Mission 1.28 — The Jade Alert": 1.0/1.5.RGB/1.5.4.RGB_Green_Blink.md
+              - "Mission 1.29 — The Sapphire Sky": 1.0/1.5.RGB/1.5.5.RGB_Blue_On.md
+              - "Mission 1.30 — The Azure Beacon": 1.0/1.5.RGB/1.5.6.RGB_Blue_Blink.md
+              - "Mission 1.31 — The Technicolor Dream": 1.0/1.5.RGB/1.5.7.RGB_Rainbow_Colors.md
+          - "1.6 LDR":
+              - "Mission 1.32 — The Night Watch": 1.0/1.6.LDR/1.6.0.LDR_Module.md
+          - "1.7 Servo Motor":
+              - "Mission 1.33 — The Robotic Joint": 1.0/1.7.Servo_Motor/1.7.0.Servo_Motor_One_Angle.md
+              - "Mission 1.34 — The Radar Sweep": 1.0/1.7.Servo_Motor/1.7.1.Servo_Motor_Sweep.md
+          - "1.8 Ultrasonic Sensor":
+              - "Mission 1.35 — The Bat's Ear": 1.0/1.8.Ultrasonic_Sensor/1.8.1ultrasonic_RGB.md
+          - "1.9 Sound Sensor":
+              - "Mission 1.36 — The Clapper": 1.0/1.9.Sound_Sensor/1.9.0.Sound_Sensor.md
+
+      - The Neighbourhood (Level 2):
+          - Manual 2.0: 2.0/version2.md
+          - "2.1 Ultrasonic + LED":
+              - "Mission 2.1 — The Bat's Warning": 2.0/2.1.Ultrasonic+LED/2.1.1.Mission_Bats_Warning.md
+              - Ultrasonic With Two LEDs: 2.0/2.1.Ultrasonic+LED/2.1.2.Ultrasonic_and_2_LED.md
+              - Ultrasonic With Three LEDs: 2.0/2.1.Ultrasonic+LED/2.1.3.Ultrasonic_and_3_LED.md
+              - Ultrasonic With Four LEDs: 2.0/2.1.Ultrasonic+LED/2.1.4.Ultrasonic_and_4_LED.md
+              - Ultrasonic With Five LEDs: 2.0/2.1.Ultrasonic+LED/2.1.5.Ultrasonic_and_5_LED.md
+          - "2.2 Ultrasonic + Buzzer":
+              - Ultrasonic Distance Sensor: 2.0/2.2.Ultrasonic+Buzzer/2.2.1.Ultrasonic_distance_Sensor.md
+              - Ultrasonic With Buzzer: 2.0/2.2.Ultrasonic+Buzzer/2.2.2.Ultrasonic_sensor_and_buzzer.md
+          - "2.3 Ultrasonic + Traffic Light":
+              - Ultrasonic With Traffic Light: 2.0/2.3.Ultrasonic+TrafficLight/2.3.1.ultrasonic_sensor_and_trafficLight_module.md
+          - "2.4 Ultrasonic + RGB":
+              - Ultrasonic With RGB: 2.0/2.4.Ultrasonic+RGB/2.4.1.ultrasonic_sensor_and_RGB_module.md
+          - "2.5 Push Button + LED":
+              - Push Button With One LED: 2.0/2.5.Push_Button+LED/2.5.1.Push_Button_to_turn_on_and_off_LED.md
+              - Push Button Blink One LED: 2.0/2.5.Push_Button+LED/2.5.2.Push_Button_to_blink_one_LED.md
+              - Push Button With Two LEDs: 2.0/2.5.Push_Button+LED/2.5.3.Push_Button_to_turn_on_and_off_2_LED.md
+              - Push Button Blink Two LEDs: 2.0/2.5.Push_Button+LED/2.5.4.Push_Button_to_blink_two_LED.md
+              - Push Button With Three LEDs: 2.0/2.5.Push_Button+LED/2.5.5.Push_Button_to_turn_on_and_off_three_LED.md
+              - Push Button Blink Three LEDs: 2.0/2.5.Push_Button+LED/2.5.6.Push_Button_to_blink_three_LED.md
+              - Push Button With Four LEDs: 2.0/2.5.Push_Button+LED/2.5.7.Push_Button_to_turn_on_and_off_four_LED.md
+              - Push Button Blink Four LEDs: 2.0/2.5.Push_Button+LED/2.5.8.Push_Button_to_blink_four_LED.md
+              - Push Button With Five LEDs: 2.0/2.5.Push_Button+LED/2.5.9.Push_Button_to_turn_on_and_off_five_LED.md
+          - "2.6 Push Button + Buzzer":
+              - Push Button With Buzzer: 2.0/2.6.Push_Button+Buzzer/2.6.1.Push_button_and_Buzzer.md
+          - "2.7 Push Button + Traffic Light":
+              - Push Button With Traffic Light: 2.0/2.7.PushButton+TrafficLightModule/2.7.1.PushButton+TrafficLightModule.md
+          - "2.8 Push Button + RGB":
+              - Push Button With RGB: 2.0/2.8.PushButton+RGB/2.8.1.PushButton+RGB.md
+          - "2.9 LDR + LED":
+              - LDR With One LED: 2.0/2.9.LDR+LED/2.9.1.LDR+1_LED.md
+              - LDR With Two LEDs: 2.0/2.9.LDR+LED/2.9.2.LDR+2_LED.md
+              - LDR With Four LEDs: 2.0/2.9.LDR+LED/2.9.4.LDR+4_LED.md
+              - LDR With Five LEDs: 2.0/2.9.LDR+LED/2.9.5.LDR+5_LED.md
+          - "2.10 LDR + Buzzer":
+              - LDR With Buzzer: 2.0/2.10.LDR+Buzzer/2.10.1.LDR+Buzzer.md
+          - "2.11 LDR + RGB":
+              - LDR With RGB: 2.0/2.11.LDR_RGB/2.11.1.LDR_RGB.md
+          - "2.12 Traffic Light STEMAIDE":
+              - STEMAIDE Traffic Light: 2.0/2.12.Traffic_Light_STEMAIDE/2.12.1.Traffic_Light_STEMAIDE.md
+          - "2.13 Sound Sensor + LED":
+              - Sound Sensor With One LED: 2.0/2.13.SoundSensor+LED/2.13.1.SoundSensor+1_LED.md
+              - Sound Sensor With Two LEDs: 2.0/2.13.SoundSensor+LED/2.13.2.Soundsensor+2_LED.md
+              - Sound Sensor With Three LEDs: 2.0/2.13.SoundSensor+LED/2.13.3.SoundSensor+3_LED.md
+          - "2.14 Sound Sensor + Traffic Light":
+              - Sound Sensor With Traffic Light: 2.0/2.14.SoundSensor+Traffic/2.14.1.SoundSensor+TrafficLight_module.md
+
       - The Smart City (Level 3):
-        - Manual 3.0: 3.0/version3.md
-        - Smart Irrigation: 3.0/3.7.Smart_Irrigation/3.7.1.Smart_Irrigation.md
+          - Manual 3.0: 3.0/version3.md
+          - "3.1 Smart Gauge":
+              - "Mission 3.1 — The City Dashboard": 3.0/3.1.Smart_Gauge/3.1.1.Mission_City_Dashboard.md
+          - "3.2 Smart Security System":
+              - Smart Security System: 3.0/3.2.Smart_Security_System/3.2.1.Smart_Security_System.md
+          - "3.3 Smart Traffic Light":
+              - Smart Traffic Light System: 3.0/3.3.Smart_Traffic_light_system/3.3.1.Smart_Traffic_Light_System.md
+          - "3.4 Smart Bed Light":
+              - Smart Bed Light: 3.0/3.4.Smart_Bed_Light/3.4.1.Smart_Bed_Light.md
+          - "3.5 Smart Car Parking":
+              - Smart Car Parking System: 3.0/3.5.Smart_Car_Parking_System/3.5.1.Smart_Car_Parking_System.md
+          - "3.6 Smart Clap Device":
+              - Smart Clap Device: 3.0/3.6.Smart_Clap_Device/3.6.1.Smart_Clap_device.md
+          - "3.7 Smart Irrigation":
+              - "Mission 3.7 — The Smart Farm": 3.0/3.7.Smart_Irrigation/3.7.1.Smart_Irrigation.md
+
       - Developer Guide: guides/developer-guide.md
 
   - Contributing: CONTRIBUTING.md
@@ -65,27 +175,49 @@ nav:
   - Code of Conduct: code-of-conduct.md
 
 markdown_extensions:
+  # Admonitions & collapsible blocks
   - admonition
-  - codehilite:
-      guess_lang: false
+  - pymdownx.details
+
+  # Table of contents
   - toc:
       permalink: true
-  - md_in_html
-  - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.details
-  - pymdownx.critic
-  - pymdownx.highlight:
-      use_pygments: true
 
+  # HTML in Markdown
+  - md_in_html
+
+  # Attribute lists (for buttons, annotations)
+  - attr_list
+
+  # Code highlighting (replaces deprecated codehilite)
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
+      use_pygments: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+
+  # Fenced code blocks & Mermaid support
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+  # Content tabs
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  # Critic markup
+  - pymdownx.critic
+
+  # Task lists & emoji
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra:
   social:
@@ -108,6 +240,5 @@ extra:
       link: https://www.tiktok.com/@stemaide?_t=ZM-8xaIGd6aIR6&_r=1
       name: STEMAIDE on TikTok
 
-  generator: false 
+  generator: false
   homepage: /
-  

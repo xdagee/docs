@@ -30,7 +30,7 @@ hide:
   </a>
 
   <a href="2.0/version2/" class="card">
-    <h3>asd The Neighborhood (Level 2)</h3>
+    <h3>🏘️ The Neighbourhood (Level 2)</h3>
     <p><strong>Solve Problems.</strong> Use your skills to build street lights, alarms, and smart gates for your community.</p>
   </a>
 

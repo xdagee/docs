@@ -6,11 +6,11 @@
 
 ### 3.2 Smart Security System
 
-- [Smart Security System](3.2.Smart_Security_System/3.2.1.Smart%20Security%20System.md)
+- [Smart Security System](3.2.Smart_Security_System/3.2.1.Smart_Security_System.md)
 
 ### 3.3 Smart Traffic light System
 
-- [Smart Traffic light System](3.3.Smart_Traffic_light_system/3.3.1.Smart%20Traffic%20light%20system.md)
+- [Smart Traffic Light System](3.3.Smart_Traffic_light_system/3.3.1.Smart_Traffic_Light_System.md)
 
 ### 3.4 Smart Bed Light
 

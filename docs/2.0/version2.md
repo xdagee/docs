@@ -71,6 +71,6 @@
 - [Sound Sensor With Two LEDs](2.13.SoundSensor+LED/2.13.2.Soundsensor+2_LED.md)
 - [Sound Sensor With Three LEDs](2.13.SoundSensor+LED/2.13.3.SoundSensor+3_LED.md)
 
-### 2.14 SOund Sensor With Traffic Light
+### 2.14 Sound Sensor With Traffic Light
 
 - [Sound Sensor With Traffic Light Module](2.14.SoundSensor+Traffic/2.14.1.SoundSensor+TrafficLight_module.md)

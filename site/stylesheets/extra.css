@@ -1,11 +1,11 @@
-/* OpenVINO / Intel Design Theme */
+/* STEMAIDE Design Theme */
 :root {
-  /* Intel Blue */
+  /* STEMAIDE Blue */
   --md-primary-fg-color:        #0068B5;
   --md-primary-fg-color--light: #00C7FD;
   --md-primary-fg-color--dark:  #004A86;
   --md-accent-fg-color:         #0068B5;
-  
+
   /* Typography */
   --md-text-font: "Inter", "Roboto", sans-serif;
   --md-code-font: "JetBrains Mono", "Roboto Mono", monospace;
@@ -30,7 +30,7 @@
     font-weight: bold;
 }
 
-/* Card Styling mimicking OpenVINO homepage */
+/* Card Styling */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -66,8 +66,36 @@
   flex-grow: 1;
 }
 
+/* Dark mode overrides for cards */
+[data-md-color-scheme="slate"] .card {
+  background: var(--md-default-bg-color);
+  border-color: var(--md-default-fg-color--lightest);
+}
+
+[data-md-color-scheme="slate"] .card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  border-color: var(--md-accent-fg-color);
+}
+
+[data-md-color-scheme="slate"] .card p {
+  color: var(--md-default-fg-color--light);
+}
+
+[data-md-color-scheme="slate"] .md-tabs {
+  background-color: var(--md-default-bg-color) !important;
+  color: var(--md-default-fg-color) !important;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link {
+  color: var(--md-default-fg-color--light) !important;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link--active {
+  color: var(--md-accent-fg-color) !important;
+}
+
 /* Admonition Styling */
-.md-typeset .admonition, 
+.md-typeset .admonition,
 .md-typeset details {
   border-color: #0068B5;
 }
